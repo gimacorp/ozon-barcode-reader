@@ -31,6 +31,7 @@
     "per_box_MB": 890.0096,
     "average_MB_s": 445.0048,
     "remaining_processing_delivery_s": 0.635,
+    "last_rear_observation_x_mm": 1415.0,
     "budget_slack_s": 0.185,
     "encoder_step_mm": 0.08333333333333333,
     "strip_height_mm": 170.66666666666666,

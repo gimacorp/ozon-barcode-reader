@@ -18,10 +18,52 @@ class Detection:
         return self.format, self.payload_hex
 
 
-def decode(image: np.ndarray, enhanced: bool = False) -> list[Detection]:
+def _views(gray: np.ndarray, enhanced: bool, try_diagonal: bool):
+    """Дополнительные 45° покрывают диагональные коды; матрица ведёт в исходный кадр."""
+    height, width = gray.shape
+    for angle in ((0, 45) if try_diagonal else (0,)):
+        transform = np.eye(3, dtype=np.float64)
+        frame = gray
+        if angle:
+            affine = cv2.getRotationMatrix2D((width/2, height/2), angle, 1.)
+            cosine, sine = abs(affine[0, 0]), abs(affine[0, 1])
+            nw, nh = int(np.ceil(width*cosine+height*sine)), int(np.ceil(height*cosine+width*sine))
+            affine[0, 2] += nw/2-width/2
+            affine[1, 2] += nh/2-height/2
+            transform[:2] = affine
+            frame = cv2.warpAffine(gray, affine, (nw, nh), flags=cv2.INTER_CUBIC, borderValue=255)
+        inverse = np.linalg.inv(transform)
+        yield frame, inverse
+        if enhanced:
+            yield cv2.createCLAHE(clipLimit=2., tileGridSize=(8, 8)).apply(frame), inverse
+            yield cv2.resize(frame, None, fx=2, fy=2, interpolation=cv2.INTER_CUBIC), inverse @ np.diag([.5, .5, 1.])
+
+
+def parse_formats(spec: str | None):
+    """Явный перечень символик; None сохраняет режим сравнения со всеми форматами."""
+    if spec is None:
+        return None
+    result = []
+    for name in spec.split(","):
+        value = getattr(zxingcpp.BarcodeFormat, name.strip(), None)
+        if value is None or not isinstance(value, zxingcpp.BarcodeFormat):
+            raise ValueError(f"Неизвестная символика: {name}")
+        if value != zxingcpp.BarcodeFormat.NONE:
+            result.append(value)
+    if not result:
+        raise ValueError("Укажите хотя бы одну символику")
+    return zxingcpp.BarcodeFormats(result)
+
+
+def decode(image: np.ndarray, enhanced: bool = False, *, try_diagonal: bool = True,
+           formats: str | None = "Code128") -> list[Detection]:
     """Фиксированный набор преобразований, без доступа к эталонным ответам.
 
-    Усиленный режим пробует CLAHE и увеличение только после исходного кадра.
+    Исходный кадр и его поворот на 45° проверяются всегда. Усиленный режим
+    дополнительно пробует CLAHE и увеличение. try_diagonal=False воспроизводит
+    исходный базовый вариант для сравнительного эксперимента.
+    По умолчанию включён Code128, как в демонстрационной выборке. Дополнительные
+    символики перечисляются явно: например, formats="Code128,DataMatrix".
     Результаты объединяются по формату и исходным байтам. Это множество
     значений, а не счётчик физических наклеек с одинаковым содержимым.
     """
@@ -30,17 +72,16 @@ def decode(image: np.ndarray, enhanced: bool = False) -> list[Detection]:
     gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY) if image.ndim == 3 else image
     if gray.ndim != 2 or gray.dtype != np.uint8:
         raise ValueError("Нужен кадр uint8: оттенки серого или BGR")
-    variants = [(gray, 1.)]
-    if enhanced:
-        variants += [(cv2.createCLAHE(clipLimit=2., tileGridSize=(8, 8)).apply(gray), 1.),
-                     (cv2.resize(gray, None, fx=2, fy=2, interpolation=cv2.INTER_CUBIC), 2.)]
     result = {}
-    for frame, scale in variants:
-        for b in zxingcpp.read_barcodes(frame, try_rotate=True, try_downscale=True,
+    parsed = parse_formats(formats)
+    allowed = {} if parsed is None else {"formats": parsed}
+    for frame, inverse in _views(gray, enhanced, try_diagonal):
+        for b in zxingcpp.read_barcodes(frame, **allowed, try_rotate=True, try_downscale=True,
                                        try_invert=True, return_errors=False):
             p = b.position
-            polygon = tuple((v.x/scale, v.y/scale) for v in
-                            (p.top_left, p.top_right, p.bottom_right, p.bottom_left))
+            points = np.array([[v.x, v.y, 1.] for v in
+                               (p.top_left, p.top_right, p.bottom_right, p.bottom_left)]) @ inverse.T
+            polygon = tuple((float(x), float(y)) for x, y, _ in points)
             d = Detection(str(b.format), b.text, bytes(b.bytes).hex(), polygon)
             result.setdefault(d.key, d)
     return list(result.values())

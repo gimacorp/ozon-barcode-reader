@@ -68,3 +68,18 @@ def test_bad_time_and_early_finalization():
     t=tracker()
     with pytest.raises(ValueError):t.register("X",0,3,2)
     with pytest.raises(ValueError):t.finalize("A",1)
+
+
+def test_finalization_waits_for_completed_decoding():
+    t=tracker()
+    t.observe("A","top","f1",1.9,2.9,[D])
+    with pytest.raises(ValueError):t.finalize("A",2.1)
+    assert t.finalize("A",2.9)["codes"][0]["text"] == "VALUE"
+
+
+def test_plc_keeps_immutable_receipt_snapshot():
+    t=tracker();complete(t);message=t.finalize("A",2.5)
+    plc=MockPLC();plc.receive(message,2.6)
+    message["codes"][0]["text"]="CHANGED"
+    with pytest.raises(ValueError):plc.receive(message,2.7)
+    assert plc.receipts["A:1"]["message"]["codes"][0]["text"]=="VALUE"

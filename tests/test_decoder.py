@@ -1,7 +1,8 @@
 import numpy as np
 import pytest
-from barcode_reader.decoder import decode,decode_strips,strips
+from barcode_reader.decoder import decode,decode_strips,strips,parse_formats
 from barcode_reader.synthetic import label
+from PIL import Image
 
 
 @pytest.mark.parametrize("turns",[0,1,2,3])
@@ -39,3 +40,22 @@ def test_strip_bounds():
     a=np.zeros((10,3),np.uint8)
     assert [i for i,_ in strips(a,6,2)]==[0,4]
     with pytest.raises(ValueError):list(strips(a,2,2))
+
+
+@pytest.mark.parametrize("angle",range(0,180,5))
+def test_arbitrary_orientation_and_original_coordinates(angle):
+    stamp=np.array(Image.fromarray(label("ANGLE000001",3.86)).rotate(
+        angle,expand=True,resample=Image.Resampling.BICUBIC,fillcolor=255))
+    canvas=np.full((stamp.shape[0]+80,stamp.shape[1]+100),255,np.uint8)
+    canvas[40:40+stamp.shape[0],50:50+stamp.shape[1]]=stamp
+    result=decode(canvas)
+    assert {d.text for d in result}=={"ANGLE000001"}
+    x,y=np.mean(result[0].polygon,axis=0)
+    assert abs(x-(50+stamp.shape[1]/2))<8
+    assert abs(y-(40+stamp.shape[0]/2))<8
+
+
+def test_symbol_allowlist_is_explicit():
+    assert decode(label("TEST000001"),formats="DataMatrix")==[]
+    assert decode(label("TEST000001"),formats="Code128,DataMatrix")[0].text=="TEST000001"
+    with pytest.raises(ValueError):parse_formats("Code128,Typo")

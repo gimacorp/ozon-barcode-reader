@@ -78,14 +78,14 @@ def figures(calc,benchmark):
     fig.savefig(dest/"deadline.png",dpi=180);plt.close(fig)
 
     metrics=[m for m in benchmark["metrics"] if m["level"]=="all"]
-    names=["Один кадр","Три кадра","Три кадра +\nобработка"]
+    names=["Один кадр","Три кадра","Три кадра +\nобработка","45° +\nCode128"]
     fig,axes=plt.subplots(1,2,figsize=(10,4.0),layout="constrained")
-    x=np.arange(3)
+    x=np.arange(len(metrics))
     axes[0].bar(x-.17,[m["exact_set_rate"]*100 for m in metrics],width=.34,color=BLUE,label="Всё множество коробки")
     axes[0].bar(x+.17,[m["code_recall"]*100 for m in metrics],width=.34,color=CYAN,label="Полнота кодов")
     axes[0].set(ylim=(0,115),xticks=x,xticklabels=names,ylabel="%",title="60 синтетических коробок / 140 кодов")
     axes[0].legend(fontsize=8,loc="upper left")
-    bars=axes[1].bar(x,[m["latency_p95_ms"] for m in metrics],color=[BLUE,CYAN,"#EF6C4D"])
+    bars=axes[1].bar(x,[m["latency_p95_ms"] for m in metrics],color=[BLUE,CYAN,"#EF6C4D","#5A63C9"])
     for b in bars:axes[1].text(b.get_x()+b.get_width()/2,b.get_height()+8,f"{b.get_height():.0f}",ha="center")
     axes[1].set(ylim=(0,max(m["latency_p95_ms"] for m in metrics)*1.22),xticks=x,xticklabels=names,ylabel="мс",title="95-й перцентиль декодирования")
     fig.savefig(dest/"benchmark.png",dpi=180);plt.close(fig)
@@ -117,7 +117,8 @@ def build():
         "small":ParagraphStyle("small",fontName="DV",fontSize=8.1,leading=11.7,textColor=colors.HexColor(DARK),spaceAfter=7),
         "cell":ParagraphStyle("cell",fontName="DV",fontSize=8.2,leading=11.5,textColor=colors.HexColor(DARK)),
     }
-    pages=make_pages(calc,bench)
+    native=json.loads((ROOT/"results/native_resolution.json").read_text())
+    pages=make_pages(calc,bench,native)
     story=[];markdown=["# Шестистороннее чтение штрихкодов\n\nКарим Гимадиев · CV, вариант 2 · 9 сентября 2026\n"]
     for i,page in enumerate(pages):
         if i:story.append(PageBreak())

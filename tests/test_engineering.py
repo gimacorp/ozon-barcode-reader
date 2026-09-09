@@ -63,3 +63,17 @@ def test_whole_label_focus_requires_more_than_point_coverage():
     c = load_config()
     assert evaluate_label_focus(c)["min_whole_label_coverage"] == 1
     assert evaluate_label_focus(c, 8)["min_whole_label_coverage"] < 1
+
+
+def test_speed_changes_last_observation_and_deadline():
+    c=load_config();base=summarize(c)
+    fast=summarize(c|{"speed_mm_s":2000})
+    assert base["last_rear_observation_x_mm"]==1415
+    assert fast["last_rear_observation_x_mm"]==1570
+    assert fast["remaining_processing_delivery_s"]==pytest.approx(.065)
+
+
+@pytest.mark.parametrize("bad",[float("nan"),float("inf"),-1])
+def test_nonfinite_blur_rejected(bad):
+    with pytest.raises(ValueError):motion_blur_px(bad,40,.08)
+    with pytest.raises(ValueError):motion_blur_px(1000,bad,.08)

@@ -22,11 +22,13 @@ def run(output="results", boxes=60, seed=20260909):
     for i, sample in enumerate(dataset(seed,boxes)):
         expected=set(sample["expected"])
         predictions={}
-        for name,frames,enhanced in [("one_frame",sample["frames"][1:2],False),
-                                      ("three_frames",sample["frames"],False),
-                                      ("three_frames_enhanced",sample["frames"],True)]:
+        for name,frames,enhanced,diagonal in [("one_frame",sample["frames"][1:2],False,False),
+                                      ("three_frames",sample["frames"],False,False),
+                                      ("three_frames_enhanced",sample["frames"],True,False),
+                                      ("three_frames_diagonal",sample["frames"],False,True)]:
             started=time.perf_counter()
-            found={d.text for frame in frames for d in decode(frame,enhanced)}
+            found={d.text for frame in frames for d in decode(frame,enhanced,try_diagonal=diagonal,
+                                                              formats="Code128" if diagonal else None)}
             elapsed=(time.perf_counter()-started)*1000
             predictions[name]=sorted(found)
             rows.append({"box_id":sample["box_id"],"level":sample["level"],"method":name,
@@ -56,6 +58,7 @@ def run(output="results", boxes=60, seed=20260909):
                             "false_values":fp,"latency_p50_ms":float(np.percentile([r["latency_ms"] for r in rs],50)),
                             "latency_p95_ms":float(np.percentile([r["latency_ms"] for r in rs],95))})
     result={"seed":seed,"boxes":boxes,"frames_per_box":3,"image_shape":[960,1280],
+            "methods_note":"A-C: автоматический набор ZXing-C++, исходная ориентация. D: исходный кадр + 45°, явный перечень Code128. В D одновременно изменены поиск угла и перечень символик.",
             "warning":"Синтетика: кадры независимо изменены, физическая последовательность движения не моделируется. Тайминг полного цикла декодирования, без камеры, генерации и передачи.",
             "environment":{"python":platform.python_version(),"platform":platform.platform(),
                            "machine":platform.machine(),"processor":platform.processor(),

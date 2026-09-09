@@ -1,0 +1,42 @@
+{
+  "platform": "macOS-26.5.1-arm64-arm-64bit",
+  "python": "3.12.14",
+  "opencv_threads": 1,
+  "measurements": [
+    {
+      "kind": "area",
+      "width": 9344,
+      "height": 7000,
+      "milliseconds": 281.6430830862373,
+      "expected": [
+        "NATIVE0000",
+        "NATIVE0001",
+        "NATIVE0002"
+      ],
+      "found": [
+        "NATIVE0000",
+        "NATIVE0001",
+        "NATIVE0002"
+      ],
+      "exact_set": true
+    },
+    {
+      "kind": "line_strip",
+      "width": 8192,
+      "height": 2048,
+      "milliseconds": 89.86695809289813,
+      "expected": [
+        "NATIVE0000",
+        "NATIVE0001",
+        "NATIVE0002"
+      ],
+      "found": [
+        "NATIVE0000",
+        "NATIVE0001",
+        "NATIVE0002"
+      ],
+      "exact_set": true
+    }
+  ],
+  "limitation": "По одному чистому синтетическому изображению каждого размера на текущем CPU. Это проверка размера и единичной задержки; p95/p99 и промышленная нагрузка требуют отдельного стенда."
+}

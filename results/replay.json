@@ -1,0 +1,542 @@
+{
+  "description": "Две коробки, шесть граней, по две этикетки на грани; единая шкала времени имитатора.",
+  "boxes": [
+    {
+      "box_id": "REPLAY-00",
+      "expected": [
+        "B0F0L0",
+        "B0F0L1",
+        "B0F1L0",
+        "B0F1L1",
+        "B0F2L0",
+        "B0F2L1",
+        "B0F3L0",
+        "B0F3L1",
+        "B0F4L0",
+        "B0F4L1",
+        "B0F5L0",
+        "B0F5L1"
+      ],
+      "message": {
+        "schema_version": 1,
+        "message_id": "REPLAY-00:1",
+        "box_id": "REPLAY-00",
+        "status": "read",
+        "codes": [
+          {
+            "format": "Code 128",
+            "text": "B0F0L0",
+            "payload_hex": "423046304c30",
+            "confirmations": 1,
+            "faces": [
+              "top"
+            ]
+          },
+          {
+            "format": "Code 128",
+            "text": "B0F0L1",
+            "payload_hex": "423046304c31",
+            "confirmations": 1,
+            "faces": [
+              "top"
+            ]
+          },
+          {
+            "format": "Code 128",
+            "text": "B0F1L0",
+            "payload_hex": "423046314c30",
+            "confirmations": 1,
+            "faces": [
+              "bottom"
+            ]
+          },
+          {
+            "format": "Code 128",
+            "text": "B0F1L1",
+            "payload_hex": "423046314c31",
+            "confirmations": 1,
+            "faces": [
+              "bottom"
+            ]
+          },
+          {
+            "format": "Code 128",
+            "text": "B0F2L0",
+            "payload_hex": "423046324c30",
+            "confirmations": 1,
+            "faces": [
+              "left"
+            ]
+          },
+          {
+            "format": "Code 128",
+            "text": "B0F2L1",
+            "payload_hex": "423046324c31",
+            "confirmations": 1,
+            "faces": [
+              "left"
+            ]
+          },
+          {
+            "format": "Code 128",
+            "text": "B0F3L0",
+            "payload_hex": "423046334c30",
+            "confirmations": 1,
+            "faces": [
+              "right"
+            ]
+          },
+          {
+            "format": "Code 128",
+            "text": "B0F3L1",
+            "payload_hex": "423046334c31",
+            "confirmations": 1,
+            "faces": [
+              "right"
+            ]
+          },
+          {
+            "format": "Code 128",
+            "text": "B0F4L0",
+            "payload_hex": "423046344c30",
+            "confirmations": 1,
+            "faces": [
+              "front"
+            ]
+          },
+          {
+            "format": "Code 128",
+            "text": "B0F4L1",
+            "payload_hex": "423046344c31",
+            "confirmations": 1,
+            "faces": [
+              "front"
+            ]
+          },
+          {
+            "format": "Code 128",
+            "text": "B0F5L0",
+            "payload_hex": "423046354c30",
+            "confirmations": 1,
+            "faces": [
+              "rear"
+            ]
+          },
+          {
+            "format": "Code 128",
+            "text": "B0F5L1",
+            "payload_hex": "423046354c31",
+            "confirmations": 1,
+            "faces": [
+              "rear"
+            ]
+          }
+        ],
+        "accepted_codes": [
+          {
+            "format": "Code 128",
+            "text": "B0F0L0",
+            "payload_hex": "423046304c30",
+            "confirmations": 1,
+            "faces": [
+              "top"
+            ]
+          },
+          {
+            "format": "Code 128",
+            "text": "B0F0L1",
+            "payload_hex": "423046304c31",
+            "confirmations": 1,
+            "faces": [
+              "top"
+            ]
+          },
+          {
+            "format": "Code 128",
+            "text": "B0F1L0",
+            "payload_hex": "423046314c30",
+            "confirmations": 1,
+            "faces": [
+              "bottom"
+            ]
+          },
+          {
+            "format": "Code 128",
+            "text": "B0F1L1",
+            "payload_hex": "423046314c31",
+            "confirmations": 1,
+            "faces": [
+              "bottom"
+            ]
+          },
+          {
+            "format": "Code 128",
+            "text": "B0F2L0",
+            "payload_hex": "423046324c30",
+            "confirmations": 1,
+            "faces": [
+              "left"
+            ]
+          },
+          {
+            "format": "Code 128",
+            "text": "B0F2L1",
+            "payload_hex": "423046324c31",
+            "confirmations": 1,
+            "faces": [
+              "left"
+            ]
+          },
+          {
+            "format": "Code 128",
+            "text": "B0F3L0",
+            "payload_hex": "423046334c30",
+            "confirmations": 1,
+            "faces": [
+              "right"
+            ]
+          },
+          {
+            "format": "Code 128",
+            "text": "B0F3L1",
+            "payload_hex": "423046334c31",
+            "confirmations": 1,
+            "faces": [
+              "right"
+            ]
+          },
+          {
+            "format": "Code 128",
+            "text": "B0F4L0",
+            "payload_hex": "423046344c30",
+            "confirmations": 1,
+            "faces": [
+              "front"
+            ]
+          },
+          {
+            "format": "Code 128",
+            "text": "B0F4L1",
+            "payload_hex": "423046344c31",
+            "confirmations": 1,
+            "faces": [
+              "front"
+            ]
+          },
+          {
+            "format": "Code 128",
+            "text": "B0F5L0",
+            "payload_hex": "423046354c30",
+            "confirmations": 1,
+            "faces": [
+              "rear"
+            ]
+          },
+          {
+            "format": "Code 128",
+            "text": "B0F5L1",
+            "payload_hex": "423046354c31",
+            "confirmations": 1,
+            "faces": [
+              "rear"
+            ]
+          }
+        ],
+        "observed_faces": [
+          "bottom",
+          "front",
+          "left",
+          "rear",
+          "right",
+          "top"
+        ],
+        "deadline_s": 2.635,
+        "complete_set_verified": false
+      },
+      "exact_set": true,
+      "first_ack": {
+        "message_id": "REPLAY-00:1",
+        "ack": "accepted",
+        "action": "lookup_all_codes"
+      },
+      "retry_ack": {
+        "message_id": "REPLAY-00:1",
+        "ack": "duplicate"
+      }
+    },
+    {
+      "box_id": "REPLAY-01",
+      "expected": [
+        "B1F0L0",
+        "B1F0L1",
+        "B1F1L0",
+        "B1F1L1",
+        "B1F2L0",
+        "B1F2L1",
+        "B1F3L0",
+        "B1F3L1",
+        "B1F4L0",
+        "B1F4L1",
+        "B1F5L0",
+        "B1F5L1"
+      ],
+      "message": {
+        "schema_version": 1,
+        "message_id": "REPLAY-01:1",
+        "box_id": "REPLAY-01",
+        "status": "read",
+        "codes": [
+          {
+            "format": "Code 128",
+            "text": "B1F0L0",
+            "payload_hex": "423146304c30",
+            "confirmations": 1,
+            "faces": [
+              "top"
+            ]
+          },
+          {
+            "format": "Code 128",
+            "text": "B1F0L1",
+            "payload_hex": "423146304c31",
+            "confirmations": 1,
+            "faces": [
+              "top"
+            ]
+          },
+          {
+            "format": "Code 128",
+            "text": "B1F1L0",
+            "payload_hex": "423146314c30",
+            "confirmations": 1,
+            "faces": [
+              "bottom"
+            ]
+          },
+          {
+            "format": "Code 128",
+            "text": "B1F1L1",
+            "payload_hex": "423146314c31",
+            "confirmations": 1,
+            "faces": [
+              "bottom"
+            ]
+          },
+          {
+            "format": "Code 128",
+            "text": "B1F2L0",
+            "payload_hex": "423146324c30",
+            "confirmations": 1,
+            "faces": [
+              "left"
+            ]
+          },
+          {
+            "format": "Code 128",
+            "text": "B1F2L1",
+            "payload_hex": "423146324c31",
+            "confirmations": 1,
+            "faces": [
+              "left"
+            ]
+          },
+          {
+            "format": "Code 128",
+            "text": "B1F3L0",
+            "payload_hex": "423146334c30",
+            "confirmations": 1,
+            "faces": [
+              "right"
+            ]
+          },
+          {
+            "format": "Code 128",
+            "text": "B1F3L1",
+            "payload_hex": "423146334c31",
+            "confirmations": 1,
+            "faces": [
+              "right"
+            ]
+          },
+          {
+            "format": "Code 128",
+            "text": "B1F4L0",
+            "payload_hex": "423146344c30",
+            "confirmations": 1,
+            "faces": [
+              "front"
+            ]
+          },
+          {
+            "format": "Code 128",
+            "text": "B1F4L1",
+            "payload_hex": "423146344c31",
+            "confirmations": 1,
+            "faces": [
+              "front"
+            ]
+          },
+          {
+            "format": "Code 128",
+            "text": "B1F5L0",
+            "payload_hex": "423146354c30",
+            "confirmations": 1,
+            "faces": [
+              "rear"
+            ]
+          },
+          {
+            "format": "Code 128",
+            "text": "B1F5L1",
+            "payload_hex": "423146354c31",
+            "confirmations": 1,
+            "faces": [
+              "rear"
+            ]
+          }
+        ],
+        "accepted_codes": [
+          {
+            "format": "Code 128",
+            "text": "B1F0L0",
+            "payload_hex": "423146304c30",
+            "confirmations": 1,
+            "faces": [
+              "top"
+            ]
+          },
+          {
+            "format": "Code 128",
+            "text": "B1F0L1",
+            "payload_hex": "423146304c31",
+            "confirmations": 1,
+            "faces": [
+              "top"
+            ]
+          },
+          {
+            "format": "Code 128",
+            "text": "B1F1L0",
+            "payload_hex": "423146314c30",
+            "confirmations": 1,
+            "faces": [
+              "bottom"
+            ]
+          },
+          {
+            "format": "Code 128",
+            "text": "B1F1L1",
+            "payload_hex": "423146314c31",
+            "confirmations": 1,
+            "faces": [
+              "bottom"
+            ]
+          },
+          {
+            "format": "Code 128",
+            "text": "B1F2L0",
+            "payload_hex": "423146324c30",
+            "confirmations": 1,
+            "faces": [
+              "left"
+            ]
+          },
+          {
+            "format": "Code 128",
+            "text": "B1F2L1",
+            "payload_hex": "423146324c31",
+            "confirmations": 1,
+            "faces": [
+              "left"
+            ]
+          },
+          {
+            "format": "Code 128",
+            "text": "B1F3L0",
+            "payload_hex": "423146334c30",
+            "confirmations": 1,
+            "faces": [
+              "right"
+            ]
+          },
+          {
+            "format": "Code 128",
+            "text": "B1F3L1",
+            "payload_hex": "423146334c31",
+            "confirmations": 1,
+            "faces": [
+              "right"
+            ]
+          },
+          {
+            "format": "Code 128",
+            "text": "B1F4L0",
+            "payload_hex": "423146344c30",
+            "confirmations": 1,
+            "faces": [
+              "front"
+            ]
+          },
+          {
+            "format": "Code 128",
+            "text": "B1F4L1",
+            "payload_hex": "423146344c31",
+            "confirmations": 1,
+            "faces": [
+              "front"
+            ]
+          },
+          {
+            "format": "Code 128",
+            "text": "B1F5L0",
+            "payload_hex": "423146354c30",
+            "confirmations": 1,
+            "faces": [
+              "rear"
+            ]
+          },
+          {
+            "format": "Code 128",
+            "text": "B1F5L1",
+            "payload_hex": "423146354c31",
+            "confirmations": 1,
+            "faces": [
+              "rear"
+            ]
+          }
+        ],
+        "observed_faces": [
+          "bottom",
+          "front",
+          "left",
+          "rear",
+          "right",
+          "top"
+        ],
+        "deadline_s": 4.635,
+        "complete_set_verified": false
+      },
+      "exact_set": true,
+      "first_ack": {
+        "message_id": "REPLAY-01:1",
+        "ack": "accepted",
+        "action": "lookup_all_codes"
+      },
+      "retry_ack": {
+        "message_id": "REPLAY-01:1",
+        "ack": "duplicate"
+      }
+    }
+  ],
+  "commands": [
+    {
+      "box_id": "REPLAY-00",
+      "action": "lookup_all_codes"
+    },
+    {
+      "box_id": "REPLAY-01",
+      "action": "lookup_all_codes"
+    }
+  ],
+  "limitation": "Привязку кадров к коробкам и временные метки задаёт имитатор. Аппаратный захват и сеть проверяются на пилоте."
+}

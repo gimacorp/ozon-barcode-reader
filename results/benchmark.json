@@ -6,6 +6,7 @@
     960,
     1280
   ],
+  "methods_note": "A-C: автоматический набор ZXing-C++, исходная ориентация. D: исходный кадр + 45°, явный перечень Code128. В D одновременно изменены поиск угла и перечень символик.",
   "warning": "Синтетика: кадры независимо изменены, физическая последовательность движения не моделируется. Тайминг полного цикла декодирования, без камеры, генерации и передачи.",
   "environment": {
     "python": "3.12.14",
@@ -30,8 +31,8 @@
       "code_recall": 0.5857142857142857,
       "code_precision": 1.0,
       "false_values": 0,
-      "latency_p50_ms": 8.00343748414889,
-      "latency_p95_ms": 42.40019856952131
+      "latency_p50_ms": 8.36272950982675,
+      "latency_p95_ms": 42.156649933895096
     },
     {
       "method": "one_frame",
@@ -42,8 +43,8 @@
       "code_recall": 0.8913043478260869,
       "code_precision": 1.0,
       "false_values": 0,
-      "latency_p50_ms": 7.658082991838455,
-      "latency_p95_ms": 8.700753829907626
+      "latency_p50_ms": 7.761771033983678,
+      "latency_p95_ms": 9.018662484595552
     },
     {
       "method": "one_frame",
@@ -54,8 +55,8 @@
       "code_recall": 0.5,
       "code_precision": 1.0,
       "false_values": 0,
-      "latency_p50_ms": 36.063062492758036,
-      "latency_p95_ms": 42.511724965879694
+      "latency_p50_ms": 36.85929148923606,
+      "latency_p95_ms": 43.150656594661996
     },
     {
       "method": "one_frame",
@@ -66,8 +67,8 @@
       "code_recall": 0.375,
       "code_precision": 1.0,
       "false_values": 0,
-      "latency_p50_ms": 27.849874983076006,
-      "latency_p95_ms": 41.21482944465243
+      "latency_p50_ms": 28.333666501566768,
+      "latency_p95_ms": 40.34401032840833
     },
     {
       "method": "three_frames",
@@ -78,8 +79,8 @@
       "code_recall": 0.85,
       "code_precision": 1.0,
       "false_values": 0,
-      "latency_p50_ms": 55.21172896260396,
-      "latency_p95_ms": 116.96265412610954
+      "latency_p50_ms": 55.84727099630982,
+      "latency_p95_ms": 119.16378712048754
     },
     {
       "method": "three_frames",
@@ -90,8 +91,8 @@
       "code_recall": 1.0,
       "code_precision": 1.0,
       "false_values": 0,
-      "latency_p50_ms": 23.44983402872458,
-      "latency_p95_ms": 24.798981216736138
+      "latency_p50_ms": 23.61787494737655,
+      "latency_p95_ms": 25.119270535651594
     },
     {
       "method": "three_frames",
@@ -102,8 +103,8 @@
       "code_recall": 0.8913043478260869,
       "code_precision": 1.0,
       "false_values": 0,
-      "latency_p50_ms": 89.78908305289224,
-      "latency_p95_ms": 119.87223596079275
+      "latency_p50_ms": 91.14943799795583,
+      "latency_p95_ms": 122.13878332986496
     },
     {
       "method": "three_frames",
@@ -114,8 +115,8 @@
       "code_recall": 0.6666666666666666,
       "code_precision": 1.0,
       "false_values": 0,
-      "latency_p50_ms": 71.97829202050343,
-      "latency_p95_ms": 117.1797790855635
+      "latency_p50_ms": 72.88827101001516,
+      "latency_p95_ms": 119.16378712048754
     },
     {
       "method": "three_frames_enhanced",
@@ -126,8 +127,8 @@
       "code_recall": 0.9,
       "code_precision": 0.9921259842519685,
       "false_values": 1,
-      "latency_p50_ms": 341.88612550497055,
-      "latency_p95_ms": 586.8612131103873
+      "latency_p50_ms": 347.1745005226694,
+      "latency_p95_ms": 596.466431801673
     },
     {
       "method": "three_frames_enhanced",
@@ -138,8 +139,8 @@
       "code_recall": 1.0,
       "code_precision": 1.0,
       "false_values": 0,
-      "latency_p50_ms": 136.39724999666214,
-      "latency_p95_ms": 142.16209514415823
+      "latency_p50_ms": 137.814583547879,
+      "latency_p95_ms": 142.85960630513728
     },
     {
       "method": "three_frames_enhanced",
@@ -150,8 +151,8 @@
       "code_recall": 0.9130434782608695,
       "code_precision": 1.0,
       "false_values": 0,
-      "latency_p50_ms": 478.35518699139357,
-      "latency_p95_ms": 589.6094023599289
+      "latency_p50_ms": 487.1047920314595,
+      "latency_p95_ms": 598.447154747555
     },
     {
       "method": "three_frames_enhanced",
@@ -162,8 +163,56 @@
       "code_recall": 0.7916666666666666,
       "code_precision": 0.9743589743589743,
       "false_values": 1,
-      "latency_p50_ms": 378.95727052818984,
-      "latency_p95_ms": 578.8015164376702
+      "latency_p50_ms": 386.82820851681754,
+      "latency_p95_ms": 603.7223639898002
+    },
+    {
+      "method": "three_frames_diagonal",
+      "level": "all",
+      "boxes": 60,
+      "codes": 140,
+      "exact_set_rate": 0.7833333333333333,
+      "code_recall": 0.8571428571428571,
+      "code_precision": 1.0,
+      "false_values": 0,
+      "latency_p50_ms": 22.881666431203485,
+      "latency_p95_ms": 24.81082023587078
+    },
+    {
+      "method": "three_frames_diagonal",
+      "level": "clean",
+      "boxes": 20,
+      "codes": 46,
+      "exact_set_rate": 1.0,
+      "code_recall": 1.0,
+      "code_precision": 1.0,
+      "false_values": 0,
+      "latency_p50_ms": 24.357854039408267,
+      "latency_p95_ms": 25.096425629453734
+    },
+    {
+      "method": "three_frames_diagonal",
+      "level": "moderate",
+      "boxes": 20,
+      "codes": 46,
+      "exact_set_rate": 0.85,
+      "code_recall": 0.9130434782608695,
+      "code_precision": 1.0,
+      "false_values": 0,
+      "latency_p50_ms": 22.305271006189287,
+      "latency_p95_ms": 23.39411004795693
+    },
+    {
+      "method": "three_frames_diagonal",
+      "level": "hard",
+      "boxes": 20,
+      "codes": 48,
+      "exact_set_rate": 0.5,
+      "code_recall": 0.6666666666666666,
+      "code_precision": 1.0,
+      "false_values": 0,
+      "latency_p50_ms": 22.80295849777758,
+      "latency_p95_ms": 23.09602078748867
     }
   ]
 }

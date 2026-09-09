@@ -1,6 +1,7 @@
 """Модель привязки результатов и идемпотентного обмена; драйверов ПЛК здесь нет."""
 
 from dataclasses import dataclass, field
+from copy import deepcopy
 import math
 from .decoder import Detection
 
@@ -16,6 +17,7 @@ class Box:
     faces: set = field(default_factory=set)
     observations: dict = field(default_factory=dict)
     closed: bool = False
+    latest_completion_s: float = -math.inf
 
 
 class BoxTracker:
@@ -43,6 +45,7 @@ class BoxTracker:
                 or not captured_s <= completed_s <= b.deadline_s):
             return False
         b.faces.add(face)
+        b.latest_completion_s = max(b.latest_completion_s, completed_s)
         for d in detections:
             entry = b.observations.setdefault(d.key, {"detection": d, "frames": set(), "faces": set()})
             # Повторная обработка того же кадра не является подтверждением.
@@ -58,6 +61,8 @@ class BoxTracker:
             raise ValueError("Результат уже зафиксирован")
         if not math.isfinite(now_s) or now_s < b.capture_end_s:
             raise ValueError("Сбор кадров ещё не завершён")
+        if now_s < b.latest_completion_s:
+            raise ValueError("Время финализации предшествует завершению декодирования")
         b.closed = True
         all_codes, accepted = [], []
         for key in sorted(b.observations):
@@ -94,5 +99,5 @@ class MockPLC:
         # Маршрут определяет WCS/ПЛК по всем кодам; reader его не выдумывает.
         action = "lookup_all_codes" if message["status"] == "read" and now_s <= message["deadline_s"] else "exception_lane"
         self.commands.append({"box_id": message["box_id"], "action": action})
-        self.receipts[key] = {"message": message, "action": action}
+        self.receipts[key] = {"message": deepcopy(message), "action": action}
         return {"message_id": key, "ack": "accepted", "action": action}

@@ -15,6 +15,10 @@
     "three_frames_enhanced": [
       "OZ000101",
       "OZ000102"
+    ],
+    "three_frames_diagonal": [
+      "OZ000101",
+      "OZ000102"
     ]
   }
 }

@@ -20,6 +20,8 @@ def main():
     bench.add_argument("--output",default="results")
     read=sub.add_parser("decode",help="Прочитать все коды на изображении")
     read.add_argument("image");read.add_argument("--enhanced",action="store_true")
+    read.add_argument("--formats",default="Code128",help="Символики через запятую: Code128,DataMatrix,QRCode")
+    read.add_argument("--timeout",type=float,default=5.,help="Срок отдельного процесса, включая загрузку файла; по умолчанию 5 с")
     args=p.parse_args()
     if args.command=="calculate":
         c=load_config(args.config);result={"engineering":summarize(c),"end_face_geometry":evaluate_end_face(c),
@@ -33,9 +35,11 @@ def main():
         run(args.output,args.boxes,args.seed)
         print(f"Результаты эксперимента: {args.output}")
     else:
-        image=cv2.imread(args.image,cv2.IMREAD_GRAYSCALE)
-        if image is None:p.error("Не удалось открыть изображение")
-        print(json.dumps([asdict(d) for d in decode(image,args.enhanced)],ensure_ascii=False,indent=2))
+        from .worker import decode_file_bounded
+        try:
+            readings=decode_file_bounded(args.image,args.timeout,enhanced=args.enhanced,formats=args.formats)
+        except (ValueError,TimeoutError) as error:p.error(str(error))
+        print(json.dumps(readings,ensure_ascii=False,indent=2))
 
 
 if __name__=="__main__":main()

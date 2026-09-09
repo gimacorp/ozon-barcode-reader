@@ -27,8 +27,8 @@ def pixels_per_module(pixels: int, fov_mm: float, module_mm: float,
 def motion_blur_px(speed_mm_s: float, exposure_us: float,
                    mm_per_pixel: float) -> float:
     positive(mm_per_pixel, "mm_per_pixel")
-    if speed_mm_s < 0 or exposure_us < 0:
-        raise ValueError("Скорость и выдержка не могут быть отрицательными")
+    if not all(math.isfinite(v) and v >= 0 for v in (speed_mm_s, exposure_us)):
+        raise ValueError("Скорость и выдержка должны быть конечными и неотрицательными")
     return speed_mm_s * exposure_us * 1e-6 / mm_per_pixel
 
 
@@ -96,7 +96,12 @@ def summarize(config: dict) -> dict:
     lines_per_box = math.ceil(c["box_length_mm"] / line_step)
     per_box = (c["line_camera_count"] * c["line_pixels"] * lines_per_box * bytes_px
                + c["area_camera_count"] * c["area_frames_per_box"] * area_frame)
-    remaining = deadline_budget(c["sorter_x_mm"], c["last_rear_observation_x_mm"],
+    # Крайний кадр учитывает полшага неопределённости фазы запуска серии.
+    camera_dx = math.sqrt(area_wd**2-elevation**2)
+    last_rear = c["rear_camera_x_mm"] + camera_dx + c["area_frames_per_box"]/2*v/c["area_frame_rate_hz"]
+    rounding = positive(c["observation_position_rounding_mm"], "observation_position_rounding_mm")
+    last_rear = math.ceil(last_rear/rounding)*rounding
+    remaining = deadline_budget(c["sorter_x_mm"], last_rear,
         c["box_length_mm"], v, c["plc_actuation_s"], c["guard_s"])
     label_diagonal = math.hypot(c["max_label_width_mm"], c["max_label_height_mm"])
     return {
@@ -137,6 +142,7 @@ def summarize(config: dict) -> dict:
         "per_box_MB": per_box/1e6,
         "average_MB_s": per_box/c["leading_edge_interval_s"]/1e6,
         "remaining_processing_delivery_s": remaining,
+        "last_rear_observation_x_mm": last_rear,
         "budget_slack_s": remaining-c["processing_budget_s"]-c["delivery_budget_s"],
         "encoder_step_mm": c["encoder_wheel_circumference_mm"]/c["encoder_pulses_per_rev"],
         "strip_height_mm": c["line_strip_rows"]*line_step,
@@ -158,4 +164,3 @@ def write_calculations(config_path: str | Path, output: str | Path) -> dict:
     out.parent.mkdir(parents=True, exist_ok=True)
     out.write_text(json.dumps(result, ensure_ascii=False, indent=2)+"\n", encoding="utf-8")
     return result
-

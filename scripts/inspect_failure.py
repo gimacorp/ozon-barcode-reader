@@ -23,8 +23,9 @@ def main():
     result={"box_id":sample["box_id"],"expected":sample["expected"],"frames":[]}
     for i,frame in enumerate(sample["frames"]):
         cv2.imwrite(str(out/f"frame_{i}.png"),frame)
-        result["frames"].append({"frame":i,"base":[d.text for d in decode(frame)],
-                                  "enhanced":[d.text for d in decode(frame,True)]})
+        result["frames"].append({"frame":i,"base":[d.text for d in decode(frame,try_diagonal=False,formats=None)],
+                                  "enhanced":[d.text for d in decode(frame,True,try_diagonal=False,formats=None)],
+                                  "current":[d.text for d in decode(frame)]})
     text=json.dumps(result,ensure_ascii=False,indent=2)
     (out/"result.json").write_text(text+"\n",encoding="utf-8")
     print(text)
