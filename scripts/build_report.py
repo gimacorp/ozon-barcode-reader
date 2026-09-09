@@ -159,7 +159,7 @@ def build():
                           topMargin=60,bottomMargin=55,title="Шестистороннее чтение штрихкодов | Ozon CV-2",
                           author="Карим Гимадиев",subject="Инженерное решение и воспроизводимый прототип")
     doc.build(story,onFirstPage=footer,onLaterPages=footer)
-    (ROOT/"docs/report.md").write_text("\n".join(markdown)+"\n",encoding="utf-8")
+    (ROOT/"docs/report.md").write_text("\n".join(markdown).rstrip()+"\n",encoding="utf-8")
     print(out)
 
 

@@ -42,7 +42,7 @@ def run(output="results", boxes=60, seed=20260909):
         if (i+1)%10==0:
             print(f"Обработано коробок: {i+1}/{boxes}",flush=True)
     with (out/"benchmark.csv").open("w",newline="",encoding="utf-8") as f:
-        writer=csv.DictWriter(f,fieldnames=list(rows[0]));writer.writeheader();writer.writerows(rows)
+        writer=csv.DictWriter(f,fieldnames=list(rows[0]),lineterminator="\n");writer.writeheader();writer.writerows(rows)
     (out/"predictions.jsonl").write_text("".join(json.dumps(r,ensure_ascii=False)+"\n" for r in ledger),encoding="utf-8")
     metrics=[]
     for method in dict.fromkeys(r["method"] for r in rows):

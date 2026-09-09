@@ -487,4 +487,3 @@ https://www.cognex.com/library/media/press-release-media/press-release-pdfs/cogn
 **[20]** [Репозиторий решения: код, тесты, исходные результаты](https://github.com/gimacorp/ozon-barcode-reader)
 
 https://github.com/gimacorp/ozon-barcode-reader
-
