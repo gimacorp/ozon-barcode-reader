@@ -1,0 +1,26 @@
+{
+  "box_id": "SYN-0000",
+  "level": "clean",
+  "expected": [
+    "OZ000001",
+    "OZ000002",
+    "OZ000003"
+  ],
+  "predictions": {
+    "one_frame": [
+      "OZ000001",
+      "OZ000002",
+      "OZ000003"
+    ],
+    "three_frames": [
+      "OZ000001",
+      "OZ000002",
+      "OZ000003"
+    ],
+    "three_frames_enhanced": [
+      "OZ000001",
+      "OZ000002",
+      "OZ000003"
+    ]
+  }
+}

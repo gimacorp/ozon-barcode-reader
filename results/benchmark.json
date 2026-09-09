@@ -1,0 +1,169 @@
+{
+  "seed": 20260909,
+  "boxes": 60,
+  "frames_per_box": 3,
+  "image_shape": [
+    960,
+    1280
+  ],
+  "warning": "Синтетика: кадры независимо изменены, физическая последовательность движения не моделируется. Тайминг полного цикла декодирования, без камеры, генерации и передачи.",
+  "environment": {
+    "python": "3.12.14",
+    "platform": "macOS-26.5.1-arm64-arm-64bit",
+    "machine": "arm64",
+    "processor": "arm",
+    "opencv_threads": 1,
+    "packages": {
+      "numpy": "2.3.5",
+      "opencv-python-headless": "5.0.0.93",
+      "zxing-cpp": "3.1.1",
+      "python-barcode": "0.16.1"
+    }
+  },
+  "metrics": [
+    {
+      "method": "one_frame",
+      "level": "all",
+      "boxes": 60,
+      "codes": 140,
+      "exact_set_rate": 0.4166666666666667,
+      "code_recall": 0.5857142857142857,
+      "code_precision": 1.0,
+      "false_values": 0,
+      "latency_p50_ms": 8.00343748414889,
+      "latency_p95_ms": 42.40019856952131
+    },
+    {
+      "method": "one_frame",
+      "level": "clean",
+      "boxes": 20,
+      "codes": 46,
+      "exact_set_rate": 0.75,
+      "code_recall": 0.8913043478260869,
+      "code_precision": 1.0,
+      "false_values": 0,
+      "latency_p50_ms": 7.658082991838455,
+      "latency_p95_ms": 8.700753829907626
+    },
+    {
+      "method": "one_frame",
+      "level": "moderate",
+      "boxes": 20,
+      "codes": 46,
+      "exact_set_rate": 0.3,
+      "code_recall": 0.5,
+      "code_precision": 1.0,
+      "false_values": 0,
+      "latency_p50_ms": 36.063062492758036,
+      "latency_p95_ms": 42.511724965879694
+    },
+    {
+      "method": "one_frame",
+      "level": "hard",
+      "boxes": 20,
+      "codes": 48,
+      "exact_set_rate": 0.2,
+      "code_recall": 0.375,
+      "code_precision": 1.0,
+      "false_values": 0,
+      "latency_p50_ms": 27.849874983076006,
+      "latency_p95_ms": 41.21482944465243
+    },
+    {
+      "method": "three_frames",
+      "level": "all",
+      "boxes": 60,
+      "codes": 140,
+      "exact_set_rate": 0.7666666666666667,
+      "code_recall": 0.85,
+      "code_precision": 1.0,
+      "false_values": 0,
+      "latency_p50_ms": 55.21172896260396,
+      "latency_p95_ms": 116.96265412610954
+    },
+    {
+      "method": "three_frames",
+      "level": "clean",
+      "boxes": 20,
+      "codes": 46,
+      "exact_set_rate": 1.0,
+      "code_recall": 1.0,
+      "code_precision": 1.0,
+      "false_values": 0,
+      "latency_p50_ms": 23.44983402872458,
+      "latency_p95_ms": 24.798981216736138
+    },
+    {
+      "method": "three_frames",
+      "level": "moderate",
+      "boxes": 20,
+      "codes": 46,
+      "exact_set_rate": 0.8,
+      "code_recall": 0.8913043478260869,
+      "code_precision": 1.0,
+      "false_values": 0,
+      "latency_p50_ms": 89.78908305289224,
+      "latency_p95_ms": 119.87223596079275
+    },
+    {
+      "method": "three_frames",
+      "level": "hard",
+      "boxes": 20,
+      "codes": 48,
+      "exact_set_rate": 0.5,
+      "code_recall": 0.6666666666666666,
+      "code_precision": 1.0,
+      "false_values": 0,
+      "latency_p50_ms": 71.97829202050343,
+      "latency_p95_ms": 117.1797790855635
+    },
+    {
+      "method": "three_frames_enhanced",
+      "level": "all",
+      "boxes": 60,
+      "codes": 140,
+      "exact_set_rate": 0.8,
+      "code_recall": 0.9,
+      "code_precision": 0.9921259842519685,
+      "false_values": 1,
+      "latency_p50_ms": 341.88612550497055,
+      "latency_p95_ms": 586.8612131103873
+    },
+    {
+      "method": "three_frames_enhanced",
+      "level": "clean",
+      "boxes": 20,
+      "codes": 46,
+      "exact_set_rate": 1.0,
+      "code_recall": 1.0,
+      "code_precision": 1.0,
+      "false_values": 0,
+      "latency_p50_ms": 136.39724999666214,
+      "latency_p95_ms": 142.16209514415823
+    },
+    {
+      "method": "three_frames_enhanced",
+      "level": "moderate",
+      "boxes": 20,
+      "codes": 46,
+      "exact_set_rate": 0.85,
+      "code_recall": 0.9130434782608695,
+      "code_precision": 1.0,
+      "false_values": 0,
+      "latency_p50_ms": 478.35518699139357,
+      "latency_p95_ms": 589.6094023599289
+    },
+    {
+      "method": "three_frames_enhanced",
+      "level": "hard",
+      "boxes": 20,
+      "codes": 48,
+      "exact_set_rate": 0.55,
+      "code_recall": 0.7916666666666666,
+      "code_precision": 0.9743589743589743,
+      "false_values": 1,
+      "latency_p50_ms": 378.95727052818984,
+      "latency_p95_ms": 578.8015164376702
+    }
+  ]
+}
