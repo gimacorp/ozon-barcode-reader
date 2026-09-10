@@ -16,7 +16,9 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 from barcode_reader.decoder import _views, decode
+from barcode_reader.engineering import load_config
 from barcode_reader.optics import contrast, degrade
+from barcode_reader.provenance import metadata
 from barcode_reader.synthetic import dataset, label
 
 
@@ -112,12 +114,13 @@ def run():
     (ROOT / "results/visual_evidence.json").write_text(
         json.dumps(
             {
+                "metadata": metadata(load_config()),
                 "real": real,
                 "false_read": {
                     "found": bool(false),
                     "expected": sample["expected"],
-                    "decoded": "O*000904",
-                    "format": "Code 128",
+                    "decoded": false[4].text if false else None,
+                    "format": false[4].format if false else None,
                 },
                 "optical": {
                     "expected": "MIN00001",

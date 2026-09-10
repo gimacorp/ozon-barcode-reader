@@ -90,6 +90,7 @@ def simulate(
     if workers < 1 or capacity < 1 or delivery_s < 0:
         raise ValueError("Некорректные параметры очереди")
     pending, active, finished, cancelled, waits = [], [], {}, set(), []
+    completions = []
     i = serial = maxq = 0
     while i < len(jobs) or active or pending:
         now = min(
@@ -99,6 +100,14 @@ def simulate(
         while active and active[0][0] <= now:
             end, _, job = heapq.heappop(active)
             finished[job.box] = max(finished.get(job.box, 0), end)
+            completions.append(
+                {
+                    "box": job.box,
+                    "channel": job.channel,
+                    "sequence": job.sequence,
+                    "completed_s": end,
+                }
+            )
         while i < len(jobs) and jobs[i].arrival <= now:
             job = jobs[i]
             i += 1
@@ -127,6 +136,7 @@ def simulate(
     ]
     return {
         "outcomes": outcomes,
+        "completions": completions,
         "max_queue": maxq,
         "max_wait_s": max(waits, default=0),
         "cancelled_boxes": len(cancelled),

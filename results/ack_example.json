@@ -1,0 +1,7 @@
+{
+  "message_id": "integration-session:A:1",
+  "receipt": "accepted",
+  "body_sha256": "80d13db3d91ab2a4303adccea323c03a0c05b4b441ada9f5c584fff36102fb73",
+  "sorting": "pending",
+  "action": "resolve_all_values"
+}

@@ -1,0 +1,46 @@
+{
+  "metadata": {
+    "run_id": "2026-09-10T20:51:19.290015+00:00",
+    "timestamp_utc": "2026-09-10T20:51:19.290076+00:00",
+    "cpu": "unavailable",
+    "cpu_source": "OS",
+    "os": "macOS-26.5.1-arm64-arm-64bit",
+    "architecture": "arm64",
+    "python": "3.12.14",
+    "packages": {
+      "numpy": "2.3.5",
+      "opencv-python-headless": "5.0.0.93",
+      "zxing-cpp": "3.1.1",
+      "python-barcode": "0.16.1",
+      "Pillow": "12.3.0",
+      "reportlab": "4.4.9",
+      "pytest": "9.1.1"
+    },
+    "git_revision": "ae49c5ca7bc5613f6491d90086df772dc49f57f7",
+    "git_description": "submission-v2-3-gae49c5c",
+    "git_dirty": true,
+    "source_sha256": "70dd03fc28f180648af568799010cdc3fc53ab522e72c4d74b8c45e0908d0300",
+    "config_sha256": null,
+    "config": null,
+    "parameters": {}
+  },
+  "inputs": {
+    "results/calculations.json": "960e134dc1bd83ee959947c9d2c5db56bc4f8dc6673857b52778f9e7dd9f18c8",
+    "results/engineering_review.json": "9a962d475d23cdd01c9d259a5281dfe731e9198d7e6a92a4eac141151511f4cc",
+    "results/nominal.json": "48605f99ae7e56de888fec3d28d0db69bbaac6a88e927422bfd6491bce161aea",
+    "results/load_replay.json": "1872421dfd91c26e7279c36035f0ec732453b78b12269c6caf05070436f0e97c",
+    "results/ablation.json": "f74c6600545989d53382bd853b17ec99a63abd245ea4cdd98ca7e8ab4df14cad",
+    "results/visual_evidence.json": "fb8edfbf0528ee1f4c0ad60074400c2f52124603d7d2915a26e409d1c8b8bd1c",
+    "results/nominal_manifest.json": "d1c81c8d0f157fe18675b99417c14d7ef98924292ebf087bc12e66784728248c",
+    "results/ablation_predictions.jsonl": "4e6b8c17930e28031e23a6297d6df2ab0a3b7de5a093d5a5a116ca85463f8e4f"
+  },
+  "runs": {
+    "calculations": "2026-09-10T20:44:28.374872+00:00",
+    "engineering_review": "2026-09-10T20:44:28.374872+00:00",
+    "nominal": "2026-09-10T20:44:28.374872+00:00",
+    "load_replay": "2026-09-10T20:44:28.374872+00:00",
+    "ablation": "2026-09-10T20:44:28.374872+00:00",
+    "visual_evidence": "2026-09-10T20:44:28.374872+00:00"
+  },
+  "config_sha256": "91f3864ccdad826eb2e08cef85d0a3dd078b279f398fbf4d3b8d42f7e9c449fa"
+}

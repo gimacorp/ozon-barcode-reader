@@ -1,244 +1,133 @@
 {
-  "description": "Две коробки, шесть граней, по две этикетки на грани; единая шкала времени имитатора.",
+  "description": "Две перекрывающиеся области коробок; одинаковые значения в общем кадре; полная серия торцов и все запланированные полосы.",
+  "metadata": {
+    "run_id": "2026-09-10T20:44:28.374872+00:00",
+    "timestamp_utc": "2026-09-10T20:48:36.456007+00:00",
+    "cpu": "Apple M5",
+    "cpu_source": "OS",
+    "os": "macOS-26.5.1-arm64-arm-64bit",
+    "architecture": "arm64",
+    "python": "3.12.14",
+    "packages": {
+      "numpy": "2.3.5",
+      "opencv-python-headless": "5.0.0.93",
+      "zxing-cpp": "3.1.1",
+      "python-barcode": "0.16.1",
+      "Pillow": "12.3.0",
+      "reportlab": "4.4.9",
+      "pytest": "9.1.1"
+    },
+    "git_revision": "ae49c5ca7bc5613f6491d90086df772dc49f57f7",
+    "git_description": "submission-v2-3-gae49c5c",
+    "git_dirty": true,
+    "source_sha256": "e6f5e78906c4baf61cc41bdb164ba3c0ef693324d817a4f26ba3d4372e39623d",
+    "config_sha256": "bca97a4d4fef94c14ff9ed1d15acde5f7741d010f5fa00cd79d45b71436e5d8c",
+    "config": {
+      "description": "Проектные параметры; не производственные измерения",
+      "speed_mm_s": 1000.0,
+      "belt_width_mm": 650.0,
+      "box_length_mm": 600.0,
+      "box_width_mm": 400.0,
+      "box_height_mm": 400.0,
+      "leading_edge_interval_s": 2.0,
+      "min_module_mm": 0.33,
+      "sampling_target_px": 3.0,
+      "sorter_x_mm": 3000.0,
+      "rear_camera_x_mm": 0.0,
+      "observation_position_rounding_mm": 5.0,
+      "plc_actuation_s": 0.1,
+      "guard_s": 0.25,
+      "processing_budget_s": 0.5,
+      "delivery_budget_s": 0.05,
+      "line_pixels": 8192,
+      "line_fov_horizontal_mm": 700.0,
+      "line_fov_vertical_mm": 450.0,
+      "line_rate_hz": 2000,
+      "line_exposure_us": 40.0,
+      "line_camera_count": 4,
+      "line_sensor_pixel_um": 3.5,
+      "line_focal_length_mm": 28.0,
+      "area_pixels_x": 9344,
+      "area_pixels_y": 7000,
+      "area_fov_width_mm": 750.0,
+      "area_sensor_pixel_um": 3.2,
+      "area_focal_length_mm": 50.0,
+      "area_aperture": 11.0,
+      "area_exposure_us": 40.0,
+      "area_frame_rate_hz": 16.0,
+      "area_camera_count": 2,
+      "area_frames_per_box": 5,
+      "area_elevation_mm": 350.0,
+      "area_focus_coc_px": 2.0,
+      "bits_per_pixel": 8,
+      "encoder_wheel_circumference_mm": 200.0,
+      "encoder_pulses_per_rev": 2400,
+      "line_strip_rows": 800,
+      "line_strip_overlap_rows": 400,
+      "max_label_width_mm": 78.0,
+      "max_label_height_mm": 25.0,
+      "line_positions_mm": {
+        "top": 650.0,
+        "left": 750.0,
+        "right": 750.0,
+        "bottom": 900.0
+      },
+      "line_transfer_s": 0.002,
+      "area_transfer_s": 0.08,
+      "processing_workers": 8,
+      "processing_queue_capacity": 64,
+      "max_values_per_box": 24,
+      "max_labels_per_face": 4,
+      "line_aperture": 8.0,
+      "aberration_sigma_px": 0.35
+    },
+    "parameters": {
+      "missing_strip": false
+    }
+  },
   "boxes": [
     {
-      "box_id": "REPLAY-00",
+      "box_id": "A",
       "expected": [
-        "B0F0L0",
-        "B0F0L1",
-        "B0F1L0",
-        "B0F1L1",
-        "B0F2L0",
-        "B0F2L1",
-        "B0F3L0",
-        "B0F3L1",
-        "B0F4L0",
-        "B0F4L1",
-        "B0F5L0",
-        "B0F5L1"
+        "SHARED01"
       ],
       "message": {
-        "schema_version": 1,
-        "message_id": "REPLAY-00:1",
-        "box_id": "REPLAY-00",
+        "schema_version": 2,
+        "message_id": "integration-session:A:1",
+        "box_id": "A",
+        "session_id": "integration-session",
+        "clock_domain": "integration-os-epoch",
+        "created_s": 2.112553911558798,
         "status": "read",
         "codes": [
           {
             "format": "Code 128",
-            "text": "B0F0L0",
-            "payload_hex": "423046304c30",
-            "confirmations": 1,
+            "text": "SHARED01",
+            "payload_hex": "5348415245443031",
+            "confirmations": 14,
             "faces": [
+              "bottom",
+              "front",
+              "left",
+              "rear",
+              "right",
               "top"
-            ]
-          },
-          {
-            "format": "Code 128",
-            "text": "B0F0L1",
-            "payload_hex": "423046304c31",
-            "confirmations": 1,
-            "faces": [
-              "top"
-            ]
-          },
-          {
-            "format": "Code 128",
-            "text": "B0F1L0",
-            "payload_hex": "423046314c30",
-            "confirmations": 1,
-            "faces": [
-              "bottom"
-            ]
-          },
-          {
-            "format": "Code 128",
-            "text": "B0F1L1",
-            "payload_hex": "423046314c31",
-            "confirmations": 1,
-            "faces": [
-              "bottom"
-            ]
-          },
-          {
-            "format": "Code 128",
-            "text": "B0F2L0",
-            "payload_hex": "423046324c30",
-            "confirmations": 1,
-            "faces": [
-              "left"
-            ]
-          },
-          {
-            "format": "Code 128",
-            "text": "B0F2L1",
-            "payload_hex": "423046324c31",
-            "confirmations": 1,
-            "faces": [
-              "left"
-            ]
-          },
-          {
-            "format": "Code 128",
-            "text": "B0F3L0",
-            "payload_hex": "423046334c30",
-            "confirmations": 1,
-            "faces": [
-              "right"
-            ]
-          },
-          {
-            "format": "Code 128",
-            "text": "B0F3L1",
-            "payload_hex": "423046334c31",
-            "confirmations": 1,
-            "faces": [
-              "right"
-            ]
-          },
-          {
-            "format": "Code 128",
-            "text": "B0F4L0",
-            "payload_hex": "423046344c30",
-            "confirmations": 1,
-            "faces": [
-              "front"
-            ]
-          },
-          {
-            "format": "Code 128",
-            "text": "B0F4L1",
-            "payload_hex": "423046344c31",
-            "confirmations": 1,
-            "faces": [
-              "front"
-            ]
-          },
-          {
-            "format": "Code 128",
-            "text": "B0F5L0",
-            "payload_hex": "423046354c30",
-            "confirmations": 1,
-            "faces": [
-              "rear"
-            ]
-          },
-          {
-            "format": "Code 128",
-            "text": "B0F5L1",
-            "payload_hex": "423046354c31",
-            "confirmations": 1,
-            "faces": [
-              "rear"
             ]
           }
         ],
         "accepted_codes": [
           {
             "format": "Code 128",
-            "text": "B0F0L0",
-            "payload_hex": "423046304c30",
-            "confirmations": 1,
+            "text": "SHARED01",
+            "payload_hex": "5348415245443031",
+            "confirmations": 14,
             "faces": [
+              "bottom",
+              "front",
+              "left",
+              "rear",
+              "right",
               "top"
-            ]
-          },
-          {
-            "format": "Code 128",
-            "text": "B0F0L1",
-            "payload_hex": "423046304c31",
-            "confirmations": 1,
-            "faces": [
-              "top"
-            ]
-          },
-          {
-            "format": "Code 128",
-            "text": "B0F1L0",
-            "payload_hex": "423046314c30",
-            "confirmations": 1,
-            "faces": [
-              "bottom"
-            ]
-          },
-          {
-            "format": "Code 128",
-            "text": "B0F1L1",
-            "payload_hex": "423046314c31",
-            "confirmations": 1,
-            "faces": [
-              "bottom"
-            ]
-          },
-          {
-            "format": "Code 128",
-            "text": "B0F2L0",
-            "payload_hex": "423046324c30",
-            "confirmations": 1,
-            "faces": [
-              "left"
-            ]
-          },
-          {
-            "format": "Code 128",
-            "text": "B0F2L1",
-            "payload_hex": "423046324c31",
-            "confirmations": 1,
-            "faces": [
-              "left"
-            ]
-          },
-          {
-            "format": "Code 128",
-            "text": "B0F3L0",
-            "payload_hex": "423046334c30",
-            "confirmations": 1,
-            "faces": [
-              "right"
-            ]
-          },
-          {
-            "format": "Code 128",
-            "text": "B0F3L1",
-            "payload_hex": "423046334c31",
-            "confirmations": 1,
-            "faces": [
-              "right"
-            ]
-          },
-          {
-            "format": "Code 128",
-            "text": "B0F4L0",
-            "payload_hex": "423046344c30",
-            "confirmations": 1,
-            "faces": [
-              "front"
-            ]
-          },
-          {
-            "format": "Code 128",
-            "text": "B0F4L1",
-            "payload_hex": "423046344c31",
-            "confirmations": 1,
-            "faces": [
-              "front"
-            ]
-          },
-          {
-            "format": "Code 128",
-            "text": "B0F5L0",
-            "payload_hex": "423046354c30",
-            "confirmations": 1,
-            "faces": [
-              "rear"
-            ]
-          },
-          {
-            "format": "Code 128",
-            "text": "B0F5L1",
-            "payload_hex": "423046354c31",
-            "confirmations": 1,
-            "faces": [
-              "rear"
             ]
           }
         ],
@@ -251,258 +140,66 @@
           "top"
         ],
         "capture_complete": true,
-        "deadline_s": 2.635,
+        "deadline_s": 2.65,
         "complete_set_verified": false
       },
       "exact_set": true,
       "first_ack": {
-        "message_id": "REPLAY-00:1",
-        "ack": "accepted",
-        "action": "lookup_all_codes"
+        "message_id": "integration-session:A:1",
+        "receipt": "accepted",
+        "body_sha256": "80d13db3d91ab2a4303adccea323c03a0c05b4b441ada9f5c584fff36102fb73",
+        "sorting": "pending",
+        "action": "resolve_all_values"
       },
       "retry_ack": {
-        "message_id": "REPLAY-00:1",
-        "ack": "duplicate"
+        "message_id": "integration-session:A:1",
+        "receipt": "duplicate",
+        "body_sha256": "80d13db3d91ab2a4303adccea323c03a0c05b4b441ada9f5c584fff36102fb73",
+        "sorting": "pending_or_recorded"
       }
     },
     {
-      "box_id": "REPLAY-01",
+      "box_id": "B",
       "expected": [
-        "B1F0L0",
-        "B1F0L1",
-        "B1F1L0",
-        "B1F1L1",
-        "B1F2L0",
-        "B1F2L1",
-        "B1F3L0",
-        "B1F3L1",
-        "B1F4L0",
-        "B1F4L1",
-        "B1F5L0",
-        "B1F5L1"
+        "SHARED01"
       ],
       "message": {
-        "schema_version": 1,
-        "message_id": "REPLAY-01:1",
-        "box_id": "REPLAY-01",
+        "schema_version": 2,
+        "message_id": "integration-session:B:2",
+        "box_id": "B",
+        "session_id": "integration-session",
+        "clock_domain": "integration-os-epoch",
+        "created_s": 2.112553911558798,
         "status": "read",
         "codes": [
           {
             "format": "Code 128",
-            "text": "B1F0L0",
-            "payload_hex": "423146304c30",
-            "confirmations": 1,
+            "text": "SHARED01",
+            "payload_hex": "5348415245443031",
+            "confirmations": 14,
             "faces": [
+              "bottom",
+              "front",
+              "left",
+              "rear",
+              "right",
               "top"
-            ]
-          },
-          {
-            "format": "Code 128",
-            "text": "B1F0L1",
-            "payload_hex": "423146304c31",
-            "confirmations": 1,
-            "faces": [
-              "top"
-            ]
-          },
-          {
-            "format": "Code 128",
-            "text": "B1F1L0",
-            "payload_hex": "423146314c30",
-            "confirmations": 1,
-            "faces": [
-              "bottom"
-            ]
-          },
-          {
-            "format": "Code 128",
-            "text": "B1F1L1",
-            "payload_hex": "423146314c31",
-            "confirmations": 1,
-            "faces": [
-              "bottom"
-            ]
-          },
-          {
-            "format": "Code 128",
-            "text": "B1F2L0",
-            "payload_hex": "423146324c30",
-            "confirmations": 1,
-            "faces": [
-              "left"
-            ]
-          },
-          {
-            "format": "Code 128",
-            "text": "B1F2L1",
-            "payload_hex": "423146324c31",
-            "confirmations": 1,
-            "faces": [
-              "left"
-            ]
-          },
-          {
-            "format": "Code 128",
-            "text": "B1F3L0",
-            "payload_hex": "423146334c30",
-            "confirmations": 1,
-            "faces": [
-              "right"
-            ]
-          },
-          {
-            "format": "Code 128",
-            "text": "B1F3L1",
-            "payload_hex": "423146334c31",
-            "confirmations": 1,
-            "faces": [
-              "right"
-            ]
-          },
-          {
-            "format": "Code 128",
-            "text": "B1F4L0",
-            "payload_hex": "423146344c30",
-            "confirmations": 1,
-            "faces": [
-              "front"
-            ]
-          },
-          {
-            "format": "Code 128",
-            "text": "B1F4L1",
-            "payload_hex": "423146344c31",
-            "confirmations": 1,
-            "faces": [
-              "front"
-            ]
-          },
-          {
-            "format": "Code 128",
-            "text": "B1F5L0",
-            "payload_hex": "423146354c30",
-            "confirmations": 1,
-            "faces": [
-              "rear"
-            ]
-          },
-          {
-            "format": "Code 128",
-            "text": "B1F5L1",
-            "payload_hex": "423146354c31",
-            "confirmations": 1,
-            "faces": [
-              "rear"
             ]
           }
         ],
         "accepted_codes": [
           {
             "format": "Code 128",
-            "text": "B1F0L0",
-            "payload_hex": "423146304c30",
-            "confirmations": 1,
+            "text": "SHARED01",
+            "payload_hex": "5348415245443031",
+            "confirmations": 14,
             "faces": [
+              "bottom",
+              "front",
+              "left",
+              "rear",
+              "right",
               "top"
-            ]
-          },
-          {
-            "format": "Code 128",
-            "text": "B1F0L1",
-            "payload_hex": "423146304c31",
-            "confirmations": 1,
-            "faces": [
-              "top"
-            ]
-          },
-          {
-            "format": "Code 128",
-            "text": "B1F1L0",
-            "payload_hex": "423146314c30",
-            "confirmations": 1,
-            "faces": [
-              "bottom"
-            ]
-          },
-          {
-            "format": "Code 128",
-            "text": "B1F1L1",
-            "payload_hex": "423146314c31",
-            "confirmations": 1,
-            "faces": [
-              "bottom"
-            ]
-          },
-          {
-            "format": "Code 128",
-            "text": "B1F2L0",
-            "payload_hex": "423146324c30",
-            "confirmations": 1,
-            "faces": [
-              "left"
-            ]
-          },
-          {
-            "format": "Code 128",
-            "text": "B1F2L1",
-            "payload_hex": "423146324c31",
-            "confirmations": 1,
-            "faces": [
-              "left"
-            ]
-          },
-          {
-            "format": "Code 128",
-            "text": "B1F3L0",
-            "payload_hex": "423146334c30",
-            "confirmations": 1,
-            "faces": [
-              "right"
-            ]
-          },
-          {
-            "format": "Code 128",
-            "text": "B1F3L1",
-            "payload_hex": "423146334c31",
-            "confirmations": 1,
-            "faces": [
-              "right"
-            ]
-          },
-          {
-            "format": "Code 128",
-            "text": "B1F4L0",
-            "payload_hex": "423146344c30",
-            "confirmations": 1,
-            "faces": [
-              "front"
-            ]
-          },
-          {
-            "format": "Code 128",
-            "text": "B1F4L1",
-            "payload_hex": "423146344c31",
-            "confirmations": 1,
-            "faces": [
-              "front"
-            ]
-          },
-          {
-            "format": "Code 128",
-            "text": "B1F5L0",
-            "payload_hex": "423146354c30",
-            "confirmations": 1,
-            "faces": [
-              "rear"
-            ]
-          },
-          {
-            "format": "Code 128",
-            "text": "B1F5L1",
-            "payload_hex": "423146354c31",
-            "confirmations": 1,
-            "faces": [
-              "rear"
             ]
           }
         ],
@@ -515,30 +212,214 @@
           "top"
         ],
         "capture_complete": true,
-        "deadline_s": 4.635,
+        "deadline_s": 2.65,
         "complete_set_verified": false
       },
       "exact_set": true,
       "first_ack": {
-        "message_id": "REPLAY-01:1",
-        "ack": "accepted",
-        "action": "lookup_all_codes"
+        "message_id": "integration-session:B:2",
+        "receipt": "accepted",
+        "body_sha256": "5a30e31eda05e7bee10c519dc4ae49cc30b25b0269f1c4b19fce5343b623c347",
+        "sorting": "pending",
+        "action": "resolve_all_values"
       },
       "retry_ack": {
-        "message_id": "REPLAY-01:1",
-        "ack": "duplicate"
+        "message_id": "integration-session:B:2",
+        "receipt": "duplicate",
+        "body_sha256": "5a30e31eda05e7bee10c519dc4ae49cc30b25b0269f1c4b19fce5343b623c347",
+        "sorting": "pending_or_recorded"
       }
     }
   ],
   "commands": [
     {
-      "box_id": "REPLAY-00",
-      "action": "lookup_all_codes"
+      "box_id": "A",
+      "action": "resolve_all_values"
     },
     {
-      "box_id": "REPLAY-01",
-      "action": "lookup_all_codes"
+      "box_id": "B",
+      "action": "resolve_all_values"
     }
   ],
-  "limitation": "Привязку кадров к коробкам и временные метки задаёт имитатор. Аппаратный захват и сеть проверяются на пилоте."
+  "dispatch": {
+    "outcomes": [
+      {
+        "box": 0,
+        "ack_s": 2.152553911558798,
+        "late": false
+      },
+      {
+        "box": 1,
+        "ack_s": 1.5625539115587985,
+        "late": false
+      }
+    ],
+    "completions": [
+      {
+        "box": 0,
+        "channel": "top",
+        "sequence": 0,
+        "completed_s": 1.062
+      },
+      {
+        "box": 1,
+        "channel": "top",
+        "sequence": 0,
+        "completed_s": 1.062
+      },
+      {
+        "box": 0,
+        "channel": "left",
+        "sequence": 0,
+        "completed_s": 1.162
+      },
+      {
+        "box": 1,
+        "channel": "left",
+        "sequence": 0,
+        "completed_s": 1.162
+      },
+      {
+        "box": 0,
+        "channel": "right",
+        "sequence": 0,
+        "completed_s": 1.172
+      },
+      {
+        "box": 1,
+        "channel": "right",
+        "sequence": 0,
+        "completed_s": 1.172
+      },
+      {
+        "box": 0,
+        "channel": "front",
+        "sequence": 0,
+        "completed_s": 1.2525539115587985
+      },
+      {
+        "box": 0,
+        "channel": "top",
+        "sequence": 1,
+        "completed_s": 1.262
+      },
+      {
+        "box": 1,
+        "channel": "top",
+        "sequence": 1,
+        "completed_s": 1.2625539115587985
+      },
+      {
+        "box": 0,
+        "channel": "bottom",
+        "sequence": 0,
+        "completed_s": 1.312
+      },
+      {
+        "box": 1,
+        "channel": "bottom",
+        "sequence": 0,
+        "completed_s": 1.312
+      },
+      {
+        "box": 0,
+        "channel": "front",
+        "sequence": 1,
+        "completed_s": 1.322
+      },
+      {
+        "box": 0,
+        "channel": "left",
+        "sequence": 1,
+        "completed_s": 1.362
+      },
+      {
+        "box": 1,
+        "channel": "left",
+        "sequence": 1,
+        "completed_s": 1.362
+      },
+      {
+        "box": 0,
+        "channel": "right",
+        "sequence": 1,
+        "completed_s": 1.372
+      },
+      {
+        "box": 1,
+        "channel": "right",
+        "sequence": 1,
+        "completed_s": 1.372
+      },
+      {
+        "box": 0,
+        "channel": "front",
+        "sequence": 2,
+        "completed_s": 1.3820000000000001
+      },
+      {
+        "box": 0,
+        "channel": "front",
+        "sequence": 3,
+        "completed_s": 1.4400539115587985
+      },
+      {
+        "box": 0,
+        "channel": "front",
+        "sequence": 4,
+        "completed_s": 1.5025539115587985
+      },
+      {
+        "box": 0,
+        "channel": "bottom",
+        "sequence": 1,
+        "completed_s": 1.512
+      },
+      {
+        "box": 1,
+        "channel": "bottom",
+        "sequence": 1,
+        "completed_s": 1.5125539115587985
+      },
+      {
+        "box": 0,
+        "channel": "rear",
+        "sequence": 0,
+        "completed_s": 1.8525539115587983
+      },
+      {
+        "box": 0,
+        "channel": "rear",
+        "sequence": 1,
+        "completed_s": 1.9150539115587983
+      },
+      {
+        "box": 0,
+        "channel": "rear",
+        "sequence": 2,
+        "completed_s": 1.9775539115587983
+      },
+      {
+        "box": 0,
+        "channel": "rear",
+        "sequence": 3,
+        "completed_s": 2.040053911558798
+      },
+      {
+        "box": 0,
+        "channel": "rear",
+        "sequence": 4,
+        "completed_s": 2.102553911558798
+      }
+    ],
+    "max_queue": 2,
+    "max_wait_s": 0.010000000000000009,
+    "cancelled_boxes": 0
+  },
+  "processed_images": 26,
+  "all_captures_accepted": true,
+  "stale_session_rejected": true,
+  "pruned_boxes": 2,
+  "retained_assignments": 0,
+  "limitation": "Синтетические изображения и калиброванные прямоугольные области имитатора; аппаратный захват, точность калибровки и IPC проверяются отдельно."
 }

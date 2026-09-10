@@ -17,3 +17,6 @@ dist/
 output/qa/
 output/quick/
 output/failure/
+
+output/*.log
+output/ci_*

@@ -12,6 +12,7 @@ RESULT_NAMES = (
     "nominal",
     "load_replay",
     "ablation",
+    "visual_evidence",
 )
 
 

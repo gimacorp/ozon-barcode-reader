@@ -1,0 +1,52 @@
+{
+  "accepted_codes": [
+    {
+      "confirmations": 14,
+      "faces": [
+        "bottom",
+        "front",
+        "left",
+        "rear",
+        "right",
+        "top"
+      ],
+      "format": "Code 128",
+      "payload_hex": "5348415245443031",
+      "text": "SHARED01"
+    }
+  ],
+  "box_id": "A",
+  "capture_complete": true,
+  "clock_domain": "integration-os-epoch",
+  "codes": [
+    {
+      "confirmations": 14,
+      "faces": [
+        "bottom",
+        "front",
+        "left",
+        "rear",
+        "right",
+        "top"
+      ],
+      "format": "Code 128",
+      "payload_hex": "5348415245443031",
+      "text": "SHARED01"
+    }
+  ],
+  "complete_set_verified": false,
+  "created_s": 2.112553911558798,
+  "deadline_s": 2.65,
+  "message_id": "integration-session:A:1",
+  "observed_faces": [
+    "bottom",
+    "front",
+    "left",
+    "rear",
+    "right",
+    "top"
+  ],
+  "schema_version": 2,
+  "session_id": "integration-session",
+  "status": "read"
+}

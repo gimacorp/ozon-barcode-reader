@@ -30,11 +30,23 @@ def run_replay(
     tracker = BoxTracker(session)
     pipe = Pipeline(tracker)
     jobs = arrivals(1, config=c)
-    dispatch = simulate(
-        jobs, lambda _: 0.01, workers=2, delivery_s=c["delivery_budget_s"]
+    scheduled = sorted(
+        [
+            replace(job, box=owner)
+            for job in jobs
+            for owner in ((0,) if job.kind == "area" else (0, 1))
+        ],
+        key=lambda job: job.arrival,
     )
+    dispatch = simulate(
+        scheduled, lambda _: 0.01, workers=2, delivery_s=c["delivery_budget_s"]
+    )
+    completed = {
+        (r["box"], r["channel"], r["sequence"]): r["completed_s"]
+        for r in dispatch["completions"]
+    }
     end = max(j.captured_s for j in jobs)
-    complete_s = max(j.arrival for j in jobs) + 0.02
+    complete_s = max(completed.values()) + 0.01
     area_frames = {
         face: {f"shared-{face}-{i}" for i in range(c["area_frames_per_box"])}
         for face in ("front", "rear")
@@ -89,7 +101,7 @@ def run_replay(
                 regions,
                 np.eye(3),
                 job.captured_s,
-                job.arrival + 0.01,
+                completed[(0 if name in ("A", "AB") else 1, job.channel, job.sequence)],
                 job.rows,
             )
             events.append(pipe.process(capture))

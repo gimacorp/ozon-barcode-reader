@@ -1,496 +1,582 @@
 {
   "seed": 20260909,
   "boxes": 12,
-  "labels": 216,
-  "unique_values_found": 216,
-  "exact_boxes": 12,
+  "metadata": {
+    "run_id": "2026-09-10T20:44:28.374872+00:00",
+    "timestamp_utc": "2026-09-10T20:45:50.703535+00:00",
+    "cpu": "Apple M5",
+    "cpu_source": "OS",
+    "os": "macOS-26.5.1-arm64-arm-64bit",
+    "architecture": "arm64",
+    "python": "3.12.14",
+    "packages": {
+      "numpy": "2.3.5",
+      "opencv-python-headless": "5.0.0.93",
+      "zxing-cpp": "3.1.1",
+      "python-barcode": "0.16.1",
+      "Pillow": "12.3.0",
+      "reportlab": "4.4.9",
+      "pytest": "9.1.1"
+    },
+    "git_revision": "ae49c5ca7bc5613f6491d90086df772dc49f57f7",
+    "git_description": "submission-v2-3-gae49c5c",
+    "git_dirty": true,
+    "source_sha256": "209c7bc06abc0932d6de5995264a0c3321e19d54d1586024b5cad081f04a213a",
+    "config_sha256": "91f3864ccdad826eb2e08cef85d0a3dd078b279f398fbf4d3b8d42f7e9c449fa",
+    "config": {
+      "description": "Проектные параметры; не производственные измерения",
+      "speed_mm_s": 1000.0,
+      "belt_width_mm": 650.0,
+      "box_length_mm": 600.0,
+      "box_width_mm": 400.0,
+      "box_height_mm": 400.0,
+      "leading_edge_interval_s": 2.0,
+      "min_module_mm": 0.33,
+      "sampling_target_px": 3.0,
+      "sorter_x_mm": 3000.0,
+      "rear_camera_x_mm": 0.0,
+      "observation_position_rounding_mm": 5.0,
+      "plc_actuation_s": 0.1,
+      "guard_s": 0.25,
+      "processing_budget_s": 0.5,
+      "delivery_budget_s": 0.05,
+      "line_pixels": 8192,
+      "line_fov_horizontal_mm": 700.0,
+      "line_fov_vertical_mm": 450.0,
+      "line_rate_hz": 12000.0,
+      "line_exposure_us": 40.0,
+      "line_camera_count": 4,
+      "line_sensor_pixel_um": 3.5,
+      "line_focal_length_mm": 28.0,
+      "area_pixels_x": 9344,
+      "area_pixels_y": 7000,
+      "area_fov_width_mm": 750.0,
+      "area_sensor_pixel_um": 3.2,
+      "area_focal_length_mm": 50.0,
+      "area_aperture": 11.0,
+      "area_exposure_us": 40.0,
+      "area_frame_rate_hz": 16.0,
+      "area_camera_count": 2,
+      "area_frames_per_box": 5,
+      "area_elevation_mm": 350.0,
+      "area_focus_coc_px": 2.0,
+      "bits_per_pixel": 8,
+      "encoder_wheel_circumference_mm": 200.0,
+      "encoder_pulses_per_rev": 2400,
+      "line_strip_rows": 2048,
+      "line_strip_overlap_rows": 1024,
+      "max_label_width_mm": 78.0,
+      "max_label_height_mm": 25.0,
+      "line_positions_mm": {
+        "top": 650.0,
+        "left": 750.0,
+        "right": 750.0,
+        "bottom": 900.0
+      },
+      "line_transfer_s": 0.002,
+      "area_transfer_s": 0.08,
+      "processing_workers": 8,
+      "processing_queue_capacity": 64,
+      "max_values_per_box": 24,
+      "max_labels_per_face": 4,
+      "line_aperture": 8.0,
+      "aberration_sigma_px": 0.35
+    },
+    "parameters": {
+      "boxes": 12,
+      "seed": 20260909
+    }
+  },
+  "labels": 288,
+  "unique_values_found": 288,
+  "exact_boxes": 10,
   "exact_ci95": [
-    0.7575059933447592,
-    1.0
+    0.5519691377470266,
+    0.9530348578161463
   ],
   "rows": [
     {
       "box": 0,
-      "expected": 18,
-      "tp": 18,
+      "expected": 24,
+      "tp": 24,
       "fp": 0,
       "fn": 0,
       "exact": 1,
       "faces": [
         {
           "face": "top",
-          "found": 3,
-          "expected": 3
+          "found": 4,
+          "expected": 4
         },
         {
           "face": "bottom",
-          "found": 3,
-          "expected": 3
+          "found": 4,
+          "expected": 4
         },
         {
           "face": "left",
-          "found": 3,
-          "expected": 3
+          "found": 4,
+          "expected": 4
         },
         {
           "face": "right",
-          "found": 3,
-          "expected": 3
+          "found": 4,
+          "expected": 4
         },
         {
           "face": "front",
-          "found": 3,
-          "expected": 3
+          "found": 4,
+          "expected": 4
         },
         {
           "face": "rear",
-          "found": 3,
-          "expected": 3
+          "found": 4,
+          "expected": 4
         }
       ]
     },
     {
       "box": 1,
-      "expected": 18,
-      "tp": 18,
+      "expected": 24,
+      "tp": 24,
       "fp": 0,
       "fn": 0,
       "exact": 1,
       "faces": [
         {
           "face": "top",
-          "found": 3,
-          "expected": 3
+          "found": 4,
+          "expected": 4
         },
         {
           "face": "bottom",
-          "found": 3,
-          "expected": 3
+          "found": 4,
+          "expected": 4
         },
         {
           "face": "left",
-          "found": 3,
-          "expected": 3
+          "found": 4,
+          "expected": 4
         },
         {
           "face": "right",
-          "found": 3,
-          "expected": 3
+          "found": 4,
+          "expected": 4
         },
         {
           "face": "front",
-          "found": 3,
-          "expected": 3
+          "found": 4,
+          "expected": 4
         },
         {
           "face": "rear",
-          "found": 3,
-          "expected": 3
+          "found": 4,
+          "expected": 4
         }
       ]
     },
     {
       "box": 2,
-      "expected": 18,
-      "tp": 18,
+      "expected": 24,
+      "tp": 24,
       "fp": 0,
       "fn": 0,
       "exact": 1,
       "faces": [
         {
           "face": "top",
-          "found": 3,
-          "expected": 3
+          "found": 4,
+          "expected": 4
         },
         {
           "face": "bottom",
-          "found": 3,
-          "expected": 3
+          "found": 4,
+          "expected": 4
         },
         {
           "face": "left",
-          "found": 3,
-          "expected": 3
+          "found": 4,
+          "expected": 4
         },
         {
           "face": "right",
-          "found": 3,
-          "expected": 3
+          "found": 4,
+          "expected": 4
         },
         {
           "face": "front",
-          "found": 3,
-          "expected": 3
+          "found": 4,
+          "expected": 4
         },
         {
           "face": "rear",
-          "found": 3,
-          "expected": 3
+          "found": 4,
+          "expected": 4
         }
       ]
     },
     {
       "box": 3,
-      "expected": 18,
-      "tp": 18,
-      "fp": 0,
+      "expected": 24,
+      "tp": 24,
+      "fp": 1,
       "fn": 0,
-      "exact": 1,
+      "exact": 0,
       "faces": [
         {
           "face": "top",
-          "found": 3,
-          "expected": 3
+          "found": 4,
+          "expected": 4
         },
         {
           "face": "bottom",
-          "found": 3,
-          "expected": 3
+          "found": 4,
+          "expected": 4
         },
         {
           "face": "left",
-          "found": 3,
-          "expected": 3
+          "found": 4,
+          "expected": 4
         },
         {
           "face": "right",
-          "found": 3,
-          "expected": 3
+          "found": 4,
+          "expected": 4
         },
         {
           "face": "front",
-          "found": 3,
-          "expected": 3
+          "found": 4,
+          "expected": 4
         },
         {
           "face": "rear",
-          "found": 3,
-          "expected": 3
+          "found": 5,
+          "expected": 4
         }
       ]
     },
     {
       "box": 4,
-      "expected": 18,
-      "tp": 18,
-      "fp": 0,
+      "expected": 24,
+      "tp": 24,
+      "fp": 1,
       "fn": 0,
-      "exact": 1,
+      "exact": 0,
       "faces": [
         {
           "face": "top",
-          "found": 3,
-          "expected": 3
+          "found": 4,
+          "expected": 4
         },
         {
           "face": "bottom",
-          "found": 3,
-          "expected": 3
+          "found": 4,
+          "expected": 4
         },
         {
           "face": "left",
-          "found": 3,
-          "expected": 3
+          "found": 4,
+          "expected": 4
         },
         {
           "face": "right",
-          "found": 3,
-          "expected": 3
+          "found": 4,
+          "expected": 4
         },
         {
           "face": "front",
-          "found": 3,
-          "expected": 3
+          "found": 4,
+          "expected": 4
         },
         {
           "face": "rear",
-          "found": 3,
-          "expected": 3
+          "found": 5,
+          "expected": 4
         }
       ]
     },
     {
       "box": 5,
-      "expected": 18,
-      "tp": 18,
+      "expected": 24,
+      "tp": 24,
       "fp": 0,
       "fn": 0,
       "exact": 1,
       "faces": [
         {
           "face": "top",
-          "found": 3,
-          "expected": 3
+          "found": 4,
+          "expected": 4
         },
         {
           "face": "bottom",
-          "found": 3,
-          "expected": 3
+          "found": 4,
+          "expected": 4
         },
         {
           "face": "left",
-          "found": 3,
-          "expected": 3
+          "found": 4,
+          "expected": 4
         },
         {
           "face": "right",
-          "found": 3,
-          "expected": 3
+          "found": 4,
+          "expected": 4
         },
         {
           "face": "front",
-          "found": 3,
-          "expected": 3
+          "found": 4,
+          "expected": 4
         },
         {
           "face": "rear",
-          "found": 3,
-          "expected": 3
+          "found": 4,
+          "expected": 4
         }
       ]
     },
     {
       "box": 6,
-      "expected": 18,
-      "tp": 18,
+      "expected": 24,
+      "tp": 24,
       "fp": 0,
       "fn": 0,
       "exact": 1,
       "faces": [
         {
           "face": "top",
-          "found": 3,
-          "expected": 3
+          "found": 4,
+          "expected": 4
         },
         {
           "face": "bottom",
-          "found": 3,
-          "expected": 3
+          "found": 4,
+          "expected": 4
         },
         {
           "face": "left",
-          "found": 3,
-          "expected": 3
+          "found": 4,
+          "expected": 4
         },
         {
           "face": "right",
-          "found": 3,
-          "expected": 3
+          "found": 4,
+          "expected": 4
         },
         {
           "face": "front",
-          "found": 3,
-          "expected": 3
+          "found": 4,
+          "expected": 4
         },
         {
           "face": "rear",
-          "found": 3,
-          "expected": 3
+          "found": 4,
+          "expected": 4
         }
       ]
     },
     {
       "box": 7,
-      "expected": 18,
-      "tp": 18,
+      "expected": 24,
+      "tp": 24,
       "fp": 0,
       "fn": 0,
       "exact": 1,
       "faces": [
         {
           "face": "top",
-          "found": 3,
-          "expected": 3
+          "found": 4,
+          "expected": 4
         },
         {
           "face": "bottom",
-          "found": 3,
-          "expected": 3
+          "found": 4,
+          "expected": 4
         },
         {
           "face": "left",
-          "found": 3,
-          "expected": 3
+          "found": 4,
+          "expected": 4
         },
         {
           "face": "right",
-          "found": 3,
-          "expected": 3
+          "found": 4,
+          "expected": 4
         },
         {
           "face": "front",
-          "found": 3,
-          "expected": 3
+          "found": 4,
+          "expected": 4
         },
         {
           "face": "rear",
-          "found": 3,
-          "expected": 3
+          "found": 4,
+          "expected": 4
         }
       ]
     },
     {
       "box": 8,
-      "expected": 18,
-      "tp": 18,
+      "expected": 24,
+      "tp": 24,
       "fp": 0,
       "fn": 0,
       "exact": 1,
       "faces": [
         {
           "face": "top",
-          "found": 3,
-          "expected": 3
+          "found": 4,
+          "expected": 4
         },
         {
           "face": "bottom",
-          "found": 3,
-          "expected": 3
+          "found": 4,
+          "expected": 4
         },
         {
           "face": "left",
-          "found": 3,
-          "expected": 3
+          "found": 4,
+          "expected": 4
         },
         {
           "face": "right",
-          "found": 3,
-          "expected": 3
+          "found": 4,
+          "expected": 4
         },
         {
           "face": "front",
-          "found": 3,
-          "expected": 3
+          "found": 4,
+          "expected": 4
         },
         {
           "face": "rear",
-          "found": 3,
-          "expected": 3
+          "found": 4,
+          "expected": 4
         }
       ]
     },
     {
       "box": 9,
-      "expected": 18,
-      "tp": 18,
+      "expected": 24,
+      "tp": 24,
       "fp": 0,
       "fn": 0,
       "exact": 1,
       "faces": [
         {
           "face": "top",
-          "found": 3,
-          "expected": 3
+          "found": 4,
+          "expected": 4
         },
         {
           "face": "bottom",
-          "found": 3,
-          "expected": 3
+          "found": 4,
+          "expected": 4
         },
         {
           "face": "left",
-          "found": 3,
-          "expected": 3
+          "found": 4,
+          "expected": 4
         },
         {
           "face": "right",
-          "found": 3,
-          "expected": 3
+          "found": 4,
+          "expected": 4
         },
         {
           "face": "front",
-          "found": 3,
-          "expected": 3
+          "found": 4,
+          "expected": 4
         },
         {
           "face": "rear",
-          "found": 3,
-          "expected": 3
+          "found": 4,
+          "expected": 4
         }
       ]
     },
     {
       "box": 10,
-      "expected": 18,
-      "tp": 18,
+      "expected": 24,
+      "tp": 24,
       "fp": 0,
       "fn": 0,
       "exact": 1,
       "faces": [
         {
           "face": "top",
-          "found": 3,
-          "expected": 3
+          "found": 4,
+          "expected": 4
         },
         {
           "face": "bottom",
-          "found": 3,
-          "expected": 3
+          "found": 4,
+          "expected": 4
         },
         {
           "face": "left",
-          "found": 3,
-          "expected": 3
+          "found": 4,
+          "expected": 4
         },
         {
           "face": "right",
-          "found": 3,
-          "expected": 3
+          "found": 4,
+          "expected": 4
         },
         {
           "face": "front",
-          "found": 3,
-          "expected": 3
+          "found": 4,
+          "expected": 4
         },
         {
           "face": "rear",
-          "found": 3,
-          "expected": 3
+          "found": 4,
+          "expected": 4
         }
       ]
     },
     {
       "box": 11,
-      "expected": 18,
-      "tp": 18,
+      "expected": 24,
+      "tp": 24,
       "fp": 0,
       "fn": 0,
       "exact": 1,
       "faces": [
         {
           "face": "top",
-          "found": 3,
-          "expected": 3
+          "found": 4,
+          "expected": 4
         },
         {
           "face": "bottom",
-          "found": 3,
-          "expected": 3
+          "found": 4,
+          "expected": 4
         },
         {
           "face": "left",
-          "found": 3,
-          "expected": 3
+          "found": 4,
+          "expected": 4
         },
         {
           "face": "right",
-          "found": 3,
-          "expected": 3
+          "found": 4,
+          "expected": 4
         },
         {
           "face": "front",
-          "found": 3,
-          "expected": 3
+          "found": 4,
+          "expected": 4
         },
         {
           "face": "rear",
-          "found": 3,
-          "expected": 3
+          "found": 4,
+          "expected": 4
         }
       ]
     }
   ],
-  "elapsed_s": 75.62382283294573,
-  "model": "Каждая коробка имеет 18 постоянных этикеток; 4 полных линейных скана 8192×7200 и 10 торцевых кадров 9344×7000. Проекция тонкой линзы, проектный X=0.33 мм, консервативный дефокус по худшему углу этикетки; дифракция, апертура пикселя, смаз 0.5 px, условная аберрация sigma=0.35 px.",
+  "elapsed_s": 81.90967058390379,
+  "model": "Постоянные этикетки, до 4 на каждой из 6 граней. Размеры растров, сетка кадров, масштаб, скорость, выдержка и полосы взяты из сохранённого конфига. Проекция тонкой линзы, дефокус по худшему углу этикетки, дифракция, апертура пикселя и условная аберрация sigma=0.35 px.",
   "limitations": "Плоские матовые этикетки, постоянное освещение, без шума фотонов, бликов, окклюзий и калибровочных ошибок. Проекции торцов симметричны. Скорость/позиции заданы моделью; это проверка согласованности проекта."
 }
