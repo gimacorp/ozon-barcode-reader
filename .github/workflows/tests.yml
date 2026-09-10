@@ -1,4 +1,4 @@
-name: Проверка прототипа
+name: Проверка кода и материалов
 on: [push, pull_request]
 permissions:
   contents: read
@@ -11,9 +11,21 @@ jobs:
         with:
           python-version: '3.12'
           cache: pip
-      - name: Установить зависимости
-        run: python -m pip install -r requirements.txt
-      - name: Проверить алгоритмы и расчёты
-        run: python -m pytest -q
-      - name: Пересчитать конфигурацию
-        run: python -m barcode_reader calculate --output output/ci_calculations.json
+      - run: python -m pip install -r requirements.txt
+      - name: Форматирование и регрессии, включая сквозной replay
+        run: |
+          ruff format --check barcode_reader scripts tests
+          python -m pytest -q
+      - name: Расчёты и сборка PDF из сохранённых экспериментов
+        run: |
+          python -m barcode_reader calculate --output output/ci_calculations.json
+          python scripts/build_report.py
+      - name: Выполнить Jupyter Notebook
+        run: python scripts/execute_notebook.py --output output/ci_demo.ipynb
+      - uses: actions/upload-artifact@v4
+        with:
+          name: Проверенные-материалы
+          path: |
+            output/pdf/ozon_cv2_report_ru.pdf
+            output/ci_demo.ipynb
+            results/report_manifest.json

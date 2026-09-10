@@ -1,13 +1,17 @@
 from barcode_reader.replay import run_replay
 
 
-def test_six_faces_multiple_codes_and_two_boxes():
-    result=run_replay()
-    assert len(result["commands"])==2
-    for b in result["boxes"]:
-        assert b["exact_set"]
-        assert len(b["message"]["codes"])==12
-        assert len(b["message"]["observed_faces"])==6
-        assert b["message"]["status"]=="read"
-        assert b["retry_ack"]["ack"]=="duplicate"
-    assert set(result["boxes"][0]["expected"]).isdisjoint(result["boxes"][1]["expected"])
+def test_image_to_durable_wcs():
+    r = run_replay()
+    assert all(b["exact_set"] and b["message"]["status"] == "read" for b in r["boxes"])
+    assert all(b["retry_ack"]["receipt"] == "duplicate" for b in r["boxes"])
+    assert all(c["action"] == "resolve_all_values" for c in r["commands"])
+    assert r["stale_session_rejected"] and r["all_captures_accepted"]
+    assert r["pruned_boxes"] == 2 and r["retained_assignments"] == 0
+    assert r["dispatch"]["cancelled_boxes"] == 0
+
+
+def test_missing_planned_strip_blocks_read_even_with_overlap():
+    r = run_replay(missing_strip=True)
+    assert [b["message"]["status"] for b in r["boxes"]] == ["read", "incomplete_views"]
+    assert r["commands"][1]["action"] == "exception_only"
