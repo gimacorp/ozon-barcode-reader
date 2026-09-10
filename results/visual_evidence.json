@@ -1,0 +1,46 @@
+{
+  "real": [
+    {
+      "file": "assignment_label.png",
+      "width": 372,
+      "height": 184,
+      "diagram_estimate_px_per_mm": 3.1333333333333333,
+      "project_X_033_estimate_px": 1.034,
+      "found": []
+    },
+    {
+      "file": "assignment_box.png",
+      "width": 2048,
+      "height": 1713,
+      "diagram_estimate_px_per_mm": null,
+      "project_X_033_estimate_px": null,
+      "found": []
+    }
+  ],
+  "false_read": {
+    "found": true,
+    "expected": [
+      "OZ002301",
+      "OZ002302",
+      "OZ002303",
+      "OZ002304"
+    ],
+    "decoded": "O*000904",
+    "format": "Code 128"
+  },
+  "optical": {
+    "expected": "MIN00001",
+    "found": [
+      "MIN00001"
+    ],
+    "frequency_lp_mm": 41.89008042895442,
+    "terms": {
+      "diffraction": 0.6808049094274549,
+      "defocus": 0.9139094402914707,
+      "motion": 0.9926269353571998,
+      "pixel": 0.9707032797131746,
+      "aberration_assumption": 0.9574805807571528
+    },
+    "mtf_product": 0.574021778074311
+  }
+}

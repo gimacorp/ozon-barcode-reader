@@ -1,3 +1,4 @@
+from barcode_reader.coverage import CaptureContract
 """Сквозной программный проход двух коробок через шесть направлений съёмки."""
 from pathlib import Path
 import json
@@ -15,7 +16,7 @@ def run_replay():
     results=[]
     for box_index in range(2):
         box_id=f"REPLAY-{box_index:02d}";start=box_index*2.
-        tracker.register(box_id,start,start+1.8,start+2.635)
+        tracker.register(box_id,start,start+1.8,start+2.635,contract=CaptureContract.image_demo({f:f"{box_id}-{f}" for f,_ in faces}))
         expected=set()
         for face_index,(face,angle) in enumerate(faces):
             frame=np.full((1400,900),255,np.uint8)

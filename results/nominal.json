@@ -1,0 +1,496 @@
+{
+  "seed": 20260909,
+  "boxes": 12,
+  "labels": 216,
+  "unique_values_found": 216,
+  "exact_boxes": 12,
+  "exact_ci95": [
+    0.7575059933447592,
+    1.0
+  ],
+  "rows": [
+    {
+      "box": 0,
+      "expected": 18,
+      "tp": 18,
+      "fp": 0,
+      "fn": 0,
+      "exact": 1,
+      "faces": [
+        {
+          "face": "top",
+          "found": 3,
+          "expected": 3
+        },
+        {
+          "face": "bottom",
+          "found": 3,
+          "expected": 3
+        },
+        {
+          "face": "left",
+          "found": 3,
+          "expected": 3
+        },
+        {
+          "face": "right",
+          "found": 3,
+          "expected": 3
+        },
+        {
+          "face": "front",
+          "found": 3,
+          "expected": 3
+        },
+        {
+          "face": "rear",
+          "found": 3,
+          "expected": 3
+        }
+      ]
+    },
+    {
+      "box": 1,
+      "expected": 18,
+      "tp": 18,
+      "fp": 0,
+      "fn": 0,
+      "exact": 1,
+      "faces": [
+        {
+          "face": "top",
+          "found": 3,
+          "expected": 3
+        },
+        {
+          "face": "bottom",
+          "found": 3,
+          "expected": 3
+        },
+        {
+          "face": "left",
+          "found": 3,
+          "expected": 3
+        },
+        {
+          "face": "right",
+          "found": 3,
+          "expected": 3
+        },
+        {
+          "face": "front",
+          "found": 3,
+          "expected": 3
+        },
+        {
+          "face": "rear",
+          "found": 3,
+          "expected": 3
+        }
+      ]
+    },
+    {
+      "box": 2,
+      "expected": 18,
+      "tp": 18,
+      "fp": 0,
+      "fn": 0,
+      "exact": 1,
+      "faces": [
+        {
+          "face": "top",
+          "found": 3,
+          "expected": 3
+        },
+        {
+          "face": "bottom",
+          "found": 3,
+          "expected": 3
+        },
+        {
+          "face": "left",
+          "found": 3,
+          "expected": 3
+        },
+        {
+          "face": "right",
+          "found": 3,
+          "expected": 3
+        },
+        {
+          "face": "front",
+          "found": 3,
+          "expected": 3
+        },
+        {
+          "face": "rear",
+          "found": 3,
+          "expected": 3
+        }
+      ]
+    },
+    {
+      "box": 3,
+      "expected": 18,
+      "tp": 18,
+      "fp": 0,
+      "fn": 0,
+      "exact": 1,
+      "faces": [
+        {
+          "face": "top",
+          "found": 3,
+          "expected": 3
+        },
+        {
+          "face": "bottom",
+          "found": 3,
+          "expected": 3
+        },
+        {
+          "face": "left",
+          "found": 3,
+          "expected": 3
+        },
+        {
+          "face": "right",
+          "found": 3,
+          "expected": 3
+        },
+        {
+          "face": "front",
+          "found": 3,
+          "expected": 3
+        },
+        {
+          "face": "rear",
+          "found": 3,
+          "expected": 3
+        }
+      ]
+    },
+    {
+      "box": 4,
+      "expected": 18,
+      "tp": 18,
+      "fp": 0,
+      "fn": 0,
+      "exact": 1,
+      "faces": [
+        {
+          "face": "top",
+          "found": 3,
+          "expected": 3
+        },
+        {
+          "face": "bottom",
+          "found": 3,
+          "expected": 3
+        },
+        {
+          "face": "left",
+          "found": 3,
+          "expected": 3
+        },
+        {
+          "face": "right",
+          "found": 3,
+          "expected": 3
+        },
+        {
+          "face": "front",
+          "found": 3,
+          "expected": 3
+        },
+        {
+          "face": "rear",
+          "found": 3,
+          "expected": 3
+        }
+      ]
+    },
+    {
+      "box": 5,
+      "expected": 18,
+      "tp": 18,
+      "fp": 0,
+      "fn": 0,
+      "exact": 1,
+      "faces": [
+        {
+          "face": "top",
+          "found": 3,
+          "expected": 3
+        },
+        {
+          "face": "bottom",
+          "found": 3,
+          "expected": 3
+        },
+        {
+          "face": "left",
+          "found": 3,
+          "expected": 3
+        },
+        {
+          "face": "right",
+          "found": 3,
+          "expected": 3
+        },
+        {
+          "face": "front",
+          "found": 3,
+          "expected": 3
+        },
+        {
+          "face": "rear",
+          "found": 3,
+          "expected": 3
+        }
+      ]
+    },
+    {
+      "box": 6,
+      "expected": 18,
+      "tp": 18,
+      "fp": 0,
+      "fn": 0,
+      "exact": 1,
+      "faces": [
+        {
+          "face": "top",
+          "found": 3,
+          "expected": 3
+        },
+        {
+          "face": "bottom",
+          "found": 3,
+          "expected": 3
+        },
+        {
+          "face": "left",
+          "found": 3,
+          "expected": 3
+        },
+        {
+          "face": "right",
+          "found": 3,
+          "expected": 3
+        },
+        {
+          "face": "front",
+          "found": 3,
+          "expected": 3
+        },
+        {
+          "face": "rear",
+          "found": 3,
+          "expected": 3
+        }
+      ]
+    },
+    {
+      "box": 7,
+      "expected": 18,
+      "tp": 18,
+      "fp": 0,
+      "fn": 0,
+      "exact": 1,
+      "faces": [
+        {
+          "face": "top",
+          "found": 3,
+          "expected": 3
+        },
+        {
+          "face": "bottom",
+          "found": 3,
+          "expected": 3
+        },
+        {
+          "face": "left",
+          "found": 3,
+          "expected": 3
+        },
+        {
+          "face": "right",
+          "found": 3,
+          "expected": 3
+        },
+        {
+          "face": "front",
+          "found": 3,
+          "expected": 3
+        },
+        {
+          "face": "rear",
+          "found": 3,
+          "expected": 3
+        }
+      ]
+    },
+    {
+      "box": 8,
+      "expected": 18,
+      "tp": 18,
+      "fp": 0,
+      "fn": 0,
+      "exact": 1,
+      "faces": [
+        {
+          "face": "top",
+          "found": 3,
+          "expected": 3
+        },
+        {
+          "face": "bottom",
+          "found": 3,
+          "expected": 3
+        },
+        {
+          "face": "left",
+          "found": 3,
+          "expected": 3
+        },
+        {
+          "face": "right",
+          "found": 3,
+          "expected": 3
+        },
+        {
+          "face": "front",
+          "found": 3,
+          "expected": 3
+        },
+        {
+          "face": "rear",
+          "found": 3,
+          "expected": 3
+        }
+      ]
+    },
+    {
+      "box": 9,
+      "expected": 18,
+      "tp": 18,
+      "fp": 0,
+      "fn": 0,
+      "exact": 1,
+      "faces": [
+        {
+          "face": "top",
+          "found": 3,
+          "expected": 3
+        },
+        {
+          "face": "bottom",
+          "found": 3,
+          "expected": 3
+        },
+        {
+          "face": "left",
+          "found": 3,
+          "expected": 3
+        },
+        {
+          "face": "right",
+          "found": 3,
+          "expected": 3
+        },
+        {
+          "face": "front",
+          "found": 3,
+          "expected": 3
+        },
+        {
+          "face": "rear",
+          "found": 3,
+          "expected": 3
+        }
+      ]
+    },
+    {
+      "box": 10,
+      "expected": 18,
+      "tp": 18,
+      "fp": 0,
+      "fn": 0,
+      "exact": 1,
+      "faces": [
+        {
+          "face": "top",
+          "found": 3,
+          "expected": 3
+        },
+        {
+          "face": "bottom",
+          "found": 3,
+          "expected": 3
+        },
+        {
+          "face": "left",
+          "found": 3,
+          "expected": 3
+        },
+        {
+          "face": "right",
+          "found": 3,
+          "expected": 3
+        },
+        {
+          "face": "front",
+          "found": 3,
+          "expected": 3
+        },
+        {
+          "face": "rear",
+          "found": 3,
+          "expected": 3
+        }
+      ]
+    },
+    {
+      "box": 11,
+      "expected": 18,
+      "tp": 18,
+      "fp": 0,
+      "fn": 0,
+      "exact": 1,
+      "faces": [
+        {
+          "face": "top",
+          "found": 3,
+          "expected": 3
+        },
+        {
+          "face": "bottom",
+          "found": 3,
+          "expected": 3
+        },
+        {
+          "face": "left",
+          "found": 3,
+          "expected": 3
+        },
+        {
+          "face": "right",
+          "found": 3,
+          "expected": 3
+        },
+        {
+          "face": "front",
+          "found": 3,
+          "expected": 3
+        },
+        {
+          "face": "rear",
+          "found": 3,
+          "expected": 3
+        }
+      ]
+    }
+  ],
+  "elapsed_s": 75.62382283294573,
+  "model": "Каждая коробка имеет 18 постоянных этикеток; 4 полных линейных скана 8192×7200 и 10 торцевых кадров 9344×7000. Проекция тонкой линзы, проектный X=0.33 мм, консервативный дефокус по худшему углу этикетки; дифракция, апертура пикселя, смаз 0.5 px, условная аберрация sigma=0.35 px.",
+  "limitations": "Плоские матовые этикетки, постоянное освещение, без шума фотонов, бликов, окклюзий и калибровочных ошибок. Проекции торцов симметричны. Скорость/позиции заданы моделью; это проверка согласованности проекта."
+}

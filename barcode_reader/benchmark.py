@@ -10,6 +10,7 @@ import cv2
 import numpy as np
 from .decoder import decode
 from .synthetic import dataset
+from .metrics import key_record, wilson
 
 
 def run(output="results", boxes=60, seed=20260909):
@@ -20,22 +21,22 @@ def run(output="results", boxes=60, seed=20260909):
     # Один прогрев, вне тайминга. Генерация изображений также вне тайминга.
     decode(np.full((100,100),255,np.uint8))
     for i, sample in enumerate(dataset(seed,boxes)):
-        expected=set(sample["expected"])
+        expected={("Code 128",x.encode().hex()) for x in sample["expected"]}
         predictions={}
         for name,frames,enhanced,diagonal in [("one_frame",sample["frames"][1:2],False,False),
                                       ("three_frames",sample["frames"],False,False),
                                       ("three_frames_enhanced",sample["frames"],True,False),
                                       ("three_frames_diagonal",sample["frames"],False,True)]:
             started=time.perf_counter()
-            found={d.text for frame in frames for d in decode(frame,enhanced,try_diagonal=diagonal,
+            found={d.key for frame in frames for d in decode(frame,enhanced,try_diagonal=diagonal,
                                                               formats="Code128" if diagonal else None)}
             elapsed=(time.perf_counter()-started)*1000
-            predictions[name]=sorted(found)
+            predictions[name]=[key_record(k) for k in sorted(found)]
             rows.append({"box_id":sample["box_id"],"level":sample["level"],"method":name,
                          "expected":len(expected),"tp":len(found&expected),"fp":len(found-expected),
                          "fn":len(expected-found),"exact":int(found==expected),"latency_ms":elapsed})
         ledger.append({"box_id":sample["box_id"],"level":sample["level"],
-                       "expected":sample["expected"],"predictions":predictions})
+                       "expected":[key_record(k) for k in sorted(expected)],"predictions":predictions})
         if i<3:
             for k,frame in enumerate(sample["frames"]):
                 cv2.imwrite(str(examples/f"{sample['box_id']}_{k}.png"),frame)
@@ -54,7 +55,8 @@ def run(output="results", boxes=60, seed=20260909):
             tp=sum(r["tp"] for r in rs);fp=sum(r["fp"] for r in rs);fn=sum(r["fn"] for r in rs)
             metrics.append({"method":method,"level":level,"boxes":len(rs),"codes":tp+fn,
                             "exact_set_rate":sum(r["exact"] for r in rs)/len(rs),
-                            "code_recall":tp/(tp+fn),"code_precision":tp/(tp+fp) if tp+fp else None,
+                            "exact_ci95":wilson(sum(r["exact"] for r in rs),len(rs)),
+                            "code_recall":tp/(tp+fn),"recall_ci95":wilson(tp,tp+fn),"code_precision":tp/(tp+fp) if tp+fp else None,
                             "false_values":fp,"latency_p50_ms":float(np.percentile([r["latency_ms"] for r in rs],50)),
                             "latency_p95_ms":float(np.percentile([r["latency_ms"] for r in rs],95))})
     result={"seed":seed,"boxes":boxes,"frames_per_box":3,"image_shape":[960,1280],

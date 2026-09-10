@@ -99,10 +99,10 @@ def strips(image: np.ndarray, rows: int = 2048, overlap: int = 1024):
         start += rows-overlap
 
 
-def decode_strips(image: np.ndarray, rows=2048, overlap=1024):
+def decode_strips(image: np.ndarray, rows=2048, overlap=1024, *, formats="Code128", enhanced=False, try_diagonal=True):
     found = {}
     for offset, strip in strips(image, rows, overlap):
-        for d in decode(strip):
+        for d in decode(strip, enhanced, formats=formats, try_diagonal=try_diagonal):
             mapped = Detection(d.format, d.text, d.payload_hex,
                                tuple((x, y+offset) for x, y in d.polygon))
             found.setdefault(mapped.key, mapped)

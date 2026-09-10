@@ -1,3 +1,4 @@
+from barcode_reader.coverage import CaptureContract
 import pytest
 from barcode_reader.control import BoxTracker,MockPLC,FACES
 from barcode_reader.decoder import Detection
@@ -6,7 +7,7 @@ D=Detection("Code 128","VALUE",b"VALUE".hex(),((0,0),(10,0),(10,10),(0,10)))
 
 
 def tracker():
-    t=BoxTracker();t.register("A",0,2,3)
+    t=BoxTracker();t.register("A",0,2,3,contract=CaptureContract.image_demo({f:"frame-1" for f in FACES}))
     return t
 
 

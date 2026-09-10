@@ -8,24 +8,60 @@
   ],
   "predictions": {
     "one_frame": [
-      "OZ000001",
-      "OZ000002",
-      "OZ000003"
+      {
+        "format": "Code 128",
+        "payload_hex": "4f5a303030303031"
+      },
+      {
+        "format": "Code 128",
+        "payload_hex": "4f5a303030303032"
+      },
+      {
+        "format": "Code 128",
+        "payload_hex": "4f5a303030303033"
+      }
     ],
     "three_frames": [
-      "OZ000001",
-      "OZ000002",
-      "OZ000003"
+      {
+        "format": "Code 128",
+        "payload_hex": "4f5a303030303031"
+      },
+      {
+        "format": "Code 128",
+        "payload_hex": "4f5a303030303032"
+      },
+      {
+        "format": "Code 128",
+        "payload_hex": "4f5a303030303033"
+      }
     ],
     "three_frames_enhanced": [
-      "OZ000001",
-      "OZ000002",
-      "OZ000003"
+      {
+        "format": "Code 128",
+        "payload_hex": "4f5a303030303031"
+      },
+      {
+        "format": "Code 128",
+        "payload_hex": "4f5a303030303032"
+      },
+      {
+        "format": "Code 128",
+        "payload_hex": "4f5a303030303033"
+      }
     ],
     "three_frames_diagonal": [
-      "OZ000001",
-      "OZ000002",
-      "OZ000003"
+      {
+        "format": "Code 128",
+        "payload_hex": "4f5a303030303031"
+      },
+      {
+        "format": "Code 128",
+        "payload_hex": "4f5a303030303032"
+      },
+      {
+        "format": "Code 128",
+        "payload_hex": "4f5a303030303033"
+      }
     ]
   }
 }

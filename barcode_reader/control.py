@@ -4,6 +4,7 @@ from dataclasses import dataclass, field
 from copy import deepcopy
 import math
 from .decoder import Detection
+from .coverage import CaptureContract, Evidence, independent_count
 
 FACES = frozenset({"top", "bottom", "left", "right", "front", "rear"})
 
@@ -16,40 +17,42 @@ class Box:
     deadline_s: float
     faces: set = field(default_factory=set)
     observations: dict = field(default_factory=dict)
+    contract: CaptureContract | None = None
     closed: bool = False
     latest_completion_s: float = -math.inf
 
 
 class BoxTracker:
-    """Идентификатор задаёт имитатор аппаратного трекинга, а не декодер.
+    """Получает назначенный через Assigner ID и проверяет контракт захвата.
 
-    В промышленной версии ID определяется фотофронтом и энкодером. При двух
-    коробках в кадре требуется геометрическая привязка ROI; этот адаптер ещё
-    предстоит реализовать. Здесь неоднозначный ID отвергается явно.
+    Низкоуровневый observe доверяет адаптеру геометрии. Обработка изображений
+    вызывает его после уникального назначения ROI в assignment.py.
     """
     def __init__(self):
         self.boxes = {}
 
-    def register(self, box_id, entered_s, capture_end_s, deadline_s):
+    def register(self, box_id, entered_s, capture_end_s, deadline_s, *, contract=None):
         if box_id in self.boxes:
             raise ValueError("Повторный идентификатор коробки")
         if not all(math.isfinite(t) for t in (entered_s,capture_end_s,deadline_s)) or not entered_s <= capture_end_s < deadline_s:
             raise ValueError("Неверный порядок временных границ")
-        self.boxes[box_id] = Box(box_id, entered_s, capture_end_s, deadline_s)
+        self.boxes[box_id] = Box(box_id, entered_s, capture_end_s, deadline_s, contract=contract or CaptureContract.production(box_id))
 
-    def observe(self, box_id, face, frame_id, captured_s, completed_s, detections):
+    def observe(self, box_id, face, frame_id, captured_s, completed_s, detections, *, evidence=None, dropped_rows=()):
         if box_id not in self.boxes or face not in FACES:
             return False
         b = self.boxes[box_id]
         if (b.closed or not b.entered_s <= captured_s <= b.capture_end_s
                 or not captured_s <= completed_s <= b.deadline_s):
             return False
-        b.faces.add(face)
+        evidence = evidence or Evidence(face, frame_id)
+        b.contract.record(face, evidence, dropped_rows)
+        b.faces = b.contract.complete_faces()
         b.latest_completion_s = max(b.latest_completion_s, completed_s)
         for d in detections:
             entry = b.observations.setdefault(d.key, {"detection": d, "frames": set(), "faces": set()})
             # Повторная обработка того же кадра не является подтверждением.
-            entry["frames"].add((face, frame_id))
+            entry["frames"].add(evidence)
             entry["faces"].add(face)
         return True
 
@@ -69,16 +72,16 @@ class BoxTracker:
             e = b.observations[key]
             d = e["detection"]
             item = {"format": d.format, "text": d.text, "payload_hex": d.payload_hex,
-                    "confirmations": len(e["frames"]), "faces": sorted(e["faces"])}
+                    "confirmations": independent_count(e["frames"]), "faces": sorted(e["faces"])}
             all_codes.append(item)
-            if len(e["frames"]) >= confirmations:
+            if independent_count(e["frames"]) >= confirmations:
                 accepted.append(item)
         status = ("late" if now_s > b.deadline_s else "incomplete_views" if b.faces != FACES
                   else "no_read" if not all_codes else "unconfirmed" if len(accepted) != len(all_codes)
                   else "read")
         return {"schema_version": 1, "message_id": f"{box_id}:1", "box_id": box_id,
                 "status": status, "codes": all_codes, "accepted_codes": accepted,
-                "observed_faces": sorted(b.faces), "deadline_s": b.deadline_s,
+                "observed_faces": sorted(b.faces), "capture_complete": b.faces == FACES, "deadline_s": b.deadline_s,
                 "complete_set_verified": False}
 
 

@@ -1,0 +1,4743 @@
+{
+  "cpu": "Apple M5",
+  "workers": 8,
+  "boxes": 12,
+  "interval_s": 2,
+  "capacity": 64,
+  "peak_inflight_including_running": 13,
+  "p95_ms": 465.36867937253464,
+  "p99_ms": 466.60181591001964,
+  "late_fraction": 0.0,
+  "all_decodes_correct": true,
+  "service_p50_ms": {
+    "area": 325.8620630367659,
+    "line": 128.32385394722223
+  },
+  "service_p95_ms": {
+    "area": 412.1678396244533,
+    "line": 148.34780248929746
+  },
+  "outcomes": [
+    {
+      "box": 0,
+      "finish_after_last_exposure_ms": 464.10751700465227,
+      "ack_s": 2.476661417004652,
+      "late": false,
+      "jobs": 38
+    },
+    {
+      "box": 1,
+      "finish_after_last_exposure_ms": 433.421225022232,
+      "ack_s": 4.445975125022232,
+      "late": false,
+      "jobs": 38
+    },
+    {
+      "box": 2,
+      "finish_after_last_exposure_ms": 435.931183947889,
+      "ack_s": 6.448485083947889,
+      "late": false,
+      "jobs": 38
+    },
+    {
+      "box": 3,
+      "finish_after_last_exposure_ms": 441.0530170106206,
+      "ack_s": 8.453606917010621,
+      "late": false,
+      "jobs": 38
+    },
+    {
+      "box": 4,
+      "finish_after_last_exposure_ms": 439.09226703987156,
+      "ack_s": 10.451646167039872,
+      "late": false,
+      "jobs": 38
+    },
+    {
+      "box": 5,
+      "finish_after_last_exposure_ms": 459.4050169370014,
+      "ack_s": 12.471958916937002,
+      "late": false,
+      "jobs": 38
+    },
+    {
+      "box": 6,
+      "finish_after_last_exposure_ms": 440.0798920222435,
+      "ack_s": 14.452633792022244,
+      "late": false,
+      "jobs": 38
+    },
+    {
+      "box": 7,
+      "finish_after_last_exposure_ms": 466.9101000443909,
+      "ack_s": 16.47946400004439,
+      "late": false,
+      "jobs": 38
+    },
+    {
+      "box": 8,
+      "finish_after_last_exposure_ms": 443.81339204561596,
+      "ack_s": 18.456367292045616,
+      "late": false,
+      "jobs": 38
+    },
+    {
+      "box": 9,
+      "finish_after_last_exposure_ms": 448.2505999884445,
+      "ack_s": 20.460804499988445,
+      "late": false,
+      "jobs": 38
+    },
+    {
+      "box": 10,
+      "finish_after_last_exposure_ms": 452.26735001493876,
+      "ack_s": 22.46482125001494,
+      "late": false,
+      "jobs": 38
+    },
+    {
+      "box": 11,
+      "finish_after_last_exposure_ms": 441.924474985047,
+      "ack_s": 24.454478374985047,
+      "late": false,
+      "jobs": 38
+    }
+  ],
+  "models": [
+    {
+      "workers": 1,
+      "service_multiplier": 1.0,
+      "boxes": 1000,
+      "late_fraction": 1.0,
+      "max_queue": 29,
+      "p95_success_ms": null
+    },
+    {
+      "workers": 1,
+      "service_multiplier": 1.5,
+      "boxes": 1000,
+      "late_fraction": 1.0,
+      "max_queue": 32,
+      "p95_success_ms": null
+    },
+    {
+      "workers": 1,
+      "service_multiplier": 2.0,
+      "boxes": 1000,
+      "late_fraction": 1.0,
+      "max_queue": 33,
+      "p95_success_ms": null
+    },
+    {
+      "workers": 4,
+      "service_multiplier": 1.0,
+      "boxes": 1000,
+      "late_fraction": 1.0,
+      "max_queue": 15,
+      "p95_success_ms": null
+    },
+    {
+      "workers": 4,
+      "service_multiplier": 1.5,
+      "boxes": 1000,
+      "late_fraction": 1.0,
+      "max_queue": 20,
+      "p95_success_ms": null
+    },
+    {
+      "workers": 4,
+      "service_multiplier": 2.0,
+      "boxes": 1000,
+      "late_fraction": 1.0,
+      "max_queue": 23,
+      "p95_success_ms": null
+    },
+    {
+      "workers": 8,
+      "service_multiplier": 1.0,
+      "boxes": 1000,
+      "late_fraction": 0.0,
+      "max_queue": 5,
+      "p95_success_ms": 542.1678396245397
+    },
+    {
+      "workers": 8,
+      "service_multiplier": 1.5,
+      "boxes": 1000,
+      "late_fraction": 1.0,
+      "max_queue": 10,
+      "p95_success_ms": null
+    },
+    {
+      "workers": 8,
+      "service_multiplier": 2.0,
+      "boxes": 1000,
+      "late_fraction": 1.0,
+      "max_queue": 15,
+      "p95_success_ms": null
+    }
+  ],
+  "measurements": [
+    {
+      "kind": "line",
+      "start": 0.8332667920039967,
+      "end": 0.9562077090376988,
+      "service_s": 0.12294091703370214,
+      "correct": true,
+      "box": 0,
+      "arrival": 0.8226666666666667,
+      "deadline": 2.65
+    },
+    {
+      "kind": "line",
+      "start": 0.9083623749902472,
+      "end": 1.0112806250108406,
+      "service_s": 0.1029182500205934,
+      "correct": true,
+      "box": 0,
+      "arrival": 0.908,
+      "deadline": 2.65
+    },
+    {
+      "kind": "line",
+      "start": 0.9251384170493111,
+      "end": 1.0289814589777961,
+      "service_s": 0.10384304192848504,
+      "correct": true,
+      "box": 0,
+      "arrival": 0.9226666666666666,
+      "deadline": 2.65
+    },
+    {
+      "kind": "line",
+      "start": 0.9251602089498192,
+      "end": 1.032483874936588,
+      "service_s": 0.1073236659867689,
+      "correct": true,
+      "box": 0,
+      "arrival": 0.9226666666666666,
+      "deadline": 2.65
+    },
+    {
+      "kind": "line",
+      "start": 1.0008397089550272,
+      "end": 1.1071940419496968,
+      "service_s": 0.10635433299466968,
+      "correct": true,
+      "box": 0,
+      "arrival": 0.9933333333333334,
+      "deadline": 2.65
+    },
+    {
+      "kind": "line",
+      "start": 1.0084260000148788,
+      "end": 1.1184402919607237,
+      "service_s": 0.11001429194584489,
+      "correct": true,
+      "box": 0,
+      "arrival": 1.008,
+      "deadline": 2.65
+    },
+    {
+      "kind": "line",
+      "start": 1.0084643750451505,
+      "end": 1.1139799170196056,
+      "service_s": 0.10551554197445512,
+      "correct": true,
+      "box": 0,
+      "arrival": 1.008,
+      "deadline": 2.65
+    },
+    {
+      "kind": "line",
+      "start": 1.0737157090334222,
+      "end": 1.1816559999715537,
+      "service_s": 0.10794029093813151,
+      "correct": true,
+      "box": 0,
+      "arrival": 1.0726666666666667,
+      "deadline": 2.65
+    },
+    {
+      "kind": "line",
+      "start": 1.0814748340053484,
+      "end": 1.2033940840046853,
+      "service_s": 0.1219192499993369,
+      "correct": true,
+      "box": 0,
+      "arrival": 1.0786666666666667,
+      "deadline": 2.65
+    },
+    {
+      "kind": "line",
+      "start": 1.0996359590208158,
+      "end": 1.2239618339808658,
+      "service_s": 0.12432587496004999,
+      "correct": true,
+      "box": 0,
+      "arrival": 1.0933333333333333,
+      "deadline": 2.65
+    },
+    {
+      "kind": "line",
+      "start": 1.0996570000424981,
+      "end": 1.2239149590022862,
+      "service_s": 0.12425795895978808,
+      "correct": true,
+      "box": 0,
+      "arrival": 1.0933333333333333,
+      "deadline": 2.65
+    },
+    {
+      "kind": "line",
+      "start": 1.1584509590175003,
+      "end": 1.2751031250227243,
+      "service_s": 0.11665216600522399,
+      "correct": true,
+      "box": 0,
+      "arrival": 1.1580000000000001,
+      "deadline": 2.65
+    },
+    {
+      "kind": "line",
+      "start": 1.1651196669554338,
+      "end": 1.295023208949715,
+      "service_s": 0.1299035419942811,
+      "correct": true,
+      "box": 0,
+      "arrival": 1.164,
+      "deadline": 2.65
+    },
+    {
+      "kind": "line",
+      "start": 1.181866958970204,
+      "end": 1.309975584037602,
+      "service_s": 0.12810862506739795,
+      "correct": true,
+      "box": 0,
+      "arrival": 1.1786666666666668,
+      "deadline": 2.65
+    },
+    {
+      "kind": "line",
+      "start": 1.181895999936387,
+      "end": 1.3047141670249403,
+      "service_s": 0.12281816708855331,
+      "correct": true,
+      "box": 0,
+      "arrival": 1.1786666666666668,
+      "deadline": 2.65
+    },
+    {
+      "kind": "line",
+      "start": 1.2502766250399873,
+      "end": 1.3986705839633942,
+      "service_s": 0.1483939589234069,
+      "correct": true,
+      "box": 0,
+      "arrival": 1.2433333333333334,
+      "deadline": 2.65
+    },
+    {
+      "kind": "line",
+      "start": 1.250305874971673,
+      "end": 1.3856443340191618,
+      "service_s": 0.13533845904748887,
+      "correct": true,
+      "box": 0,
+      "arrival": 1.2493333333333334,
+      "deadline": 2.65
+    },
+    {
+      "kind": "line",
+      "start": 1.2529309169622138,
+      "end": 1.384375249966979,
+      "service_s": 0.1314443330047652,
+      "correct": true,
+      "box": 0,
+      "arrival": 1.252,
+      "deadline": 2.65
+    },
+    {
+      "kind": "line",
+      "start": 1.2751924999756739,
+      "end": 1.421558375004679,
+      "service_s": 0.1463658750290051,
+      "correct": true,
+      "box": 0,
+      "arrival": 1.264,
+      "deadline": 2.65
+    },
+    {
+      "kind": "line",
+      "start": 1.2951020000036806,
+      "end": 1.4249944590264931,
+      "service_s": 0.12989245902281255,
+      "correct": true,
+      "box": 0,
+      "arrival": 1.264,
+      "deadline": 2.65
+    },
+    {
+      "kind": "line",
+      "start": 1.335525666945614,
+      "end": 1.480304625001736,
+      "service_s": 0.14477895805612206,
+      "correct": true,
+      "box": 0,
+      "arrival": 1.3286666666666667,
+      "deadline": 2.65
+    },
+    {
+      "kind": "area",
+      "start": 1.250258499989286,
+      "end": 1.677715666941367,
+      "service_s": 0.427457166952081,
+      "correct": true,
+      "box": 0,
+      "arrival": 1.2425539,
+      "deadline": 2.65
+    },
+    {
+      "kind": "area",
+      "start": 1.3152996669523418,
+      "end": 1.727355416980572,
+      "service_s": 0.41205575002823025,
+      "correct": true,
+      "box": 0,
+      "arrival": 1.3050539,
+      "deadline": 2.65
+    },
+    {
+      "kind": "line",
+      "start": 1.3844940420240164,
+      "end": 1.5251769999740645,
+      "service_s": 0.14068295795004815,
+      "correct": true,
+      "box": 0,
+      "arrival": 1.3493333333333333,
+      "deadline": 2.65
+    },
+    {
+      "kind": "line",
+      "start": 1.3857310840394348,
+      "end": 1.530030291993171,
+      "service_s": 0.14429920795373619,
+      "correct": true,
+      "box": 0,
+      "arrival": 1.3493333333333333,
+      "deadline": 2.65
+    },
+    {
+      "kind": "line",
+      "start": 1.3987858339678496,
+      "end": 1.545176833984442,
+      "service_s": 0.14639100001659244,
+      "correct": true,
+      "box": 0,
+      "arrival": 1.352,
+      "deadline": 2.65
+    },
+    {
+      "kind": "line",
+      "start": 1.421675833989866,
+      "end": 1.5711014589760453,
+      "service_s": 0.14942562498617917,
+      "correct": true,
+      "box": 0,
+      "arrival": 1.352,
+      "deadline": 2.65
+    },
+    {
+      "kind": "area",
+      "start": 1.4250945840030909,
+      "end": 1.8343914590077475,
+      "service_s": 0.4092968750046566,
+      "correct": true,
+      "box": 0,
+      "arrival": 1.3675539,
+      "deadline": 2.65
+    },
+    {
+      "kind": "line",
+      "start": 1.4803808339638636,
+      "end": 1.6261099169496447,
+      "service_s": 0.14572908298578113,
+      "correct": true,
+      "box": 0,
+      "arrival": 1.414,
+      "deadline": 2.65
+    },
+    {
+      "kind": "line",
+      "start": 1.5452580419369042,
+      "end": 1.6935904589481652,
+      "service_s": 0.148332417011261,
+      "correct": true,
+      "box": 0,
+      "arrival": 1.4993333333333334,
+      "deadline": 2.65
+    },
+    {
+      "kind": "line",
+      "start": 1.5711852089734748,
+      "end": 1.7336086250143126,
+      "service_s": 0.16242341604083776,
+      "correct": true,
+      "box": 0,
+      "arrival": 1.502,
+      "deadline": 2.65
+    },
+    {
+      "kind": "area",
+      "start": 1.5252704590093344,
+      "end": 1.94033504195977,
+      "service_s": 0.4150645829504356,
+      "correct": true,
+      "box": 0,
+      "arrival": 1.4300539,
+      "deadline": 2.65
+    },
+    {
+      "kind": "area",
+      "start": 1.53011258400511,
+      "end": 1.9406472500413656,
+      "service_s": 0.41053466603625566,
+      "correct": true,
+      "box": 0,
+      "arrival": 1.4925539,
+      "deadline": 2.65
+    },
+    {
+      "kind": "area",
+      "start": 1.8527687919558957,
+      "end": 2.1990344589576125,
+      "service_s": 0.3462656670017168,
+      "correct": true,
+      "box": 0,
+      "arrival": 1.8425539,
+      "deadline": 2.65
+    },
+    {
+      "kind": "area",
+      "start": 1.908141874941066,
+      "end": 2.215604083961807,
+      "service_s": 0.3074622090207413,
+      "correct": true,
+      "box": 0,
+      "arrival": 1.9050539,
+      "deadline": 2.65
+    },
+    {
+      "kind": "area",
+      "start": 1.969529291964136,
+      "end": 2.303447291953489,
+      "service_s": 0.3339179999893531,
+      "correct": true,
+      "box": 0,
+      "arrival": 1.9675539,
+      "deadline": 2.65
+    },
+    {
+      "kind": "area",
+      "start": 2.0402842089533806,
+      "end": 2.3377058339538053,
+      "service_s": 0.2974216250004247,
+      "correct": true,
+      "box": 0,
+      "arrival": 2.0300539,
+      "deadline": 2.65
+    },
+    {
+      "kind": "area",
+      "start": 2.1028675839770585,
+      "end": 2.4266614170046523,
+      "service_s": 0.3237938330275938,
+      "correct": true,
+      "box": 0,
+      "arrival": 2.0925539,
+      "deadline": 2.65
+    },
+    {
+      "kind": "line",
+      "start": 2.832201167009771,
+      "end": 3.000692958943546,
+      "service_s": 0.16849179193377495,
+      "correct": true,
+      "box": 1,
+      "arrival": 2.822666666666666,
+      "deadline": 4.65
+    },
+    {
+      "kind": "line",
+      "start": 2.9182566669769585,
+      "end": 3.0587076670490205,
+      "service_s": 0.14045100007206202,
+      "correct": true,
+      "box": 1,
+      "arrival": 2.9079999999999995,
+      "deadline": 4.65
+    },
+    {
+      "kind": "line",
+      "start": 2.925281750038266,
+      "end": 3.054890291998163,
+      "service_s": 0.12960854195989668,
+      "correct": true,
+      "box": 1,
+      "arrival": 2.9226666666666663,
+      "deadline": 4.65
+    },
+    {
+      "kind": "line",
+      "start": 2.9253240840043873,
+      "end": 3.043146042036824,
+      "service_s": 0.11782195803243667,
+      "correct": true,
+      "box": 1,
+      "arrival": 2.9226666666666663,
+      "deadline": 4.65
+    },
+    {
+      "kind": "line",
+      "start": 3.001189999980852,
+      "end": 3.123254167032428,
+      "service_s": 0.12206416705157608,
+      "correct": true,
+      "box": 1,
+      "arrival": 2.993333333333333,
+      "deadline": 4.65
+    },
+    {
+      "kind": "line",
+      "start": 3.0085157089633867,
+      "end": 3.1216503749601543,
+      "service_s": 0.11313466599676758,
+      "correct": true,
+      "box": 1,
+      "arrival": 3.008,
+      "deadline": 4.65
+    },
+    {
+      "kind": "line",
+      "start": 3.00855937495362,
+      "end": 3.1355117090279236,
+      "service_s": 0.1269523340743035,
+      "correct": true,
+      "box": 1,
+      "arrival": 3.008,
+      "deadline": 4.65
+    },
+    {
+      "kind": "line",
+      "start": 3.0830464999889955,
+      "end": 3.195577917038463,
+      "service_s": 0.11253141704946756,
+      "correct": true,
+      "box": 1,
+      "arrival": 3.072666666666666,
+      "deadline": 4.65
+    },
+    {
+      "kind": "line",
+      "start": 3.0831482090288773,
+      "end": 3.2091818749904633,
+      "service_s": 0.12603366596158594,
+      "correct": true,
+      "box": 1,
+      "arrival": 3.0786666666666664,
+      "deadline": 4.65
+    },
+    {
+      "kind": "line",
+      "start": 3.098941499949433,
+      "end": 3.222881417023018,
+      "service_s": 0.12393991707358509,
+      "correct": true,
+      "box": 1,
+      "arrival": 3.0933333333333333,
+      "deadline": 4.65
+    },
+    {
+      "kind": "line",
+      "start": 3.0989752089371905,
+      "end": 3.223203666973859,
+      "service_s": 0.1242284580366686,
+      "correct": true,
+      "box": 1,
+      "arrival": 3.0933333333333333,
+      "deadline": 4.65
+    },
+    {
+      "kind": "line",
+      "start": 3.1682042500469834,
+      "end": 3.2956392499618232,
+      "service_s": 0.12743499991483986,
+      "correct": true,
+      "box": 1,
+      "arrival": 3.1579999999999995,
+      "deadline": 4.65
+    },
+    {
+      "kind": "line",
+      "start": 3.168221249943599,
+      "end": 3.2891188750509173,
+      "service_s": 0.12089762510731816,
+      "correct": true,
+      "box": 1,
+      "arrival": 3.1639999999999997,
+      "deadline": 4.65
+    },
+    {
+      "kind": "line",
+      "start": 3.184315750026144,
+      "end": 3.3077811249531806,
+      "service_s": 0.12346537492703646,
+      "correct": true,
+      "box": 1,
+      "arrival": 3.1786666666666665,
+      "deadline": 4.65
+    },
+    {
+      "kind": "line",
+      "start": 3.184292749967426,
+      "end": 3.316293500014581,
+      "service_s": 0.13200075004715472,
+      "correct": true,
+      "box": 1,
+      "arrival": 3.1786666666666665,
+      "deadline": 4.65
+    },
+    {
+      "kind": "line",
+      "start": 3.2515945839695632,
+      "end": 3.390999541967176,
+      "service_s": 0.13940495799761266,
+      "correct": true,
+      "box": 1,
+      "arrival": 3.243333333333333,
+      "deadline": 4.65
+    },
+    {
+      "kind": "line",
+      "start": 3.2516202919650823,
+      "end": 3.4004911669762805,
+      "service_s": 0.14887087501119822,
+      "correct": true,
+      "box": 1,
+      "arrival": 3.249333333333333,
+      "deadline": 4.65
+    },
+    {
+      "kind": "line",
+      "start": 3.2525188339641318,
+      "end": 3.395689917029813,
+      "service_s": 0.14317108306568116,
+      "correct": true,
+      "box": 1,
+      "arrival": 3.252,
+      "deadline": 4.65
+    },
+    {
+      "kind": "line",
+      "start": 3.2892265419941396,
+      "end": 3.4168595840455964,
+      "service_s": 0.12763304205145687,
+      "correct": true,
+      "box": 1,
+      "arrival": 3.264,
+      "deadline": 4.65
+    },
+    {
+      "kind": "line",
+      "start": 3.2957586250267923,
+      "end": 3.4382518749916926,
+      "service_s": 0.14249324996490031,
+      "correct": true,
+      "box": 1,
+      "arrival": 3.264,
+      "deadline": 4.65
+    },
+    {
+      "kind": "line",
+      "start": 3.3333575419383124,
+      "end": 3.4700100000482053,
+      "service_s": 0.1366524581098929,
+      "correct": true,
+      "box": 1,
+      "arrival": 3.3286666666666664,
+      "deadline": 4.65
+    },
+    {
+      "kind": "area",
+      "start": 3.2515741670504212,
+      "end": 3.636727000004612,
+      "service_s": 0.38515283295419067,
+      "correct": true,
+      "box": 1,
+      "arrival": 3.2425539,
+      "deadline": 4.65
+    },
+    {
+      "kind": "area",
+      "start": 3.315153458970599,
+      "end": 3.6984490000177175,
+      "service_s": 0.3832955410471186,
+      "correct": true,
+      "box": 1,
+      "arrival": 3.3050539,
+      "deadline": 4.65
+    },
+    {
+      "kind": "line",
+      "start": 3.391118708997965,
+      "end": 3.5324720420176163,
+      "service_s": 0.14135333301965147,
+      "correct": true,
+      "box": 1,
+      "arrival": 3.349333333333333,
+      "deadline": 4.65
+    },
+    {
+      "kind": "line",
+      "start": 3.3957665839698166,
+      "end": 3.523710959008895,
+      "service_s": 0.1279443750390783,
+      "correct": true,
+      "box": 1,
+      "arrival": 3.349333333333333,
+      "deadline": 4.65
+    },
+    {
+      "kind": "line",
+      "start": 3.4005637919763103,
+      "end": 3.5468739590141922,
+      "service_s": 0.1463101670378819,
+      "correct": true,
+      "box": 1,
+      "arrival": 3.352,
+      "deadline": 4.65
+    },
+    {
+      "kind": "line",
+      "start": 3.416962292045355,
+      "end": 3.5588792499620467,
+      "service_s": 0.1419169579166919,
+      "correct": true,
+      "box": 1,
+      "arrival": 3.352,
+      "deadline": 4.65
+    },
+    {
+      "kind": "area",
+      "start": 3.43834033398889,
+      "end": 3.78991866693832,
+      "service_s": 0.35157833294942975,
+      "correct": true,
+      "box": 1,
+      "arrival": 3.3675539,
+      "deadline": 4.65
+    },
+    {
+      "kind": "line",
+      "start": 3.4700995000312105,
+      "end": 3.608483292046003,
+      "service_s": 0.13838379201479256,
+      "correct": true,
+      "box": 1,
+      "arrival": 3.4139999999999997,
+      "deadline": 4.65
+    },
+    {
+      "kind": "line",
+      "start": 3.546963333967142,
+      "end": 3.677955250022933,
+      "service_s": 0.13099191605579108,
+      "correct": true,
+      "box": 1,
+      "arrival": 3.499333333333333,
+      "deadline": 4.65
+    },
+    {
+      "kind": "line",
+      "start": 3.5589998749783263,
+      "end": 3.687106000026688,
+      "service_s": 0.12810612504836172,
+      "correct": true,
+      "box": 1,
+      "arrival": 3.502,
+      "deadline": 4.65
+    },
+    {
+      "kind": "area",
+      "start": 3.523826749995351,
+      "end": 3.853325458941981,
+      "service_s": 0.32949870894663036,
+      "correct": true,
+      "box": 1,
+      "arrival": 3.4300539,
+      "deadline": 4.65
+    },
+    {
+      "kind": "area",
+      "start": 3.532560750027187,
+      "end": 3.8581472920486704,
+      "service_s": 0.3255865420214832,
+      "correct": true,
+      "box": 1,
+      "arrival": 3.4925539,
+      "deadline": 4.65
+    },
+    {
+      "kind": "area",
+      "start": 3.852485334035009,
+      "end": 4.152352000004612,
+      "service_s": 0.29986666596960276,
+      "correct": true,
+      "box": 1,
+      "arrival": 3.8425539,
+      "deadline": 4.65
+    },
+    {
+      "kind": "area",
+      "start": 3.90836954198312,
+      "end": 4.195224917028099,
+      "service_s": 0.28685537504497916,
+      "correct": true,
+      "box": 1,
+      "arrival": 3.9050539,
+      "deadline": 4.65
+    },
+    {
+      "kind": "area",
+      "start": 3.9750733750406653,
+      "end": 4.278095124987885,
+      "service_s": 0.3030217499472201,
+      "correct": true,
+      "box": 1,
+      "arrival": 3.9675539,
+      "deadline": 4.65
+    },
+    {
+      "kind": "area",
+      "start": 4.03966491704341,
+      "end": 4.342715709004551,
+      "service_s": 0.30305079196114093,
+      "correct": true,
+      "box": 1,
+      "arrival": 4.0300538999999995,
+      "deadline": 4.65
+    },
+    {
+      "kind": "area",
+      "start": 4.102832374977879,
+      "end": 4.3959751250222325,
+      "service_s": 0.2931427500443533,
+      "correct": true,
+      "box": 1,
+      "arrival": 4.0925539,
+      "deadline": 4.65
+    },
+    {
+      "kind": "line",
+      "start": 4.825117417029105,
+      "end": 4.960269375005737,
+      "service_s": 0.13515195797663182,
+      "correct": true,
+      "box": 2,
+      "arrival": 4.822666666666667,
+      "deadline": 6.65
+    },
+    {
+      "kind": "line",
+      "start": 4.918057917035185,
+      "end": 5.029167374945246,
+      "service_s": 0.11110945791006088,
+      "correct": true,
+      "box": 2,
+      "arrival": 4.908,
+      "deadline": 6.65
+    },
+    {
+      "kind": "line",
+      "start": 4.925022333976813,
+      "end": 5.04031995893456,
+      "service_s": 0.11529762495774776,
+      "correct": true,
+      "box": 2,
+      "arrival": 4.922666666666666,
+      "deadline": 6.65
+    },
+    {
+      "kind": "line",
+      "start": 4.925036333967,
+      "end": 5.038914249977097,
+      "service_s": 0.11387791601009667,
+      "correct": true,
+      "box": 2,
+      "arrival": 4.922666666666666,
+      "deadline": 6.65
+    },
+    {
+      "kind": "line",
+      "start": 5.003572792047635,
+      "end": 5.125500333961099,
+      "service_s": 0.12192754191346467,
+      "correct": true,
+      "box": 2,
+      "arrival": 4.993333333333333,
+      "deadline": 6.65
+    },
+    {
+      "kind": "line",
+      "start": 5.008385334047489,
+      "end": 5.130361624993384,
+      "service_s": 0.12197629094589502,
+      "correct": true,
+      "box": 2,
+      "arrival": 5.008,
+      "deadline": 6.65
+    },
+    {
+      "kind": "line",
+      "start": 5.008403084008023,
+      "end": 5.112059792038053,
+      "service_s": 0.10365670803003013,
+      "correct": true,
+      "box": 2,
+      "arrival": 5.008,
+      "deadline": 6.65
+    },
+    {
+      "kind": "line",
+      "start": 5.07474412501324,
+      "end": 5.20075670897495,
+      "service_s": 0.12601258396171033,
+      "correct": true,
+      "box": 2,
+      "arrival": 5.072666666666667,
+      "deadline": 6.65
+    },
+    {
+      "kind": "line",
+      "start": 5.08095462503843,
+      "end": 5.198526083957404,
+      "service_s": 0.1175714589189738,
+      "correct": true,
+      "box": 2,
+      "arrival": 5.078666666666667,
+      "deadline": 6.65
+    },
+    {
+      "kind": "line",
+      "start": 5.099893208942376,
+      "end": 5.227436125045642,
+      "service_s": 0.12754291610326618,
+      "correct": true,
+      "box": 2,
+      "arrival": 5.093333333333333,
+      "deadline": 6.65
+    },
+    {
+      "kind": "line",
+      "start": 5.099915666971356,
+      "end": 5.2133634169586,
+      "service_s": 0.1134477499872446,
+      "correct": true,
+      "box": 2,
+      "arrival": 5.093333333333333,
+      "deadline": 6.65
+    },
+    {
+      "kind": "line",
+      "start": 5.15867050003726,
+      "end": 5.287180625018664,
+      "service_s": 0.12851012498140335,
+      "correct": true,
+      "box": 2,
+      "arrival": 5.158,
+      "deadline": 6.65
+    },
+    {
+      "kind": "line",
+      "start": 5.167023041984066,
+      "end": 5.293467625044286,
+      "service_s": 0.12644458306021988,
+      "correct": true,
+      "box": 2,
+      "arrival": 5.164000000000001,
+      "deadline": 6.65
+    },
+    {
+      "kind": "line",
+      "start": 5.184898374951445,
+      "end": 5.311959458980709,
+      "service_s": 0.12706108402926475,
+      "correct": true,
+      "box": 2,
+      "arrival": 5.1786666666666665,
+      "deadline": 6.65
+    },
+    {
+      "kind": "line",
+      "start": 5.184939458966255,
+      "end": 5.296471916954033,
+      "service_s": 0.11153245798777789,
+      "correct": true,
+      "box": 2,
+      "arrival": 5.1786666666666665,
+      "deadline": 6.65
+    },
+    {
+      "kind": "line",
+      "start": 5.24910091701895,
+      "end": 5.3927434999495745,
+      "service_s": 0.14364258293062449,
+      "correct": true,
+      "box": 2,
+      "arrival": 5.243333333333333,
+      "deadline": 6.65
+    },
+    {
+      "kind": "line",
+      "start": 5.249727874994278,
+      "end": 5.375748999998905,
+      "service_s": 0.1260211250046268,
+      "correct": true,
+      "box": 2,
+      "arrival": 5.249333333333333,
+      "deadline": 6.65
+    },
+    {
+      "kind": "line",
+      "start": 5.253472708980553,
+      "end": 5.4096919590374455,
+      "service_s": 0.15621925005689263,
+      "correct": true,
+      "box": 2,
+      "arrival": 5.252,
+      "deadline": 6.65
+    },
+    {
+      "kind": "line",
+      "start": 5.287275291979313,
+      "end": 5.429330833954737,
+      "service_s": 0.1420555419754237,
+      "correct": true,
+      "box": 2,
+      "arrival": 5.264,
+      "deadline": 6.65
+    },
+    {
+      "kind": "line",
+      "start": 5.29361254198011,
+      "end": 5.419357541948557,
+      "service_s": 0.1257449999684468,
+      "correct": true,
+      "box": 2,
+      "arrival": 5.264,
+      "deadline": 6.65
+    },
+    {
+      "kind": "line",
+      "start": 5.330699834041297,
+      "end": 5.473143083974719,
+      "service_s": 0.1424432499334216,
+      "correct": true,
+      "box": 2,
+      "arrival": 5.328666666666667,
+      "deadline": 6.65
+    },
+    {
+      "kind": "area",
+      "start": 5.249079625005834,
+      "end": 5.663377166958526,
+      "service_s": 0.414297541952692,
+      "correct": true,
+      "box": 2,
+      "arrival": 5.2425539,
+      "deadline": 6.65
+    },
+    {
+      "kind": "area",
+      "start": 5.315288709010929,
+      "end": 5.69746983400546,
+      "service_s": 0.3821811249945313,
+      "correct": true,
+      "box": 2,
+      "arrival": 5.3050539,
+      "deadline": 6.65
+    },
+    {
+      "kind": "line",
+      "start": 5.37585616693832,
+      "end": 5.517762999981642,
+      "service_s": 0.14190683304332197,
+      "correct": true,
+      "box": 2,
+      "arrival": 5.349333333333333,
+      "deadline": 6.65
+    },
+    {
+      "kind": "line",
+      "start": 5.392861500033177,
+      "end": 5.531949250027537,
+      "service_s": 0.1390877499943599,
+      "correct": true,
+      "box": 2,
+      "arrival": 5.349333333333333,
+      "deadline": 6.65
+    },
+    {
+      "kind": "line",
+      "start": 5.409760875045322,
+      "end": 5.541597041999921,
+      "service_s": 0.13183616695459932,
+      "correct": true,
+      "box": 2,
+      "arrival": 5.351999999999999,
+      "deadline": 6.65
+    },
+    {
+      "kind": "line",
+      "start": 5.419428042019717,
+      "end": 5.556944584008306,
+      "service_s": 0.13751654198858887,
+      "correct": true,
+      "box": 2,
+      "arrival": 5.351999999999999,
+      "deadline": 6.65
+    },
+    {
+      "kind": "area",
+      "start": 5.429424167028628,
+      "end": 5.776523208944127,
+      "service_s": 0.3470990419154987,
+      "correct": true,
+      "box": 2,
+      "arrival": 5.3675539,
+      "deadline": 6.65
+    },
+    {
+      "kind": "line",
+      "start": 5.473232542048208,
+      "end": 5.598737208987586,
+      "service_s": 0.12550466693937778,
+      "correct": true,
+      "box": 2,
+      "arrival": 5.414000000000001,
+      "deadline": 6.65
+    },
+    {
+      "kind": "line",
+      "start": 5.541749791940674,
+      "end": 5.672798000043258,
+      "service_s": 0.13104820810258389,
+      "correct": true,
+      "box": 2,
+      "arrival": 5.499333333333333,
+      "deadline": 6.65
+    },
+    {
+      "kind": "line",
+      "start": 5.55706529202871,
+      "end": 5.689487625029869,
+      "service_s": 0.13242233300115913,
+      "correct": true,
+      "box": 2,
+      "arrival": 5.502,
+      "deadline": 6.65
+    },
+    {
+      "kind": "area",
+      "start": 5.51785529195331,
+      "end": 5.859680291963741,
+      "service_s": 0.3418250000104308,
+      "correct": true,
+      "box": 2,
+      "arrival": 5.4300539,
+      "deadline": 6.65
+    },
+    {
+      "kind": "area",
+      "start": 5.53206366696395,
+      "end": 5.87353099999018,
+      "service_s": 0.34146733302623034,
+      "correct": true,
+      "box": 2,
+      "arrival": 5.4925539,
+      "deadline": 6.65
+    },
+    {
+      "kind": "area",
+      "start": 5.843442125013098,
+      "end": 6.131017584004439,
+      "service_s": 0.2875754589913413,
+      "correct": true,
+      "box": 2,
+      "arrival": 5.8425538999999995,
+      "deadline": 6.65
+    },
+    {
+      "kind": "area",
+      "start": 5.91525650001131,
+      "end": 6.207693999982439,
+      "service_s": 0.292437499971129,
+      "correct": true,
+      "box": 2,
+      "arrival": 5.9050538999999995,
+      "deadline": 6.65
+    },
+    {
+      "kind": "area",
+      "start": 5.975063749938272,
+      "end": 6.266517375013791,
+      "service_s": 0.2914536250755191,
+      "correct": true,
+      "box": 2,
+      "arrival": 5.9675538999999995,
+      "deadline": 6.65
+    },
+    {
+      "kind": "area",
+      "start": 6.036114417016506,
+      "end": 6.336109000025317,
+      "service_s": 0.2999945830088109,
+      "correct": true,
+      "box": 2,
+      "arrival": 6.0300538999999995,
+      "deadline": 6.65
+    },
+    {
+      "kind": "area",
+      "start": 6.102850958937779,
+      "end": 6.3984850839478895,
+      "service_s": 0.29563412501011044,
+      "correct": true,
+      "box": 2,
+      "arrival": 6.0925538999999995,
+      "deadline": 6.65
+    },
+    {
+      "kind": "line",
+      "start": 6.826907166978344,
+      "end": 6.952636417001486,
+      "service_s": 0.1257292500231415,
+      "correct": true,
+      "box": 3,
+      "arrival": 6.822666666666667,
+      "deadline": 8.65
+    },
+    {
+      "kind": "line",
+      "start": 6.911183958989568,
+      "end": 7.012637833948247,
+      "service_s": 0.10145387495867908,
+      "correct": true,
+      "box": 3,
+      "arrival": 6.908,
+      "deadline": 8.65
+    },
+    {
+      "kind": "line",
+      "start": 6.925084208953194,
+      "end": 7.029215708957054,
+      "service_s": 0.1041315000038594,
+      "correct": true,
+      "box": 3,
+      "arrival": 6.922666666666666,
+      "deadline": 8.65
+    },
+    {
+      "kind": "line",
+      "start": 6.9250962500227615,
+      "end": 7.0281367499846965,
+      "service_s": 0.10304049996193498,
+      "correct": true,
+      "box": 3,
+      "arrival": 6.922666666666666,
+      "deadline": 8.65
+    },
+    {
+      "kind": "line",
+      "start": 6.995737334014848,
+      "end": 7.096232334035449,
+      "service_s": 0.10049500002060086,
+      "correct": true,
+      "box": 3,
+      "arrival": 6.993333333333333,
+      "deadline": 8.65
+    },
+    {
+      "kind": "line",
+      "start": 7.012941916938871,
+      "end": 7.115715209045447,
+      "service_s": 0.10277329210657626,
+      "correct": true,
+      "box": 3,
+      "arrival": 7.008,
+      "deadline": 8.65
+    },
+    {
+      "kind": "line",
+      "start": 7.012980208965018,
+      "end": 7.124489833950065,
+      "service_s": 0.11150962498504668,
+      "correct": true,
+      "box": 3,
+      "arrival": 7.008,
+      "deadline": 8.65
+    },
+    {
+      "kind": "line",
+      "start": 7.08288324996829,
+      "end": 7.195449625025503,
+      "service_s": 0.11256637505721301,
+      "correct": true,
+      "box": 3,
+      "arrival": 7.072666666666667,
+      "deadline": 8.65
+    },
+    {
+      "kind": "line",
+      "start": 7.08292574994266,
+      "end": 7.199670125031844,
+      "service_s": 0.11674437508918345,
+      "correct": true,
+      "box": 3,
+      "arrival": 7.078666666666667,
+      "deadline": 8.65
+    },
+    {
+      "kind": "line",
+      "start": 7.098928124993108,
+      "end": 7.215621834038757,
+      "service_s": 0.11669370904564857,
+      "correct": true,
+      "box": 3,
+      "arrival": 7.093333333333333,
+      "deadline": 8.65
+    },
+    {
+      "kind": "line",
+      "start": 7.098954749992117,
+      "end": 7.21807116700802,
+      "service_s": 0.1191164170159027,
+      "correct": true,
+      "box": 3,
+      "arrival": 7.093333333333333,
+      "deadline": 8.65
+    },
+    {
+      "kind": "line",
+      "start": 7.168181500048377,
+      "end": 7.299942416953854,
+      "service_s": 0.13176091690547764,
+      "correct": true,
+      "box": 3,
+      "arrival": 7.158,
+      "deadline": 8.65
+    },
+    {
+      "kind": "line",
+      "start": 7.168203833978623,
+      "end": 7.294313000049442,
+      "service_s": 0.1261091660708189,
+      "correct": true,
+      "box": 3,
+      "arrival": 7.164000000000001,
+      "deadline": 8.65
+    },
+    {
+      "kind": "line",
+      "start": 7.179819499957375,
+      "end": 7.302859292016365,
+      "service_s": 0.1230397920589894,
+      "correct": true,
+      "box": 3,
+      "arrival": 7.1786666666666665,
+      "deadline": 8.65
+    },
+    {
+      "kind": "line",
+      "start": 7.179859459050931,
+      "end": 7.305002375040203,
+      "service_s": 0.1251429159892723,
+      "correct": true,
+      "box": 3,
+      "arrival": 7.1786666666666665,
+      "deadline": 8.65
+    },
+    {
+      "kind": "line",
+      "start": 7.243542750016786,
+      "end": 7.371896249940619,
+      "service_s": 0.12835349992383271,
+      "correct": true,
+      "box": 3,
+      "arrival": 7.243333333333333,
+      "deadline": 8.65
+    },
+    {
+      "kind": "line",
+      "start": 7.251964458962902,
+      "end": 7.399825125001371,
+      "service_s": 0.14786066603846848,
+      "correct": true,
+      "box": 3,
+      "arrival": 7.249333333333333,
+      "deadline": 8.65
+    },
+    {
+      "kind": "line",
+      "start": 7.2522951669525355,
+      "end": 7.380832750000991,
+      "service_s": 0.12853758304845542,
+      "correct": true,
+      "box": 3,
+      "arrival": 7.252,
+      "deadline": 8.65
+    },
+    {
+      "kind": "line",
+      "start": 7.294406250002794,
+      "end": 7.435171209042892,
+      "service_s": 0.1407649590400979,
+      "correct": true,
+      "box": 3,
+      "arrival": 7.264,
+      "deadline": 8.65
+    },
+    {
+      "kind": "line",
+      "start": 7.300045417039655,
+      "end": 7.447252084035426,
+      "service_s": 0.14720666699577123,
+      "correct": true,
+      "box": 3,
+      "arrival": 7.264,
+      "deadline": 8.65
+    },
+    {
+      "kind": "line",
+      "start": 7.3310544999549165,
+      "end": 7.474870958947577,
+      "service_s": 0.14381645899266005,
+      "correct": true,
+      "box": 3,
+      "arrival": 7.328666666666667,
+      "deadline": 8.65
+    },
+    {
+      "kind": "area",
+      "start": 7.243393125012517,
+      "end": 7.625321833998896,
+      "service_s": 0.3819287089863792,
+      "correct": true,
+      "box": 3,
+      "arrival": 7.2425539,
+      "deadline": 8.65
+    },
+    {
+      "kind": "area",
+      "start": 7.31507995899301,
+      "end": 7.6913243340095505,
+      "service_s": 0.3762443750165403,
+      "correct": true,
+      "box": 3,
+      "arrival": 7.3050539,
+      "deadline": 8.65
+    },
+    {
+      "kind": "line",
+      "start": 7.372023292002268,
+      "end": 7.508476458955556,
+      "service_s": 0.13645316695328802,
+      "correct": true,
+      "box": 3,
+      "arrival": 7.349333333333333,
+      "deadline": 8.65
+    },
+    {
+      "kind": "line",
+      "start": 7.380941624986008,
+      "end": 7.517516124993563,
+      "service_s": 0.1365745000075549,
+      "correct": true,
+      "box": 3,
+      "arrival": 7.349333333333333,
+      "deadline": 8.65
+    },
+    {
+      "kind": "line",
+      "start": 7.399907000013627,
+      "end": 7.536491167033091,
+      "service_s": 0.13658416701946408,
+      "correct": true,
+      "box": 3,
+      "arrival": 7.351999999999999,
+      "deadline": 8.65
+    },
+    {
+      "kind": "line",
+      "start": 7.435259375022724,
+      "end": 7.567946917028166,
+      "service_s": 0.13268754200544208,
+      "correct": true,
+      "box": 3,
+      "arrival": 7.351999999999999,
+      "deadline": 8.65
+    },
+    {
+      "kind": "area",
+      "start": 7.447378042037599,
+      "end": 7.788147249957547,
+      "service_s": 0.3407692079199478,
+      "correct": true,
+      "box": 3,
+      "arrival": 7.3675539,
+      "deadline": 8.65
+    },
+    {
+      "kind": "line",
+      "start": 7.475019000004977,
+      "end": 7.6146296670194715,
+      "service_s": 0.13961066701449454,
+      "correct": true,
+      "box": 3,
+      "arrival": 7.414000000000001,
+      "deadline": 8.65
+    },
+    {
+      "kind": "area",
+      "start": 7.508557750028558,
+      "end": 7.848218249971978,
+      "service_s": 0.3396604999434203,
+      "correct": true,
+      "box": 3,
+      "arrival": 7.4300539,
+      "deadline": 8.65
+    },
+    {
+      "kind": "line",
+      "start": 7.53658162499778,
+      "end": 7.668690167018212,
+      "service_s": 0.13210854202043265,
+      "correct": true,
+      "box": 3,
+      "arrival": 7.499333333333333,
+      "deadline": 8.65
+    },
+    {
+      "kind": "line",
+      "start": 7.568021834013052,
+      "end": 7.696026041987352,
+      "service_s": 0.1280042079742998,
+      "correct": true,
+      "box": 3,
+      "arrival": 7.502,
+      "deadline": 8.65
+    },
+    {
+      "kind": "area",
+      "start": 7.517617792007513,
+      "end": 7.852358542033471,
+      "service_s": 0.3347407500259578,
+      "correct": true,
+      "box": 3,
+      "arrival": 7.4925539,
+      "deadline": 8.65
+    },
+    {
+      "kind": "area",
+      "start": 7.852369041997008,
+      "end": 8.155403833952732,
+      "service_s": 0.30303479195572436,
+      "correct": true,
+      "box": 3,
+      "arrival": 7.8425538999999995,
+      "deadline": 8.65
+    },
+    {
+      "kind": "area",
+      "start": 7.915238374960609,
+      "end": 8.20949516701512,
+      "service_s": 0.2942567920545116,
+      "correct": true,
+      "box": 3,
+      "arrival": 7.9050538999999995,
+      "deadline": 8.65
+    },
+    {
+      "kind": "area",
+      "start": 7.977733624982648,
+      "end": 8.280001541948877,
+      "service_s": 0.3022679169662297,
+      "correct": true,
+      "box": 3,
+      "arrival": 7.9675538999999995,
+      "deadline": 8.65
+    },
+    {
+      "kind": "area",
+      "start": 8.033285542041995,
+      "end": 8.333339708973654,
+      "service_s": 0.300054166931659,
+      "correct": true,
+      "box": 3,
+      "arrival": 8.030053899999999,
+      "deadline": 8.65
+    },
+    {
+      "kind": "area",
+      "start": 8.102848208975047,
+      "end": 8.40360691701062,
+      "service_s": 0.30075870803557336,
+      "correct": true,
+      "box": 3,
+      "arrival": 8.0925539,
+      "deadline": 8.65
+    },
+    {
+      "kind": "line",
+      "start": 8.833304125000723,
+      "end": 8.966924584005028,
+      "service_s": 0.1336204590043053,
+      "correct": true,
+      "box": 4,
+      "arrival": 8.822666666666668,
+      "deadline": 10.65
+    },
+    {
+      "kind": "line",
+      "start": 8.908385833958164,
+      "end": 9.019736459013075,
+      "service_s": 0.11135062505491078,
+      "correct": true,
+      "box": 4,
+      "arrival": 8.908000000000001,
+      "deadline": 10.65
+    },
+    {
+      "kind": "line",
+      "start": 8.925022291950881,
+      "end": 9.039172791992314,
+      "service_s": 0.11415050004143268,
+      "correct": true,
+      "box": 4,
+      "arrival": 8.922666666666668,
+      "deadline": 10.65
+    },
+    {
+      "kind": "line",
+      "start": 8.925066291936673,
+      "end": 9.041207041940652,
+      "service_s": 0.11614075000397861,
+      "correct": true,
+      "box": 4,
+      "arrival": 8.922666666666668,
+      "deadline": 10.65
+    },
+    {
+      "kind": "line",
+      "start": 9.003566417028196,
+      "end": 9.120388124953024,
+      "service_s": 0.11682170792482793,
+      "correct": true,
+      "box": 4,
+      "arrival": 8.993333333333334,
+      "deadline": 10.65
+    },
+    {
+      "kind": "line",
+      "start": 9.008500874973834,
+      "end": 9.119706584024243,
+      "service_s": 0.1112057090504095,
+      "correct": true,
+      "box": 4,
+      "arrival": 9.008000000000001,
+      "deadline": 10.65
+    },
+    {
+      "kind": "line",
+      "start": 9.008537375018932,
+      "end": 9.127493666950613,
+      "service_s": 0.11895629193168133,
+      "correct": true,
+      "box": 4,
+      "arrival": 9.008000000000001,
+      "deadline": 10.65
+    },
+    {
+      "kind": "line",
+      "start": 9.073088541976176,
+      "end": 9.187891333946027,
+      "service_s": 0.11480279196985066,
+      "correct": true,
+      "box": 4,
+      "arrival": 9.072666666666668,
+      "deadline": 10.65
+    },
+    {
+      "kind": "line",
+      "start": 9.081853874959052,
+      "end": 9.203383667045273,
+      "service_s": 0.12152979208622128,
+      "correct": true,
+      "box": 4,
+      "arrival": 9.078666666666667,
+      "deadline": 10.65
+    },
+    {
+      "kind": "line",
+      "start": 9.093953458941542,
+      "end": 9.218517625005916,
+      "service_s": 0.12456416606437415,
+      "correct": true,
+      "box": 4,
+      "arrival": 9.093333333333334,
+      "deadline": 10.65
+    },
+    {
+      "kind": "line",
+      "start": 9.093953875009902,
+      "end": 9.212668541935273,
+      "service_s": 0.1187146669253707,
+      "correct": true,
+      "box": 4,
+      "arrival": 9.093333333333334,
+      "deadline": 10.65
+    },
+    {
+      "kind": "line",
+      "start": 9.167793749948032,
+      "end": 9.295947209000587,
+      "service_s": 0.12815345905255526,
+      "correct": true,
+      "box": 4,
+      "arrival": 9.158000000000001,
+      "deadline": 10.65
+    },
+    {
+      "kind": "line",
+      "start": 9.167818250018172,
+      "end": 9.295503458939493,
+      "service_s": 0.12768520892132074,
+      "correct": true,
+      "box": 4,
+      "arrival": 9.164000000000001,
+      "deadline": 10.65
+    },
+    {
+      "kind": "line",
+      "start": 9.182105166953988,
+      "end": 9.303811958990991,
+      "service_s": 0.12170679203700274,
+      "correct": true,
+      "box": 4,
+      "arrival": 9.178666666666667,
+      "deadline": 10.65
+    },
+    {
+      "kind": "line",
+      "start": 9.182128416956402,
+      "end": 9.301941083976999,
+      "service_s": 0.11981266702059656,
+      "correct": true,
+      "box": 4,
+      "arrival": 9.178666666666667,
+      "deadline": 10.65
+    },
+    {
+      "kind": "line",
+      "start": 9.2519833749393,
+      "end": 9.400302542024292,
+      "service_s": 0.14831916708499193,
+      "correct": true,
+      "box": 4,
+      "arrival": 9.243333333333334,
+      "deadline": 10.65
+    },
+    {
+      "kind": "line",
+      "start": 9.252016374957748,
+      "end": 9.390542250010185,
+      "service_s": 0.1385258750524372,
+      "correct": true,
+      "box": 4,
+      "arrival": 9.249333333333334,
+      "deadline": 10.65
+    },
+    {
+      "kind": "line",
+      "start": 9.252315334044397,
+      "end": 9.396958124940284,
+      "service_s": 0.14464279089588672,
+      "correct": true,
+      "box": 4,
+      "arrival": 9.252,
+      "deadline": 10.65
+    },
+    {
+      "kind": "line",
+      "start": 9.295618167030625,
+      "end": 9.41880266694352,
+      "service_s": 0.12318449991289526,
+      "correct": true,
+      "box": 4,
+      "arrival": 9.264000000000001,
+      "deadline": 10.65
+    },
+    {
+      "kind": "line",
+      "start": 9.296027292031795,
+      "end": 9.431927333935164,
+      "service_s": 0.13590004190336913,
+      "correct": true,
+      "box": 4,
+      "arrival": 9.264000000000001,
+      "deadline": 10.65
+    },
+    {
+      "kind": "line",
+      "start": 9.333378209033981,
+      "end": 9.465681500034407,
+      "service_s": 0.13230329100042582,
+      "correct": true,
+      "box": 4,
+      "arrival": 9.328666666666667,
+      "deadline": 10.65
+    },
+    {
+      "kind": "area",
+      "start": 9.25196316698566,
+      "end": 9.646708708954975,
+      "service_s": 0.3947455419693142,
+      "correct": true,
+      "box": 4,
+      "arrival": 9.2425539,
+      "deadline": 10.65
+    },
+    {
+      "kind": "area",
+      "start": 9.315326708951034,
+      "end": 9.705669917049818,
+      "service_s": 0.3903432080987841,
+      "correct": true,
+      "box": 4,
+      "arrival": 9.3050539,
+      "deadline": 10.65
+    },
+    {
+      "kind": "line",
+      "start": 9.390625625033863,
+      "end": 9.522057624999434,
+      "service_s": 0.13143199996557087,
+      "correct": true,
+      "box": 4,
+      "arrival": 9.349333333333334,
+      "deadline": 10.65
+    },
+    {
+      "kind": "line",
+      "start": 9.397081417031586,
+      "end": 9.538201167015359,
+      "service_s": 0.14111974998377264,
+      "correct": true,
+      "box": 4,
+      "arrival": 9.349333333333334,
+      "deadline": 10.65
+    },
+    {
+      "kind": "line",
+      "start": 9.400370249990374,
+      "end": 9.54259608394932,
+      "service_s": 0.14222583395894617,
+      "correct": true,
+      "box": 4,
+      "arrival": 9.352,
+      "deadline": 10.65
+    },
+    {
+      "kind": "line",
+      "start": 9.418916249996983,
+      "end": 9.560431250021793,
+      "service_s": 0.14151500002481043,
+      "correct": true,
+      "box": 4,
+      "arrival": 9.352,
+      "deadline": 10.65
+    },
+    {
+      "kind": "area",
+      "start": 9.431994584039785,
+      "end": 9.777345750015229,
+      "service_s": 0.345351165975444,
+      "correct": true,
+      "box": 4,
+      "arrival": 9.3675539,
+      "deadline": 10.65
+    },
+    {
+      "kind": "line",
+      "start": 9.465800083940849,
+      "end": 9.605791458976455,
+      "service_s": 0.13999137503560632,
+      "correct": true,
+      "box": 4,
+      "arrival": 9.414000000000001,
+      "deadline": 10.65
+    },
+    {
+      "kind": "area",
+      "start": 9.522225750028156,
+      "end": 9.850707666948438,
+      "service_s": 0.32848191692028195,
+      "correct": true,
+      "box": 4,
+      "arrival": 9.4300539,
+      "deadline": 10.65
+    },
+    {
+      "kind": "line",
+      "start": 9.542704459046945,
+      "end": 9.680958374985494,
+      "service_s": 0.13825391593854874,
+      "correct": true,
+      "box": 4,
+      "arrival": 9.499333333333334,
+      "deadline": 10.65
+    },
+    {
+      "kind": "line",
+      "start": 9.560544874984771,
+      "end": 9.696151125011966,
+      "service_s": 0.13560625002719462,
+      "correct": true,
+      "box": 4,
+      "arrival": 9.502,
+      "deadline": 10.65
+    },
+    {
+      "kind": "area",
+      "start": 9.538278709049337,
+      "end": 9.869676791946404,
+      "service_s": 0.33139808289706707,
+      "correct": true,
+      "box": 4,
+      "arrival": 9.4925539,
+      "deadline": 10.65
+    },
+    {
+      "kind": "area",
+      "start": 9.852760083973408,
+      "end": 10.146888041985221,
+      "service_s": 0.29412795801181346,
+      "correct": true,
+      "box": 4,
+      "arrival": 9.8425539,
+      "deadline": 10.65
+    },
+    {
+      "kind": "area",
+      "start": 9.915234124986455,
+      "end": 10.21011208393611,
+      "service_s": 0.2948779589496553,
+      "correct": true,
+      "box": 4,
+      "arrival": 9.9050539,
+      "deadline": 10.65
+    },
+    {
+      "kind": "area",
+      "start": 9.975108250044286,
+      "end": 10.27929195901379,
+      "service_s": 0.30418370896950364,
+      "correct": true,
+      "box": 4,
+      "arrival": 9.9675539,
+      "deadline": 10.65
+    },
+    {
+      "kind": "area",
+      "start": 10.03514749999158,
+      "end": 10.36128508404363,
+      "service_s": 0.3261375840520486,
+      "correct": true,
+      "box": 4,
+      "arrival": 10.0300539,
+      "deadline": 10.65
+    },
+    {
+      "kind": "area",
+      "start": 10.102820083964616,
+      "end": 10.401646167039871,
+      "service_s": 0.29882608307525516,
+      "correct": true,
+      "box": 4,
+      "arrival": 10.0925539,
+      "deadline": 10.65
+    },
+    {
+      "kind": "line",
+      "start": 10.825700999936089,
+      "end": 10.950158291961998,
+      "service_s": 0.12445729202590883,
+      "correct": true,
+      "box": 5,
+      "arrival": 10.822666666666668,
+      "deadline": 12.65
+    },
+    {
+      "kind": "line",
+      "start": 10.918201541993767,
+      "end": 11.02309074997902,
+      "service_s": 0.10488920798525214,
+      "correct": true,
+      "box": 5,
+      "arrival": 10.908000000000001,
+      "deadline": 12.65
+    },
+    {
+      "kind": "line",
+      "start": 10.925004333956167,
+      "end": 11.035783333936706,
+      "service_s": 0.11077899998053908,
+      "correct": true,
+      "box": 5,
+      "arrival": 10.922666666666668,
+      "deadline": 12.65
+    },
+    {
+      "kind": "line",
+      "start": 10.92501899995841,
+      "end": 11.034682333935052,
+      "service_s": 0.1096633339766413,
+      "correct": true,
+      "box": 5,
+      "arrival": 10.922666666666668,
+      "deadline": 12.65
+    },
+    {
+      "kind": "line",
+      "start": 11.003581249970011,
+      "end": 11.120049042045139,
+      "service_s": 0.11646779207512736,
+      "correct": true,
+      "box": 5,
+      "arrival": 10.993333333333334,
+      "deadline": 12.65
+    },
+    {
+      "kind": "line",
+      "start": 11.008335708989762,
+      "end": 11.112164541962557,
+      "service_s": 0.10382883297279477,
+      "correct": true,
+      "box": 5,
+      "arrival": 11.008000000000001,
+      "deadline": 12.65
+    },
+    {
+      "kind": "line",
+      "start": 11.008360791951418,
+      "end": 11.119710249942727,
+      "service_s": 0.11134945799130946,
+      "correct": true,
+      "box": 5,
+      "arrival": 11.008000000000001,
+      "deadline": 12.65
+    },
+    {
+      "kind": "line",
+      "start": 11.08290337503422,
+      "end": 11.202381041948684,
+      "service_s": 0.11947766691446304,
+      "correct": true,
+      "box": 5,
+      "arrival": 11.072666666666668,
+      "deadline": 12.65
+    },
+    {
+      "kind": "line",
+      "start": 11.082952124997973,
+      "end": 11.197466708952561,
+      "service_s": 0.11451458395458758,
+      "correct": true,
+      "box": 5,
+      "arrival": 11.078666666666667,
+      "deadline": 12.65
+    },
+    {
+      "kind": "line",
+      "start": 11.098941624979489,
+      "end": 11.214401958975941,
+      "service_s": 0.11546033399645239,
+      "correct": true,
+      "box": 5,
+      "arrival": 11.093333333333334,
+      "deadline": 12.65
+    },
+    {
+      "kind": "line",
+      "start": 11.098954500048421,
+      "end": 11.221585583989508,
+      "service_s": 0.12263108394108713,
+      "correct": true,
+      "box": 5,
+      "arrival": 11.093333333333334,
+      "deadline": 12.65
+    },
+    {
+      "kind": "line",
+      "start": 11.165660999948159,
+      "end": 11.287297541974112,
+      "service_s": 0.12163654202595353,
+      "correct": true,
+      "box": 5,
+      "arrival": 11.158000000000001,
+      "deadline": 12.65
+    },
+    {
+      "kind": "line",
+      "start": 11.165685791987926,
+      "end": 11.280036124982871,
+      "service_s": 0.11435033299494535,
+      "correct": true,
+      "box": 5,
+      "arrival": 11.164000000000001,
+      "deadline": 12.65
+    },
+    {
+      "kind": "line",
+      "start": 11.185555584030226,
+      "end": 11.310285583953373,
+      "service_s": 0.12472999992314726,
+      "correct": true,
+      "box": 5,
+      "arrival": 11.178666666666667,
+      "deadline": 12.65
+    },
+    {
+      "kind": "line",
+      "start": 11.18558008398395,
+      "end": 11.312734541948885,
+      "service_s": 0.1271544579649344,
+      "correct": true,
+      "box": 5,
+      "arrival": 11.178666666666667,
+      "deadline": 12.65
+    },
+    {
+      "kind": "line",
+      "start": 11.252925166976638,
+      "end": 11.393475999939255,
+      "service_s": 0.14055083296261728,
+      "correct": true,
+      "box": 5,
+      "arrival": 11.243333333333334,
+      "deadline": 12.65
+    },
+    {
+      "kind": "line",
+      "start": 11.252950249938294,
+      "end": 11.414041750016622,
+      "service_s": 0.16109150007832795,
+      "correct": true,
+      "box": 5,
+      "arrival": 11.249333333333334,
+      "deadline": 12.65
+    },
+    {
+      "kind": "line",
+      "start": 11.252976958989166,
+      "end": 11.392526375013404,
+      "service_s": 0.13954941602423787,
+      "correct": true,
+      "box": 5,
+      "arrival": 11.252,
+      "deadline": 12.65
+    },
+    {
+      "kind": "line",
+      "start": 11.280154917039908,
+      "end": 11.416567333973944,
+      "service_s": 0.13641241693403572,
+      "correct": true,
+      "box": 5,
+      "arrival": 11.264000000000001,
+      "deadline": 12.65
+    },
+    {
+      "kind": "line",
+      "start": 11.287374333944172,
+      "end": 11.429203041945584,
+      "service_s": 0.14182870800141245,
+      "correct": true,
+      "box": 5,
+      "arrival": 11.264000000000001,
+      "deadline": 12.65
+    },
+    {
+      "kind": "line",
+      "start": 11.330845291959122,
+      "end": 11.462199709028937,
+      "service_s": 0.1313544170698151,
+      "correct": true,
+      "box": 5,
+      "arrival": 11.328666666666667,
+      "deadline": 12.65
+    },
+    {
+      "kind": "area",
+      "start": 11.252901750034653,
+      "end": 11.639922959031537,
+      "service_s": 0.3870212089968845,
+      "correct": true,
+      "box": 5,
+      "arrival": 11.2425539,
+      "deadline": 12.65
+    },
+    {
+      "kind": "area",
+      "start": 11.310380792012438,
+      "end": 11.68723558401689,
+      "service_s": 0.37685479200445116,
+      "correct": true,
+      "box": 5,
+      "arrival": 11.3050539,
+      "deadline": 12.65
+    },
+    {
+      "kind": "line",
+      "start": 11.392632583971135,
+      "end": 11.52918266702909,
+      "service_s": 0.1365500830579549,
+      "correct": true,
+      "box": 5,
+      "arrival": 11.349333333333334,
+      "deadline": 12.65
+    },
+    {
+      "kind": "line",
+      "start": 11.393542291945778,
+      "end": 11.53701450000517,
+      "service_s": 0.14347220805939287,
+      "correct": true,
+      "box": 5,
+      "arrival": 11.349333333333334,
+      "deadline": 12.65
+    },
+    {
+      "kind": "line",
+      "start": 11.414168459014036,
+      "end": 11.553428124985658,
+      "service_s": 0.13925966597162187,
+      "correct": true,
+      "box": 5,
+      "arrival": 11.352,
+      "deadline": 12.65
+    },
+    {
+      "kind": "line",
+      "start": 11.41664133395534,
+      "end": 11.548015999956988,
+      "service_s": 0.1313746660016477,
+      "correct": true,
+      "box": 5,
+      "arrival": 11.352,
+      "deadline": 12.65
+    },
+    {
+      "kind": "area",
+      "start": 11.429308749968186,
+      "end": 11.778394042048603,
+      "service_s": 0.3490852920804173,
+      "correct": true,
+      "box": 5,
+      "arrival": 11.3675539,
+      "deadline": 12.65
+    },
+    {
+      "kind": "line",
+      "start": 11.462306583998725,
+      "end": 11.597962541971356,
+      "service_s": 0.13565595797263086,
+      "correct": true,
+      "box": 5,
+      "arrival": 11.414000000000001,
+      "deadline": 12.65
+    },
+    {
+      "kind": "line",
+      "start": 11.548091209027916,
+      "end": 11.68758670904208,
+      "service_s": 0.13949550001416355,
+      "correct": true,
+      "box": 5,
+      "arrival": 11.499333333333334,
+      "deadline": 12.65
+    },
+    {
+      "kind": "line",
+      "start": 11.55353599996306,
+      "end": 11.690931458957493,
+      "service_s": 0.13739545899443328,
+      "correct": true,
+      "box": 5,
+      "arrival": 11.502,
+      "deadline": 12.65
+    },
+    {
+      "kind": "area",
+      "start": 11.529289833968505,
+      "end": 11.85421633394435,
+      "service_s": 0.3249264999758452,
+      "correct": true,
+      "box": 5,
+      "arrival": 11.4300539,
+      "deadline": 12.65
+    },
+    {
+      "kind": "area",
+      "start": 11.537090500001796,
+      "end": 11.851133999996819,
+      "service_s": 0.314043499995023,
+      "correct": true,
+      "box": 5,
+      "arrival": 11.4925539,
+      "deadline": 12.65
+    },
+    {
+      "kind": "area",
+      "start": 11.847871624981053,
+      "end": 12.156058124965057,
+      "service_s": 0.3081864999840036,
+      "correct": true,
+      "box": 5,
+      "arrival": 11.8425539,
+      "deadline": 12.65
+    },
+    {
+      "kind": "area",
+      "start": 11.915227042045444,
+      "end": 12.227773374994285,
+      "service_s": 0.31254633294884115,
+      "correct": true,
+      "box": 5,
+      "arrival": 11.9050539,
+      "deadline": 12.65
+    },
+    {
+      "kind": "area",
+      "start": 11.975109499995597,
+      "end": 12.277464709011838,
+      "service_s": 0.30235520901624113,
+      "correct": true,
+      "box": 5,
+      "arrival": 11.9675539,
+      "deadline": 12.65
+    },
+    {
+      "kind": "area",
+      "start": 12.040375750046223,
+      "end": 12.352846249938011,
+      "service_s": 0.31247049989178777,
+      "correct": true,
+      "box": 5,
+      "arrival": 12.0300539,
+      "deadline": 12.65
+    },
+    {
+      "kind": "area",
+      "start": 12.102859625010751,
+      "end": 12.421958916937001,
+      "service_s": 0.31909929192624986,
+      "correct": true,
+      "box": 5,
+      "arrival": 12.0925539,
+      "deadline": 12.65
+    },
+    {
+      "kind": "line",
+      "start": 12.823767749941908,
+      "end": 12.954735624953173,
+      "service_s": 0.13096787501126528,
+      "correct": true,
+      "box": 6,
+      "arrival": 12.822666666666668,
+      "deadline": 14.65
+    },
+    {
+      "kind": "line",
+      "start": 12.918035250040703,
+      "end": 13.03019666695036,
+      "service_s": 0.11216141690965742,
+      "correct": true,
+      "box": 6,
+      "arrival": 12.908000000000001,
+      "deadline": 14.65
+    },
+    {
+      "kind": "line",
+      "start": 12.925260624964722,
+      "end": 13.039333084016107,
+      "service_s": 0.11407245905138552,
+      "correct": true,
+      "box": 6,
+      "arrival": 12.922666666666668,
+      "deadline": 14.65
+    },
+    {
+      "kind": "line",
+      "start": 12.925300083938055,
+      "end": 13.035103749949485,
+      "service_s": 0.10980366601143032,
+      "correct": true,
+      "box": 6,
+      "arrival": 12.922666666666668,
+      "deadline": 14.65
+    },
+    {
+      "kind": "line",
+      "start": 13.003621999989264,
+      "end": 13.12717195902951,
+      "service_s": 0.1235499590402469,
+      "correct": true,
+      "box": 6,
+      "arrival": 12.993333333333334,
+      "deadline": 14.65
+    },
+    {
+      "kind": "line",
+      "start": 13.008344499976374,
+      "end": 13.120077666942962,
+      "service_s": 0.1117331669665873,
+      "correct": true,
+      "box": 6,
+      "arrival": 13.008000000000001,
+      "deadline": 14.65
+    },
+    {
+      "kind": "line",
+      "start": 13.008388292044401,
+      "end": 13.126691541983746,
+      "service_s": 0.11830324993934482,
+      "correct": true,
+      "box": 6,
+      "arrival": 13.008000000000001,
+      "deadline": 14.65
+    },
+    {
+      "kind": "line",
+      "start": 13.082892416976392,
+      "end": 13.207478333963081,
+      "service_s": 0.12458591698668897,
+      "correct": true,
+      "box": 6,
+      "arrival": 13.072666666666668,
+      "deadline": 14.65
+    },
+    {
+      "kind": "line",
+      "start": 13.082933166995645,
+      "end": 13.207082167034969,
+      "service_s": 0.12414900003932416,
+      "correct": true,
+      "box": 6,
+      "arrival": 13.078666666666667,
+      "deadline": 14.65
+    },
+    {
+      "kind": "line",
+      "start": 13.09893750003539,
+      "end": 13.2221282919636,
+      "service_s": 0.12319079192820936,
+      "correct": true,
+      "box": 6,
+      "arrival": 13.093333333333334,
+      "deadline": 14.65
+    },
+    {
+      "kind": "line",
+      "start": 13.098972916952334,
+      "end": 13.221542667015456,
+      "service_s": 0.12256975006312132,
+      "correct": true,
+      "box": 6,
+      "arrival": 13.093333333333334,
+      "deadline": 14.65
+    },
+    {
+      "kind": "line",
+      "start": 13.168194749974646,
+      "end": 13.289261291967705,
+      "service_s": 0.12106654199305922,
+      "correct": true,
+      "box": 6,
+      "arrival": 13.164000000000001,
+      "deadline": 14.65
+    },
+    {
+      "kind": "line",
+      "start": 13.168178042047657,
+      "end": 13.316701333969831,
+      "service_s": 0.1485232919221744,
+      "correct": true,
+      "box": 6,
+      "arrival": 13.158000000000001,
+      "deadline": 14.65
+    },
+    {
+      "kind": "line",
+      "start": 13.183256209013052,
+      "end": 13.306145000038669,
+      "service_s": 0.12288879102561623,
+      "correct": true,
+      "box": 6,
+      "arrival": 13.178666666666667,
+      "deadline": 14.65
+    },
+    {
+      "kind": "line",
+      "start": 13.18327199993655,
+      "end": 13.315798999974504,
+      "service_s": 0.13252700003795326,
+      "correct": true,
+      "box": 6,
+      "arrival": 13.178666666666667,
+      "deadline": 14.65
+    },
+    {
+      "kind": "line",
+      "start": 13.250566208967939,
+      "end": 13.38567329198122,
+      "service_s": 0.13510708301328123,
+      "correct": true,
+      "box": 6,
+      "arrival": 13.243333333333334,
+      "deadline": 14.65
+    },
+    {
+      "kind": "line",
+      "start": 13.250594667042606,
+      "end": 13.383508124970831,
+      "service_s": 0.1329134579282254,
+      "correct": true,
+      "box": 6,
+      "arrival": 13.249333333333334,
+      "deadline": 14.65
+    },
+    {
+      "kind": "line",
+      "start": 13.253127167001367,
+      "end": 13.395936458953656,
+      "service_s": 0.14280929195228964,
+      "correct": true,
+      "box": 6,
+      "arrival": 13.252,
+      "deadline": 14.65
+    },
+    {
+      "kind": "line",
+      "start": 13.2893717919942,
+      "end": 13.426902542007156,
+      "service_s": 0.13753075001295656,
+      "correct": true,
+      "box": 6,
+      "arrival": 13.264000000000001,
+      "deadline": 14.65
+    },
+    {
+      "kind": "line",
+      "start": 13.306217666948214,
+      "end": 13.449568792013451,
+      "service_s": 0.14335112506523728,
+      "correct": true,
+      "box": 6,
+      "arrival": 13.264000000000001,
+      "deadline": 14.65
+    },
+    {
+      "kind": "line",
+      "start": 13.338515541981906,
+      "end": 13.476940167020075,
+      "service_s": 0.13842462503816932,
+      "correct": true,
+      "box": 6,
+      "arrival": 13.328666666666667,
+      "deadline": 14.65
+    },
+    {
+      "kind": "area",
+      "start": 13.2505407090066,
+      "end": 13.65193991700653,
+      "service_s": 0.4013992079999298,
+      "correct": true,
+      "box": 6,
+      "arrival": 13.2425539,
+      "deadline": 14.65
+    },
+    {
+      "kind": "area",
+      "start": 13.31591408397071,
+      "end": 13.688817291986197,
+      "service_s": 0.3729032080154866,
+      "correct": true,
+      "box": 6,
+      "arrival": 13.3050539,
+      "deadline": 14.65
+    },
+    {
+      "kind": "line",
+      "start": 13.383591499994509,
+      "end": 13.536696166964248,
+      "service_s": 0.1531046669697389,
+      "correct": true,
+      "box": 6,
+      "arrival": 13.349333333333334,
+      "deadline": 14.65
+    },
+    {
+      "kind": "line",
+      "start": 13.385752917034552,
+      "end": 13.520604333956726,
+      "service_s": 0.1348514169221744,
+      "correct": true,
+      "box": 6,
+      "arrival": 13.349333333333334,
+      "deadline": 14.65
+    },
+    {
+      "kind": "line",
+      "start": 13.396010791999288,
+      "end": 13.529915667022578,
+      "service_s": 0.13390487502329051,
+      "correct": true,
+      "box": 6,
+      "arrival": 13.352,
+      "deadline": 14.65
+    },
+    {
+      "kind": "line",
+      "start": 13.427010416984558,
+      "end": 13.553141250042245,
+      "service_s": 0.1261308330576867,
+      "correct": true,
+      "box": 6,
+      "arrival": 13.352,
+      "deadline": 14.65
+    },
+    {
+      "kind": "area",
+      "start": 13.449701542034745,
+      "end": 13.797181874979287,
+      "service_s": 0.34748033294454217,
+      "correct": true,
+      "box": 6,
+      "arrival": 13.3675539,
+      "deadline": 14.65
+    },
+    {
+      "kind": "line",
+      "start": 13.477050042012706,
+      "end": 13.621393708977848,
+      "service_s": 0.1443436669651419,
+      "correct": true,
+      "box": 6,
+      "arrival": 13.414000000000001,
+      "deadline": 14.65
+    },
+    {
+      "kind": "area",
+      "start": 13.530044791987166,
+      "end": 13.850572791998275,
+      "service_s": 0.3205280000111088,
+      "correct": true,
+      "box": 6,
+      "arrival": 13.4925539,
+      "deadline": 14.65
+    },
+    {
+      "kind": "line",
+      "start": 13.536820834036916,
+      "end": 13.686023041955195,
+      "service_s": 0.14920220791827887,
+      "correct": true,
+      "box": 6,
+      "arrival": 13.499333333333334,
+      "deadline": 14.65
+    },
+    {
+      "kind": "line",
+      "start": 13.553224500035867,
+      "end": 13.684241250040941,
+      "service_s": 0.13101675000507385,
+      "correct": true,
+      "box": 6,
+      "arrival": 13.502,
+      "deadline": 14.65
+    },
+    {
+      "kind": "area",
+      "start": 13.520728625007905,
+      "end": 13.860679624951445,
+      "service_s": 0.3399509999435395,
+      "correct": true,
+      "box": 6,
+      "arrival": 13.4300539,
+      "deadline": 14.65
+    },
+    {
+      "kind": "area",
+      "start": 13.85274537501391,
+      "end": 14.147142417030409,
+      "service_s": 0.29439704201649874,
+      "correct": true,
+      "box": 6,
+      "arrival": 13.8425539,
+      "deadline": 14.65
+    },
+    {
+      "kind": "area",
+      "start": 13.915231749997474,
+      "end": 14.206068709027022,
+      "service_s": 0.29083695902954787,
+      "correct": true,
+      "box": 6,
+      "arrival": 13.9050539,
+      "deadline": 14.65
+    },
+    {
+      "kind": "area",
+      "start": 13.977740708971396,
+      "end": 14.270519917015918,
+      "service_s": 0.2927792080445215,
+      "correct": true,
+      "box": 6,
+      "arrival": 13.9675539,
+      "deadline": 14.65
+    },
+    {
+      "kind": "area",
+      "start": 14.03959666704759,
+      "end": 14.336961542023346,
+      "service_s": 0.2973648749757558,
+      "correct": true,
+      "box": 6,
+      "arrival": 14.0300539,
+      "deadline": 14.65
+    },
+    {
+      "kind": "area",
+      "start": 14.102851458941586,
+      "end": 14.402633792022243,
+      "service_s": 0.2997823330806568,
+      "correct": true,
+      "box": 6,
+      "arrival": 14.0925539,
+      "deadline": 14.65
+    },
+    {
+      "kind": "line",
+      "start": 14.825970834004693,
+      "end": 14.956428042030893,
+      "service_s": 0.13045720802620053,
+      "correct": true,
+      "box": 7,
+      "arrival": 14.822666666666668,
+      "deadline": 16.65
+    },
+    {
+      "kind": "line",
+      "start": 14.918193791992962,
+      "end": 15.028522209031507,
+      "service_s": 0.11032841703854501,
+      "correct": true,
+      "box": 7,
+      "arrival": 14.908000000000001,
+      "deadline": 16.65
+    },
+    {
+      "kind": "line",
+      "start": 14.925149583956227,
+      "end": 15.035771167022176,
+      "service_s": 0.11062158306594938,
+      "correct": true,
+      "box": 7,
+      "arrival": 14.922666666666668,
+      "deadline": 16.65
+    },
+    {
+      "kind": "line",
+      "start": 14.925215999945067,
+      "end": 15.029478374985047,
+      "service_s": 0.10426237503997982,
+      "correct": true,
+      "box": 7,
+      "arrival": 14.922666666666668,
+      "deadline": 16.65
+    },
+    {
+      "kind": "line",
+      "start": 15.003565459046513,
+      "end": 15.117527417023666,
+      "service_s": 0.11396195797715336,
+      "correct": true,
+      "box": 7,
+      "arrival": 14.993333333333334,
+      "deadline": 16.65
+    },
+    {
+      "kind": "line",
+      "start": 15.008317500003614,
+      "end": 15.116240374976769,
+      "service_s": 0.10792287497315556,
+      "correct": true,
+      "box": 7,
+      "arrival": 15.008000000000001,
+      "deadline": 16.65
+    },
+    {
+      "kind": "line",
+      "start": 15.008368792012334,
+      "end": 15.116447416949086,
+      "service_s": 0.10807862493675202,
+      "correct": true,
+      "box": 7,
+      "arrival": 15.008000000000001,
+      "deadline": 16.65
+    },
+    {
+      "kind": "line",
+      "start": 15.075017667026259,
+      "end": 15.188132500043139,
+      "service_s": 0.11311483301687986,
+      "correct": true,
+      "box": 7,
+      "arrival": 15.072666666666668,
+      "deadline": 16.65
+    },
+    {
+      "kind": "line",
+      "start": 15.080831500003114,
+      "end": 15.194703959045,
+      "service_s": 0.11387245904188603,
+      "correct": true,
+      "box": 7,
+      "arrival": 15.078666666666667,
+      "deadline": 16.65
+    },
+    {
+      "kind": "line",
+      "start": 15.095254834042862,
+      "end": 15.213768417015672,
+      "service_s": 0.11851358297280967,
+      "correct": true,
+      "box": 7,
+      "arrival": 15.093333333333334,
+      "deadline": 16.65
+    },
+    {
+      "kind": "line",
+      "start": 15.09527829196304,
+      "end": 15.20864970900584,
+      "service_s": 0.1133714170427993,
+      "correct": true,
+      "box": 7,
+      "arrival": 15.093333333333334,
+      "deadline": 16.65
+    },
+    {
+      "kind": "line",
+      "start": 15.160652291961014,
+      "end": 15.292202041950077,
+      "service_s": 0.13154974998906255,
+      "correct": true,
+      "box": 7,
+      "arrival": 15.158000000000001,
+      "deadline": 16.65
+    },
+    {
+      "kind": "line",
+      "start": 15.165023125009611,
+      "end": 15.290820625028573,
+      "service_s": 0.12579750001896173,
+      "correct": true,
+      "box": 7,
+      "arrival": 15.164000000000001,
+      "deadline": 16.65
+    },
+    {
+      "kind": "line",
+      "start": 15.184770458959974,
+      "end": 15.312248541973531,
+      "service_s": 0.1274780830135569,
+      "correct": true,
+      "box": 7,
+      "arrival": 15.178666666666667,
+      "deadline": 16.65
+    },
+    {
+      "kind": "line",
+      "start": 15.184797208989039,
+      "end": 15.3032889169408,
+      "service_s": 0.11849170795176178,
+      "correct": true,
+      "box": 7,
+      "arrival": 15.178666666666667,
+      "deadline": 16.65
+    },
+    {
+      "kind": "line",
+      "start": 15.252910083974712,
+      "end": 15.396090041962452,
+      "service_s": 0.14317995798774064,
+      "correct": true,
+      "box": 7,
+      "arrival": 15.243333333333334,
+      "deadline": 16.65
+    },
+    {
+      "kind": "line",
+      "start": 15.252934708958492,
+      "end": 15.395806750049815,
+      "service_s": 0.1428720410913229,
+      "correct": true,
+      "box": 7,
+      "arrival": 15.249333333333334,
+      "deadline": 16.65
+    },
+    {
+      "kind": "line",
+      "start": 15.252961416961625,
+      "end": 15.397563625010662,
+      "service_s": 0.14460220804903656,
+      "correct": true,
+      "box": 7,
+      "arrival": 15.252,
+      "deadline": 16.65
+    },
+    {
+      "kind": "line",
+      "start": 15.290928000002168,
+      "end": 15.41872462502215,
+      "service_s": 0.12779662501998246,
+      "correct": true,
+      "box": 7,
+      "arrival": 15.264000000000001,
+      "deadline": 16.65
+    },
+    {
+      "kind": "line",
+      "start": 15.292304249946028,
+      "end": 15.428448499995284,
+      "service_s": 0.1361442500492558,
+      "correct": true,
+      "box": 7,
+      "arrival": 15.264000000000001,
+      "deadline": 16.65
+    },
+    {
+      "kind": "line",
+      "start": 15.335707084042951,
+      "end": 15.470946958987042,
+      "service_s": 0.13523987494409084,
+      "correct": true,
+      "box": 7,
+      "arrival": 15.328666666666667,
+      "deadline": 16.65
+    },
+    {
+      "kind": "area",
+      "start": 15.252885916968808,
+      "end": 15.63663500000257,
+      "service_s": 0.38374908303376287,
+      "correct": true,
+      "box": 7,
+      "arrival": 15.2425539,
+      "deadline": 16.65
+    },
+    {
+      "kind": "area",
+      "start": 15.315300166956149,
+      "end": 15.687326833955012,
+      "service_s": 0.3720266669988632,
+      "correct": true,
+      "box": 7,
+      "arrival": 15.3050539,
+      "deadline": 16.65
+    },
+    {
+      "kind": "line",
+      "start": 15.395896584028378,
+      "end": 15.529586791992188,
+      "service_s": 0.13369020796380937,
+      "correct": true,
+      "box": 7,
+      "arrival": 15.349333333333334,
+      "deadline": 16.65
+    },
+    {
+      "kind": "line",
+      "start": 15.396188416983932,
+      "end": 15.536256666993722,
+      "service_s": 0.14006825000979006,
+      "correct": true,
+      "box": 7,
+      "arrival": 15.349333333333334,
+      "deadline": 16.65
+    },
+    {
+      "kind": "line",
+      "start": 15.397634249995463,
+      "end": 15.545261041959748,
+      "service_s": 0.14762679196428508,
+      "correct": true,
+      "box": 7,
+      "arrival": 15.352,
+      "deadline": 16.65
+    },
+    {
+      "kind": "line",
+      "start": 15.418818249949254,
+      "end": 15.566730458987877,
+      "service_s": 0.14791220903862268,
+      "correct": true,
+      "box": 7,
+      "arrival": 15.352,
+      "deadline": 16.65
+    },
+    {
+      "kind": "area",
+      "start": 15.428551124990918,
+      "end": 15.776135417050682,
+      "service_s": 0.34758429205976427,
+      "correct": true,
+      "box": 7,
+      "arrival": 15.3675539,
+      "deadline": 16.65
+    },
+    {
+      "kind": "line",
+      "start": 15.471029000007547,
+      "end": 15.610268624965101,
+      "service_s": 0.13923962495755404,
+      "correct": true,
+      "box": 7,
+      "arrival": 15.414000000000001,
+      "deadline": 16.65
+    },
+    {
+      "kind": "line",
+      "start": 15.545355041977018,
+      "end": 15.68385620904155,
+      "service_s": 0.13850116706453264,
+      "correct": true,
+      "box": 7,
+      "arrival": 15.499333333333334,
+      "deadline": 16.65
+    },
+    {
+      "kind": "line",
+      "start": 15.566836792044342,
+      "end": 15.692718749982305,
+      "service_s": 0.1258819579379633,
+      "correct": true,
+      "box": 7,
+      "arrival": 15.502,
+      "deadline": 16.65
+    },
+    {
+      "kind": "area",
+      "start": 15.529727749992162,
+      "end": 15.857295791967772,
+      "service_s": 0.32756804197560996,
+      "correct": true,
+      "box": 7,
+      "arrival": 15.4300539,
+      "deadline": 16.65
+    },
+    {
+      "kind": "area",
+      "start": 15.536342625040561,
+      "end": 15.862960499944165,
+      "service_s": 0.3266178749036044,
+      "correct": true,
+      "box": 7,
+      "arrival": 15.4925539,
+      "deadline": 16.65
+    },
+    {
+      "kind": "area",
+      "start": 15.852800542023033,
+      "end": 16.158711249940097,
+      "service_s": 0.30591070791706443,
+      "correct": true,
+      "box": 7,
+      "arrival": 15.8425539,
+      "deadline": 16.65
+    },
+    {
+      "kind": "area",
+      "start": 15.908338875044137,
+      "end": 16.22796433395706,
+      "service_s": 0.31962545891292393,
+      "correct": true,
+      "box": 7,
+      "arrival": 15.9050539,
+      "deadline": 16.65
+    },
+    {
+      "kind": "area",
+      "start": 15.97503512504045,
+      "end": 16.291647791978903,
+      "service_s": 0.3166126669384539,
+      "correct": true,
+      "box": 7,
+      "arrival": 15.9675539,
+      "deadline": 16.65
+    },
+    {
+      "kind": "area",
+      "start": 16.040263458970003,
+      "end": 16.3423114590114,
+      "service_s": 0.3020480000413954,
+      "correct": true,
+      "box": 7,
+      "arrival": 16.0300539,
+      "deadline": 16.65
+    },
+    {
+      "kind": "area",
+      "start": 16.102841875050217,
+      "end": 16.42946400004439,
+      "service_s": 0.32662212499417365,
+      "correct": true,
+      "box": 7,
+      "arrival": 16.0925539,
+      "deadline": 16.65
+    },
+    {
+      "kind": "line",
+      "start": 16.832175584044307,
+      "end": 16.964181459043175,
+      "service_s": 0.1320058749988675,
+      "correct": true,
+      "box": 8,
+      "arrival": 16.822666666666663,
+      "deadline": 18.65
+    },
+    {
+      "kind": "line",
+      "start": 16.918209417024627,
+      "end": 17.031652292003855,
+      "service_s": 0.11344287497922778,
+      "correct": true,
+      "box": 8,
+      "arrival": 16.907999999999998,
+      "deadline": 18.65
+    },
+    {
+      "kind": "line",
+      "start": 16.92517762503121,
+      "end": 17.03766262496356,
+      "service_s": 0.11248499993234873,
+      "correct": true,
+      "box": 8,
+      "arrival": 16.922666666666665,
+      "deadline": 18.65
+    },
+    {
+      "kind": "line",
+      "start": 16.92521870904602,
+      "end": 17.0396312919911,
+      "service_s": 0.11441258294507861,
+      "correct": true,
+      "box": 8,
+      "arrival": 16.922666666666665,
+      "deadline": 18.65
+    },
+    {
+      "kind": "line",
+      "start": 17.003634374937974,
+      "end": 17.124543374986388,
+      "service_s": 0.12090900004841387,
+      "correct": true,
+      "box": 8,
+      "arrival": 16.993333333333332,
+      "deadline": 18.65
+    },
+    {
+      "kind": "line",
+      "start": 17.010570000042208,
+      "end": 17.12439704197459,
+      "service_s": 0.11382704193238169,
+      "correct": true,
+      "box": 8,
+      "arrival": 17.008,
+      "deadline": 18.65
+    },
+    {
+      "kind": "line",
+      "start": 17.010591833968647,
+      "end": 17.128703749971464,
+      "service_s": 0.11811191600281745,
+      "correct": true,
+      "box": 8,
+      "arrival": 17.008,
+      "deadline": 18.65
+    },
+    {
+      "kind": "line",
+      "start": 17.081771875033155,
+      "end": 17.19941329199355,
+      "service_s": 0.11764141696039587,
+      "correct": true,
+      "box": 8,
+      "arrival": 17.072666666666663,
+      "deadline": 18.65
+    },
+    {
+      "kind": "line",
+      "start": 17.081815666984767,
+      "end": 17.199484291952103,
+      "service_s": 0.11766862496733665,
+      "correct": true,
+      "box": 8,
+      "arrival": 17.078666666666663,
+      "deadline": 18.65
+    },
+    {
+      "kind": "line",
+      "start": 17.09953308396507,
+      "end": 17.218320042011328,
+      "service_s": 0.1187869580462575,
+      "correct": true,
+      "box": 8,
+      "arrival": 17.093333333333334,
+      "deadline": 18.65
+    },
+    {
+      "kind": "line",
+      "start": 17.09955987497233,
+      "end": 17.22203304199502,
+      "service_s": 0.12247316702269018,
+      "correct": true,
+      "box": 8,
+      "arrival": 17.093333333333334,
+      "deadline": 18.65
+    },
+    {
+      "kind": "line",
+      "start": 17.168316875002347,
+      "end": 17.29931283404585,
+      "service_s": 0.1309959590435028,
+      "correct": true,
+      "box": 8,
+      "arrival": 17.157999999999998,
+      "deadline": 18.65
+    },
+    {
+      "kind": "line",
+      "start": 17.16833866701927,
+      "end": 17.296632874989882,
+      "service_s": 0.12829420797061175,
+      "correct": true,
+      "box": 8,
+      "arrival": 17.163999999999998,
+      "deadline": 18.65
+    },
+    {
+      "kind": "line",
+      "start": 17.18423733394593,
+      "end": 17.31086166703608,
+      "service_s": 0.12662433309014887,
+      "correct": true,
+      "box": 8,
+      "arrival": 17.178666666666665,
+      "deadline": 18.65
+    },
+    {
+      "kind": "line",
+      "start": 17.184261374990456,
+      "end": 17.318167833960615,
+      "service_s": 0.1339064589701593,
+      "correct": true,
+      "box": 8,
+      "arrival": 17.178666666666665,
+      "deadline": 18.65
+    },
+    {
+      "kind": "line",
+      "start": 17.24383970897179,
+      "end": 17.388147916994058,
+      "service_s": 0.14430820802226663,
+      "correct": true,
+      "box": 8,
+      "arrival": 17.243333333333332,
+      "deadline": 18.65
+    },
+    {
+      "kind": "line",
+      "start": 17.25158000004012,
+      "end": 17.389391624950804,
+      "service_s": 0.13781162491068244,
+      "correct": true,
+      "box": 8,
+      "arrival": 17.249333333333333,
+      "deadline": 18.65
+    },
+    {
+      "kind": "line",
+      "start": 17.252463834010996,
+      "end": 17.39447683398612,
+      "service_s": 0.1420129999751225,
+      "correct": true,
+      "box": 8,
+      "arrival": 17.252,
+      "deadline": 18.65
+    },
+    {
+      "kind": "line",
+      "start": 17.29671387502458,
+      "end": 17.423833334003575,
+      "service_s": 0.12711945897899568,
+      "correct": true,
+      "box": 8,
+      "arrival": 17.264,
+      "deadline": 18.65
+    },
+    {
+      "kind": "line",
+      "start": 17.299375833943486,
+      "end": 17.435617542010732,
+      "service_s": 0.13624170806724578,
+      "correct": true,
+      "box": 8,
+      "arrival": 17.264,
+      "deadline": 18.65
+    },
+    {
+      "kind": "line",
+      "start": 17.33572600001935,
+      "end": 17.477893834002316,
+      "service_s": 0.14216783398296684,
+      "correct": true,
+      "box": 8,
+      "arrival": 17.328666666666663,
+      "deadline": 18.65
+    },
+    {
+      "kind": "area",
+      "start": 17.24280341702979,
+      "end": 17.644726041937247,
+      "service_s": 0.40192262490745634,
+      "correct": true,
+      "box": 8,
+      "arrival": 17.242553899999997,
+      "deadline": 18.65
+    },
+    {
+      "kind": "area",
+      "start": 17.315281708957627,
+      "end": 17.763095292029902,
+      "service_s": 0.4478135830722749,
+      "correct": true,
+      "box": 8,
+      "arrival": 17.305053899999997,
+      "deadline": 18.65
+    },
+    {
+      "kind": "line",
+      "start": 17.38822912494652,
+      "end": 17.534991499967873,
+      "service_s": 0.14676237502135336,
+      "correct": true,
+      "box": 8,
+      "arrival": 17.349333333333334,
+      "deadline": 18.65
+    },
+    {
+      "kind": "line",
+      "start": 17.38948012504261,
+      "end": 17.542079166974872,
+      "service_s": 0.15259904193226248,
+      "correct": true,
+      "box": 8,
+      "arrival": 17.349333333333334,
+      "deadline": 18.65
+    },
+    {
+      "kind": "line",
+      "start": 17.39457816700451,
+      "end": 17.533278416958638,
+      "service_s": 0.13870024995412678,
+      "correct": true,
+      "box": 8,
+      "arrival": 17.352,
+      "deadline": 18.65
+    },
+    {
+      "kind": "line",
+      "start": 17.42391720903106,
+      "end": 17.549909249995835,
+      "service_s": 0.1259920409647748,
+      "correct": true,
+      "box": 8,
+      "arrival": 17.352,
+      "deadline": 18.65
+    },
+    {
+      "kind": "line",
+      "start": 17.477971208980307,
+      "end": 17.619834374985658,
+      "service_s": 0.14186316600535065,
+      "correct": true,
+      "box": 8,
+      "arrival": 17.413999999999998,
+      "deadline": 18.65
+    },
+    {
+      "kind": "line",
+      "start": 17.54218004201539,
+      "end": 17.723223750013858,
+      "service_s": 0.18104370799846947,
+      "correct": true,
+      "box": 8,
+      "arrival": 17.499333333333333,
+      "deadline": 18.65
+    },
+    {
+      "kind": "line",
+      "start": 17.550039374968037,
+      "end": 17.721794083947316,
+      "service_s": 0.1717547089792788,
+      "correct": true,
+      "box": 8,
+      "arrival": 17.502,
+      "deadline": 18.65
+    },
+    {
+      "kind": "area",
+      "start": 17.43569449998904,
+      "end": 17.871614624978974,
+      "service_s": 0.43592012498993427,
+      "correct": true,
+      "box": 8,
+      "arrival": 17.367553899999997,
+      "deadline": 18.65
+    },
+    {
+      "kind": "area",
+      "start": 17.533358584041707,
+      "end": 17.929697624989785,
+      "service_s": 0.39633904094807804,
+      "correct": true,
+      "box": 8,
+      "arrival": 17.430053899999997,
+      "deadline": 18.65
+    },
+    {
+      "kind": "area",
+      "start": 17.5350575420307,
+      "end": 17.93118183396291,
+      "service_s": 0.3961242919322103,
+      "correct": true,
+      "box": 8,
+      "arrival": 17.492553899999997,
+      "deadline": 18.65
+    },
+    {
+      "kind": "area",
+      "start": 17.851173667004332,
+      "end": 18.164674208965153,
+      "service_s": 0.31350054196082056,
+      "correct": true,
+      "box": 8,
+      "arrival": 17.8425539,
+      "deadline": 18.65
+    },
+    {
+      "kind": "area",
+      "start": 17.915473458939232,
+      "end": 18.22758554201573,
+      "service_s": 0.3121120830764994,
+      "correct": true,
+      "box": 8,
+      "arrival": 17.9050539,
+      "deadline": 18.65
+    },
+    {
+      "kind": "area",
+      "start": 17.972634374978952,
+      "end": 18.32203749998007,
+      "service_s": 0.3494031250011176,
+      "correct": true,
+      "box": 8,
+      "arrival": 17.9675539,
+      "deadline": 18.65
+    },
+    {
+      "kind": "area",
+      "start": 18.040456000017002,
+      "end": 18.35974524996709,
+      "service_s": 0.31928924995008856,
+      "correct": true,
+      "box": 8,
+      "arrival": 18.0300539,
+      "deadline": 18.65
+    },
+    {
+      "kind": "area",
+      "start": 18.10291741695255,
+      "end": 18.406367292045616,
+      "service_s": 0.3034498750930652,
+      "correct": true,
+      "box": 8,
+      "arrival": 18.0925539,
+      "deadline": 18.65
+    },
+    {
+      "kind": "line",
+      "start": 18.82572900003288,
+      "end": 18.954243166954257,
+      "service_s": 0.12851416692137718,
+      "correct": true,
+      "box": 9,
+      "arrival": 18.822666666666663,
+      "deadline": 20.65
+    },
+    {
+      "kind": "line",
+      "start": 18.91805691702757,
+      "end": 19.022701791953295,
+      "service_s": 0.10464487492572516,
+      "correct": true,
+      "box": 9,
+      "arrival": 18.907999999999998,
+      "deadline": 20.65
+    },
+    {
+      "kind": "line",
+      "start": 18.925324292038567,
+      "end": 19.036078708944842,
+      "service_s": 0.11075441690627486,
+      "correct": true,
+      "box": 9,
+      "arrival": 18.922666666666665,
+      "deadline": 20.65
+    },
+    {
+      "kind": "line",
+      "start": 18.925316666951403,
+      "end": 19.03265512501821,
+      "service_s": 0.1073384580668062,
+      "correct": true,
+      "box": 9,
+      "arrival": 18.922666666666665,
+      "deadline": 20.65
+    },
+    {
+      "kind": "line",
+      "start": 19.003591625019908,
+      "end": 19.11782983399462,
+      "service_s": 0.1142382089747116,
+      "correct": true,
+      "box": 9,
+      "arrival": 18.993333333333332,
+      "deadline": 20.65
+    },
+    {
+      "kind": "line",
+      "start": 19.01056891703047,
+      "end": 19.134849875001237,
+      "service_s": 0.12428095797076821,
+      "correct": true,
+      "box": 9,
+      "arrival": 19.008,
+      "deadline": 20.65
+    },
+    {
+      "kind": "line",
+      "start": 19.01059370895382,
+      "end": 19.13197287498042,
+      "service_s": 0.1213791660265997,
+      "correct": true,
+      "box": 9,
+      "arrival": 19.008,
+      "deadline": 20.65
+    },
+    {
+      "kind": "line",
+      "start": 19.081749749951996,
+      "end": 19.216060249949805,
+      "service_s": 0.13431049999780953,
+      "correct": true,
+      "box": 9,
+      "arrival": 19.072666666666663,
+      "deadline": 20.65
+    },
+    {
+      "kind": "line",
+      "start": 19.08179729199037,
+      "end": 19.19985633401666,
+      "service_s": 0.11805904202628881,
+      "correct": true,
+      "box": 9,
+      "arrival": 19.078666666666663,
+      "deadline": 20.65
+    },
+    {
+      "kind": "line",
+      "start": 19.099524250021204,
+      "end": 19.21755054197274,
+      "service_s": 0.11802629195153713,
+      "correct": true,
+      "box": 9,
+      "arrival": 19.093333333333334,
+      "deadline": 20.65
+    },
+    {
+      "kind": "line",
+      "start": 19.099547417019494,
+      "end": 19.226242542034015,
+      "service_s": 0.12669512501452118,
+      "correct": true,
+      "box": 9,
+      "arrival": 19.093333333333334,
+      "deadline": 20.65
+    },
+    {
+      "kind": "line",
+      "start": 19.1636100000469,
+      "end": 19.289158124942333,
+      "service_s": 0.1255481248954311,
+      "correct": true,
+      "box": 9,
+      "arrival": 19.157999999999998,
+      "deadline": 20.65
+    },
+    {
+      "kind": "line",
+      "start": 19.164455374935642,
+      "end": 19.283658833941445,
+      "service_s": 0.11920345900580287,
+      "correct": true,
+      "box": 9,
+      "arrival": 19.163999999999998,
+      "deadline": 20.65
+    },
+    {
+      "kind": "line",
+      "start": 19.1831900839461,
+      "end": 19.309845875017345,
+      "service_s": 0.12665579107124358,
+      "correct": true,
+      "box": 9,
+      "arrival": 19.178666666666665,
+      "deadline": 20.65
+    },
+    {
+      "kind": "line",
+      "start": 19.183211166993715,
+      "end": 19.31478291703388,
+      "service_s": 0.13157175004016608,
+      "correct": true,
+      "box": 9,
+      "arrival": 19.178666666666665,
+      "deadline": 20.65
+    },
+    {
+      "kind": "line",
+      "start": 19.251520999940112,
+      "end": 19.3936526250327,
+      "service_s": 0.14213162509258837,
+      "correct": true,
+      "box": 9,
+      "arrival": 19.243333333333332,
+      "deadline": 20.65
+    },
+    {
+      "kind": "line",
+      "start": 19.25156866700854,
+      "end": 19.383366834023036,
+      "service_s": 0.13179816701449454,
+      "correct": true,
+      "box": 9,
+      "arrival": 19.249333333333333,
+      "deadline": 20.65
+    },
+    {
+      "kind": "line",
+      "start": 19.25234395894222,
+      "end": 19.403290749993175,
+      "service_s": 0.15094679105095565,
+      "correct": true,
+      "box": 9,
+      "arrival": 19.252,
+      "deadline": 20.65
+    },
+    {
+      "kind": "line",
+      "start": 19.283742291969247,
+      "end": 19.416049333987758,
+      "service_s": 0.1323070420185104,
+      "correct": true,
+      "box": 9,
+      "arrival": 19.264,
+      "deadline": 20.65
+    },
+    {
+      "kind": "line",
+      "start": 19.28927083394956,
+      "end": 19.43113733397331,
+      "service_s": 0.14186650002375245,
+      "correct": true,
+      "box": 9,
+      "arrival": 19.264,
+      "deadline": 20.65
+    },
+    {
+      "kind": "line",
+      "start": 19.338950959034264,
+      "end": 19.466782541945577,
+      "service_s": 0.12783158291131258,
+      "correct": true,
+      "box": 9,
+      "arrival": 19.328666666666663,
+      "deadline": 20.65
+    },
+    {
+      "kind": "area",
+      "start": 19.25150074996054,
+      "end": 19.66817204200197,
+      "service_s": 0.4166712920414284,
+      "correct": true,
+      "box": 9,
+      "arrival": 19.242553899999997,
+      "deadline": 20.65
+    },
+    {
+      "kind": "area",
+      "start": 19.309926833957434,
+      "end": 19.688703874940984,
+      "service_s": 0.37877704098355025,
+      "correct": true,
+      "box": 9,
+      "arrival": 19.305053899999997,
+      "deadline": 20.65
+    },
+    {
+      "kind": "line",
+      "start": 19.383457874995656,
+      "end": 19.522562374942936,
+      "service_s": 0.1391044999472797,
+      "correct": true,
+      "box": 9,
+      "arrival": 19.349333333333334,
+      "deadline": 20.65
+    },
+    {
+      "kind": "line",
+      "start": 19.393781334045343,
+      "end": 19.53013187495526,
+      "service_s": 0.13635054090991616,
+      "correct": true,
+      "box": 9,
+      "arrival": 19.349333333333334,
+      "deadline": 20.65
+    },
+    {
+      "kind": "line",
+      "start": 19.403379834024236,
+      "end": 19.545799333951436,
+      "service_s": 0.14241949992720038,
+      "correct": true,
+      "box": 9,
+      "arrival": 19.352,
+      "deadline": 20.65
+    },
+    {
+      "kind": "line",
+      "start": 19.416134667000733,
+      "end": 19.554418292012997,
+      "service_s": 0.13828362501226366,
+      "correct": true,
+      "box": 9,
+      "arrival": 19.352,
+      "deadline": 20.65
+    },
+    {
+      "kind": "area",
+      "start": 19.431202042032965,
+      "end": 19.787651958991773,
+      "service_s": 0.3564499169588089,
+      "correct": true,
+      "box": 9,
+      "arrival": 19.367553899999997,
+      "deadline": 20.65
+    },
+    {
+      "kind": "line",
+      "start": 19.466886874986812,
+      "end": 19.604694750043564,
+      "service_s": 0.13780787505675107,
+      "correct": true,
+      "box": 9,
+      "arrival": 19.413999999999998,
+      "deadline": 20.65
+    },
+    {
+      "kind": "line",
+      "start": 19.545911959023215,
+      "end": 19.686683041974902,
+      "service_s": 0.14077108295168728,
+      "correct": true,
+      "box": 9,
+      "arrival": 19.499333333333333,
+      "deadline": 20.65
+    },
+    {
+      "kind": "line",
+      "start": 19.554528999957256,
+      "end": 19.684079291997477,
+      "service_s": 0.1295502920402214,
+      "correct": true,
+      "box": 9,
+      "arrival": 19.502,
+      "deadline": 20.65
+    },
+    {
+      "kind": "area",
+      "start": 19.522668624995276,
+      "end": 19.863939833943732,
+      "service_s": 0.34127120894845575,
+      "correct": true,
+      "box": 9,
+      "arrival": 19.430053899999997,
+      "deadline": 20.65
+    },
+    {
+      "kind": "area",
+      "start": 19.530216000042856,
+      "end": 19.862453083973378,
+      "service_s": 0.3322370839305222,
+      "correct": true,
+      "box": 9,
+      "arrival": 19.492553899999997,
+      "deadline": 20.65
+    },
+    {
+      "kind": "area",
+      "start": 19.852804583963007,
+      "end": 20.1673225419363,
+      "service_s": 0.31451795797329396,
+      "correct": true,
+      "box": 9,
+      "arrival": 19.8425539,
+      "deadline": 20.65
+    },
+    {
+      "kind": "area",
+      "start": 19.90831037494354,
+      "end": 20.213927541975863,
+      "service_s": 0.3056171670323238,
+      "correct": true,
+      "box": 9,
+      "arrival": 19.9050539,
+      "deadline": 20.65
+    },
+    {
+      "kind": "area",
+      "start": 19.977733541978523,
+      "end": 20.288747958955355,
+      "service_s": 0.31101441697683185,
+      "correct": true,
+      "box": 9,
+      "arrival": 19.9675539,
+      "deadline": 20.65
+    },
+    {
+      "kind": "area",
+      "start": 20.040267042000778,
+      "end": 20.35754670901224,
+      "service_s": 0.31727966701146215,
+      "correct": true,
+      "box": 9,
+      "arrival": 20.0300539,
+      "deadline": 20.65
+    },
+    {
+      "kind": "area",
+      "start": 20.102858041995205,
+      "end": 20.410804499988444,
+      "service_s": 0.30794645799323916,
+      "correct": true,
+      "box": 9,
+      "arrival": 20.0925539,
+      "deadline": 20.65
+    },
+    {
+      "kind": "line",
+      "start": 20.82431216700934,
+      "end": 20.955463833990507,
+      "service_s": 0.1311516669811681,
+      "correct": true,
+      "box": 10,
+      "arrival": 20.822666666666663,
+      "deadline": 22.65
+    },
+    {
+      "kind": "line",
+      "start": 20.91819224995561,
+      "end": 21.03110012493562,
+      "service_s": 0.11290787498001009,
+      "correct": true,
+      "box": 10,
+      "arrival": 20.907999999999998,
+      "deadline": 22.65
+    },
+    {
+      "kind": "line",
+      "start": 20.92518854199443,
+      "end": 21.039380667032674,
+      "service_s": 0.11419212503824383,
+      "correct": true,
+      "box": 10,
+      "arrival": 20.922666666666665,
+      "deadline": 22.65
+    },
+    {
+      "kind": "line",
+      "start": 20.92522216704674,
+      "end": 21.041713334037922,
+      "service_s": 0.11649116699118167,
+      "correct": true,
+      "box": 10,
+      "arrival": 20.922666666666665,
+      "deadline": 22.65
+    },
+    {
+      "kind": "line",
+      "start": 21.003576791961677,
+      "end": 21.12136745895259,
+      "service_s": 0.11779066699091345,
+      "correct": true,
+      "box": 10,
+      "arrival": 20.993333333333332,
+      "deadline": 22.65
+    },
+    {
+      "kind": "line",
+      "start": 21.010655167046934,
+      "end": 21.12933483393863,
+      "service_s": 0.11867966689169407,
+      "correct": true,
+      "box": 10,
+      "arrival": 21.008,
+      "deadline": 22.65
+    },
+    {
+      "kind": "line",
+      "start": 21.01068262499757,
+      "end": 21.122935416991822,
+      "service_s": 0.11225279199425131,
+      "correct": true,
+      "box": 10,
+      "arrival": 21.008,
+      "deadline": 22.65
+    },
+    {
+      "kind": "line",
+      "start": 21.075311584048904,
+      "end": 21.20485620899126,
+      "service_s": 0.12954462494235486,
+      "correct": true,
+      "box": 10,
+      "arrival": 21.072666666666663,
+      "deadline": 22.65
+    },
+    {
+      "kind": "line",
+      "start": 21.080715666990727,
+      "end": 21.210632834001444,
+      "service_s": 0.1299171670107171,
+      "correct": true,
+      "box": 10,
+      "arrival": 21.078666666666663,
+      "deadline": 22.65
+    },
+    {
+      "kind": "line",
+      "start": 21.093694083974697,
+      "end": 21.202264667022973,
+      "service_s": 0.1085705830482766,
+      "correct": true,
+      "box": 10,
+      "arrival": 21.093333333333334,
+      "deadline": 22.65
+    },
+    {
+      "kind": "line",
+      "start": 21.093720542034134,
+      "end": 21.210160791990347,
+      "service_s": 0.11644024995621294,
+      "correct": true,
+      "box": 10,
+      "arrival": 21.093333333333334,
+      "deadline": 22.65
+    },
+    {
+      "kind": "line",
+      "start": 21.168296416988596,
+      "end": 21.28582837502472,
+      "service_s": 0.1175319580361247,
+      "correct": true,
+      "box": 10,
+      "arrival": 21.157999999999998,
+      "deadline": 22.65
+    },
+    {
+      "kind": "line",
+      "start": 21.168327749939635,
+      "end": 21.29913616704289,
+      "service_s": 0.1308084171032533,
+      "correct": true,
+      "box": 10,
+      "arrival": 21.163999999999998,
+      "deadline": 22.65
+    },
+    {
+      "kind": "line",
+      "start": 21.18426420900505,
+      "end": 21.309666999964975,
+      "service_s": 0.12540279095992446,
+      "correct": true,
+      "box": 10,
+      "arrival": 21.178666666666665,
+      "deadline": 22.65
+    },
+    {
+      "kind": "line",
+      "start": 21.18429816700518,
+      "end": 21.306259584031068,
+      "service_s": 0.12196141702588648,
+      "correct": true,
+      "box": 10,
+      "arrival": 21.178666666666665,
+      "deadline": 22.65
+    },
+    {
+      "kind": "line",
+      "start": 21.24413912498858,
+      "end": 21.37703491700813,
+      "service_s": 0.13289579201955348,
+      "correct": true,
+      "box": 10,
+      "arrival": 21.243333333333332,
+      "deadline": 22.65
+    },
+    {
+      "kind": "line",
+      "start": 21.251762458938174,
+      "end": 21.38930129201617,
+      "service_s": 0.13753883307799697,
+      "correct": true,
+      "box": 10,
+      "arrival": 21.249333333333333,
+      "deadline": 22.65
+    },
+    {
+      "kind": "line",
+      "start": 21.252365124993958,
+      "end": 21.39651574997697,
+      "service_s": 0.14415062498301268,
+      "correct": true,
+      "box": 10,
+      "arrival": 21.252,
+      "deadline": 22.65
+    },
+    {
+      "kind": "line",
+      "start": 21.285939958994277,
+      "end": 21.427356583997607,
+      "service_s": 0.1414166250033304,
+      "correct": true,
+      "box": 10,
+      "arrival": 21.264,
+      "deadline": 22.65
+    },
+    {
+      "kind": "line",
+      "start": 21.29921974998433,
+      "end": 21.43962370895315,
+      "service_s": 0.1404039589688182,
+      "correct": true,
+      "box": 10,
+      "arrival": 21.264,
+      "deadline": 22.65
+    },
+    {
+      "kind": "line",
+      "start": 21.329016458941624,
+      "end": 21.461215959046967,
+      "service_s": 0.13219950010534376,
+      "correct": true,
+      "box": 10,
+      "arrival": 21.328666666666663,
+      "deadline": 22.65
+    },
+    {
+      "kind": "area",
+      "start": 21.24411562504247,
+      "end": 21.62495145900175,
+      "service_s": 0.38083583395928144,
+      "correct": true,
+      "box": 10,
+      "arrival": 21.242553899999997,
+      "deadline": 22.65
+    },
+    {
+      "kind": "area",
+      "start": 21.31529716704972,
+      "end": 21.700905042001978,
+      "service_s": 0.3856078749522567,
+      "correct": true,
+      "box": 10,
+      "arrival": 21.305053899999997,
+      "deadline": 22.65
+    },
+    {
+      "kind": "line",
+      "start": 21.37712245900184,
+      "end": 21.509989583981223,
+      "service_s": 0.13286712497938424,
+      "correct": true,
+      "box": 10,
+      "arrival": 21.349333333333334,
+      "deadline": 22.65
+    },
+    {
+      "kind": "line",
+      "start": 21.38942866702564,
+      "end": 21.533373084035702,
+      "service_s": 0.14394441701006144,
+      "correct": true,
+      "box": 10,
+      "arrival": 21.349333333333334,
+      "deadline": 22.65
+    },
+    {
+      "kind": "line",
+      "start": 21.396615167031996,
+      "end": 21.555050541996025,
+      "service_s": 0.1584353749640286,
+      "correct": true,
+      "box": 10,
+      "arrival": 21.352,
+      "deadline": 22.65
+    },
+    {
+      "kind": "line",
+      "start": 21.427437625010498,
+      "end": 21.557046000030823,
+      "service_s": 0.12960837502032518,
+      "correct": true,
+      "box": 10,
+      "arrival": 21.352,
+      "deadline": 22.65
+    },
+    {
+      "kind": "area",
+      "start": 21.439693999942392,
+      "end": 21.808666500030085,
+      "service_s": 0.36897250008769333,
+      "correct": true,
+      "box": 10,
+      "arrival": 21.367553899999997,
+      "deadline": 22.65
+    },
+    {
+      "kind": "line",
+      "start": 21.461315333959647,
+      "end": 21.600977499969304,
+      "service_s": 0.13966216600965708,
+      "correct": true,
+      "box": 10,
+      "arrival": 21.413999999999998,
+      "deadline": 22.65
+    },
+    {
+      "kind": "line",
+      "start": 21.55517820897512,
+      "end": 21.688988749985583,
+      "service_s": 0.13381054101046175,
+      "correct": true,
+      "box": 10,
+      "arrival": 21.499333333333333,
+      "deadline": 22.65
+    },
+    {
+      "kind": "line",
+      "start": 21.557137291994877,
+      "end": 21.679569000029005,
+      "service_s": 0.12243170803412795,
+      "correct": true,
+      "box": 10,
+      "arrival": 21.502,
+      "deadline": 22.65
+    },
+    {
+      "kind": "area",
+      "start": 21.510094875004143,
+      "end": 21.85524270904716,
+      "service_s": 0.3451478340430185,
+      "correct": true,
+      "box": 10,
+      "arrival": 21.430053899999997,
+      "deadline": 22.65
+    },
+    {
+      "kind": "area",
+      "start": 21.533458166988567,
+      "end": 21.860210124985315,
+      "service_s": 0.3267519579967484,
+      "correct": true,
+      "box": 10,
+      "arrival": 21.492553899999997,
+      "deadline": 22.65
+    },
+    {
+      "kind": "area",
+      "start": 21.850866249995306,
+      "end": 22.15509887493681,
+      "service_s": 0.3042326249415055,
+      "correct": true,
+      "box": 10,
+      "arrival": 21.8425539,
+      "deadline": 22.65
+    },
+    {
+      "kind": "area",
+      "start": 21.91524370899424,
+      "end": 22.21833774994593,
+      "service_s": 0.30309404095169157,
+      "correct": true,
+      "box": 10,
+      "arrival": 21.9050539,
+      "deadline": 22.65
+    },
+    {
+      "kind": "area",
+      "start": 21.97504383395426,
+      "end": 22.27696070901584,
+      "service_s": 0.30191687506157905,
+      "correct": true,
+      "box": 10,
+      "arrival": 21.9675539,
+      "deadline": 22.65
+    },
+    {
+      "kind": "area",
+      "start": 22.039489667047746,
+      "end": 22.36324587499257,
+      "service_s": 0.3237562079448253,
+      "correct": true,
+      "box": 10,
+      "arrival": 22.0300539,
+      "deadline": 22.65
+    },
+    {
+      "kind": "area",
+      "start": 22.102734333951958,
+      "end": 22.41482125001494,
+      "service_s": 0.3120869160629809,
+      "correct": true,
+      "box": 10,
+      "arrival": 22.0925539,
+      "deadline": 22.65
+    },
+    {
+      "kind": "line",
+      "start": 22.82738645898644,
+      "end": 22.952359916991554,
+      "service_s": 0.12497345800511539,
+      "correct": true,
+      "box": 11,
+      "arrival": 22.822666666666663,
+      "deadline": 24.65
+    },
+    {
+      "kind": "line",
+      "start": 22.913497500005178,
+      "end": 23.01567274995614,
+      "service_s": 0.10217524995096028,
+      "correct": true,
+      "box": 11,
+      "arrival": 22.907999999999998,
+      "deadline": 24.65
+    },
+    {
+      "kind": "line",
+      "start": 22.927483291947283,
+      "end": 23.033858209033497,
+      "service_s": 0.10637491708621383,
+      "correct": true,
+      "box": 11,
+      "arrival": 22.922666666666665,
+      "deadline": 24.65
+    },
+    {
+      "kind": "line",
+      "start": 22.927506709005684,
+      "end": 23.032926292042248,
+      "service_s": 0.10541958303656429,
+      "correct": true,
+      "box": 11,
+      "arrival": 22.922666666666665,
+      "deadline": 24.65
+    },
+    {
+      "kind": "line",
+      "start": 23.00356808397919,
+      "end": 23.112249208963476,
+      "service_s": 0.10868112498428673,
+      "correct": true,
+      "box": 11,
+      "arrival": 22.993333333333332,
+      "deadline": 24.65
+    },
+    {
+      "kind": "line",
+      "start": 23.010617166990414,
+      "end": 23.126353916944936,
+      "service_s": 0.11573674995452166,
+      "correct": true,
+      "box": 11,
+      "arrival": 23.008,
+      "deadline": 24.65
+    },
+    {
+      "kind": "line",
+      "start": 23.010641291970387,
+      "end": 23.12940566695761,
+      "service_s": 0.11876437498722225,
+      "correct": true,
+      "box": 11,
+      "arrival": 23.008,
+      "deadline": 24.65
+    },
+    {
+      "kind": "line",
+      "start": 23.073703167028725,
+      "end": 23.179671374964528,
+      "service_s": 0.10596820793580264,
+      "correct": true,
+      "box": 11,
+      "arrival": 23.072666666666663,
+      "deadline": 24.65
+    },
+    {
+      "kind": "line",
+      "start": 23.081522000022233,
+      "end": 23.201377584016882,
+      "service_s": 0.11985558399464935,
+      "correct": true,
+      "box": 11,
+      "arrival": 23.078666666666663,
+      "deadline": 24.65
+    },
+    {
+      "kind": "line",
+      "start": 23.0996661670506,
+      "end": 23.217895959038287,
+      "service_s": 0.11822979198768735,
+      "correct": true,
+      "box": 11,
+      "arrival": 23.093333333333334,
+      "deadline": 24.65
+    },
+    {
+      "kind": "line",
+      "start": 23.09969079203438,
+      "end": 23.224514333996922,
+      "service_s": 0.12482354196254164,
+      "correct": true,
+      "box": 11,
+      "arrival": 23.093333333333334,
+      "deadline": 24.65
+    },
+    {
+      "kind": "line",
+      "start": 23.168003833969124,
+      "end": 23.29898691701237,
+      "service_s": 0.13098308304324746,
+      "correct": true,
+      "box": 11,
+      "arrival": 23.157999999999998,
+      "deadline": 24.65
+    },
+    {
+      "kind": "line",
+      "start": 23.168024000013247,
+      "end": 23.30354279198218,
+      "service_s": 0.13551879196893424,
+      "correct": true,
+      "box": 11,
+      "arrival": 23.163999999999998,
+      "deadline": 24.65
+    },
+    {
+      "kind": "line",
+      "start": 23.184352125041187,
+      "end": 23.315076583996415,
+      "service_s": 0.13072445895522833,
+      "correct": true,
+      "box": 11,
+      "arrival": 23.178666666666665,
+      "deadline": 24.65
+    },
+    {
+      "kind": "line",
+      "start": 23.184374541975558,
+      "end": 23.323892708984204,
+      "service_s": 0.13951816700864583,
+      "correct": true,
+      "box": 11,
+      "arrival": 23.178666666666665,
+      "deadline": 24.65
+    },
+    {
+      "kind": "line",
+      "start": 23.251036708941683,
+      "end": 23.394616417004727,
+      "service_s": 0.14357970806304365,
+      "correct": true,
+      "box": 11,
+      "arrival": 23.243333333333332,
+      "deadline": 24.65
+    },
+    {
+      "kind": "line",
+      "start": 23.251055042026564,
+      "end": 23.402603166992776,
+      "service_s": 0.15154812496621162,
+      "correct": true,
+      "box": 11,
+      "arrival": 23.249333333333333,
+      "deadline": 24.65
+    },
+    {
+      "kind": "line",
+      "start": 23.25281516695395,
+      "end": 23.40655470895581,
+      "service_s": 0.15373954200185835,
+      "correct": true,
+      "box": 11,
+      "arrival": 23.252,
+      "deadline": 24.65
+    },
+    {
+      "kind": "line",
+      "start": 23.29906741704326,
+      "end": 23.436713916948065,
+      "service_s": 0.13764649990480393,
+      "correct": true,
+      "box": 11,
+      "arrival": 23.264,
+      "deadline": 24.65
+    },
+    {
+      "kind": "line",
+      "start": 23.303624999942258,
+      "end": 23.439573416952044,
+      "service_s": 0.13594841700978577,
+      "correct": true,
+      "box": 11,
+      "arrival": 23.264,
+      "deadline": 24.65
+    },
+    {
+      "kind": "line",
+      "start": 23.332506375038065,
+      "end": 23.47293687495403,
+      "service_s": 0.1404304999159649,
+      "correct": true,
+      "box": 11,
+      "arrival": 23.328666666666663,
+      "deadline": 24.65
+    },
+    {
+      "kind": "area",
+      "start": 23.251010666950606,
+      "end": 23.64336479199119,
+      "service_s": 0.3923541250405833,
+      "correct": true,
+      "box": 11,
+      "arrival": 23.242553899999997,
+      "deadline": 24.65
+    },
+    {
+      "kind": "area",
+      "start": 23.315198124968447,
+      "end": 23.709997792029753,
+      "service_s": 0.39479966706130654,
+      "correct": true,
+      "box": 11,
+      "arrival": 23.305053899999997,
+      "deadline": 24.65
+    },
+    {
+      "kind": "line",
+      "start": 23.39471029199194,
+      "end": 23.541039541945793,
+      "service_s": 0.1463292499538511,
+      "correct": true,
+      "box": 11,
+      "arrival": 23.349333333333334,
+      "deadline": 24.65
+    },
+    {
+      "kind": "line",
+      "start": 23.402731250040233,
+      "end": 23.54211150004994,
+      "service_s": 0.1393802500097081,
+      "correct": true,
+      "box": 11,
+      "arrival": 23.349333333333334,
+      "deadline": 24.65
+    },
+    {
+      "kind": "line",
+      "start": 23.406635124934837,
+      "end": 23.55335554201156,
+      "service_s": 0.1467204170767218,
+      "correct": true,
+      "box": 11,
+      "arrival": 23.352,
+      "deadline": 24.65
+    },
+    {
+      "kind": "line",
+      "start": 23.436797042028047,
+      "end": 23.57689612498507,
+      "service_s": 0.1400990829570219,
+      "correct": true,
+      "box": 11,
+      "arrival": 23.352,
+      "deadline": 24.65
+    },
+    {
+      "kind": "area",
+      "start": 23.43967083399184,
+      "end": 23.790403499966487,
+      "service_s": 0.3507326659746468,
+      "correct": true,
+      "box": 11,
+      "arrival": 23.367553899999997,
+      "deadline": 24.65
+    },
+    {
+      "kind": "line",
+      "start": 23.47301741701085,
+      "end": 23.607166999951005,
+      "service_s": 0.13414958294015378,
+      "correct": true,
+      "box": 11,
+      "arrival": 23.413999999999998,
+      "deadline": 24.65
+    },
+    {
+      "kind": "line",
+      "start": 23.553439792012796,
+      "end": 23.680383958970197,
+      "service_s": 0.12694416695740074,
+      "correct": true,
+      "box": 11,
+      "arrival": 23.499333333333333,
+      "deadline": 24.65
+    },
+    {
+      "kind": "line",
+      "start": 23.577007625019178,
+      "end": 23.708653667010367,
+      "service_s": 0.13164604199118912,
+      "correct": true,
+      "box": 11,
+      "arrival": 23.502,
+      "deadline": 24.65
+    },
+    {
+      "kind": "area",
+      "start": 23.541131083969958,
+      "end": 23.87505587504711,
+      "service_s": 0.3339247910771519,
+      "correct": true,
+      "box": 11,
+      "arrival": 23.430053899999997,
+      "deadline": 24.65
+    },
+    {
+      "kind": "area",
+      "start": 23.54222345899325,
+      "end": 23.86368162499275,
+      "service_s": 0.32145816599950194,
+      "correct": true,
+      "box": 11,
+      "arrival": 23.492553899999997,
+      "deadline": 24.65
+    },
+    {
+      "kind": "area",
+      "start": 23.84783108404372,
+      "end": 24.156458209035918,
+      "service_s": 0.30862712499219924,
+      "correct": true,
+      "box": 11,
+      "arrival": 23.8425539,
+      "deadline": 24.65
+    },
+    {
+      "kind": "area",
+      "start": 23.908313459018245,
+      "end": 24.20199891703669,
+      "service_s": 0.2936854580184445,
+      "correct": true,
+      "box": 11,
+      "arrival": 23.9050539,
+      "deadline": 24.65
+    },
+    {
+      "kind": "area",
+      "start": 23.97500791703351,
+      "end": 24.287929084035568,
+      "service_s": 0.3129211670020595,
+      "correct": true,
+      "box": 11,
+      "arrival": 23.9675539,
+      "deadline": 24.65
+    },
+    {
+      "kind": "area",
+      "start": 24.03954841697123,
+      "end": 24.355231084045954,
+      "service_s": 0.31568266707472503,
+      "correct": true,
+      "box": 11,
+      "arrival": 24.0300539,
+      "deadline": 24.65
+    },
+    {
+      "kind": "area",
+      "start": 24.10271908401046,
+      "end": 24.404478374985047,
+      "service_s": 0.3017592909745872,
+      "correct": true,
+      "box": 11,
+      "arrival": 24.0925539,
+      "deadline": 24.65
+    }
+  ],
+  "scope": "Реальные CPU-вызовы декодера, 4 кода на изображение, кэшированные полные массивы в процессах. Приходы соответствуют камерам, включая 80 мс передачи торцов и 2 мс DMA полос. Физическая передача, shared-memory DMA и SDK отсутствуют. Реальный replay регистрирует все просрочки; отмена по сроку проверяется отдельно моделью EDF. p99 на малой выборке описательный."
+}

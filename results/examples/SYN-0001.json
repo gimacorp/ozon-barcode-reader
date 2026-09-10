@@ -9,16 +9,34 @@
   "predictions": {
     "one_frame": [],
     "three_frames": [
-      "OZ000101",
-      "OZ000102"
+      {
+        "format": "Code 128",
+        "payload_hex": "4f5a303030313031"
+      },
+      {
+        "format": "Code 128",
+        "payload_hex": "4f5a303030313032"
+      }
     ],
     "three_frames_enhanced": [
-      "OZ000101",
-      "OZ000102"
+      {
+        "format": "Code 128",
+        "payload_hex": "4f5a303030313031"
+      },
+      {
+        "format": "Code 128",
+        "payload_hex": "4f5a303030313032"
+      }
     ],
     "three_frames_diagonal": [
-      "OZ000101",
-      "OZ000102"
+      {
+        "format": "Code 128",
+        "payload_hex": "4f5a303030313031"
+      },
+      {
+        "format": "Code 128",
+        "payload_hex": "4f5a303030313032"
+      }
     ]
   }
 }

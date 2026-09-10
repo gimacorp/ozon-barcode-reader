@@ -1,0 +1,157 @@
+{
+  "line_focus": [
+    {
+      "face": "top",
+      "wd_mm": 711.59375,
+      "near_mm": 678.5286009546043,
+      "far_mm": 748.0465550874547,
+      "terms_mm": {
+        "height": 5,
+        "pitch": 2.6179606495121805,
+        "roll": 1.745307099674787,
+        "warp": 2,
+        "focus_setup": 1
+      },
+      "max_deviation_mm": 12.363267749186967,
+      "remaining_near_margin_mm": 20.701881296208775,
+      "remaining_far_margin_mm": 24.08953733826778
+    },
+    {
+      "face": "bottom",
+      "wd_mm": 711.59375,
+      "near_mm": 678.5286009546043,
+      "far_mm": 748.0465550874547,
+      "terms_mm": {
+        "sag": 2,
+        "belt_runout": 1,
+        "focus_setup": 1
+      },
+      "max_deviation_mm": 4,
+      "remaining_near_margin_mm": 29.065149045395742,
+      "remaining_far_margin_mm": 32.45280508745475
+    },
+    {
+      "face": "left",
+      "wd_mm": 467.453125,
+      "near_mm": 453.2540994495187,
+      "far_mm": 482.57054251799826,
+      "terms_mm": {
+        "center": 3,
+        "half_width": 2,
+        "yaw": 2.6179606495121805,
+        "roll": 1.745307099674787,
+        "warp": 1,
+        "focus_setup": 1
+      },
+      "max_deviation_mm": 11.363267749186967,
+      "remaining_near_margin_mm": 2.8357578012943137,
+      "remaining_far_margin_mm": 3.7541497688112955
+    },
+    {
+      "face": "right",
+      "wd_mm": 467.453125,
+      "near_mm": 453.2540994495187,
+      "far_mm": 482.57054251799826,
+      "terms_mm": {
+        "center": 3,
+        "half_width": 2,
+        "yaw": 2.6179606495121805,
+        "roll": 1.745307099674787,
+        "warp": 1,
+        "focus_setup": 1
+      },
+      "max_deviation_mm": 11.363267749186967,
+      "remaining_near_margin_mm": 2.8357578012943137,
+      "remaining_far_margin_mm": 3.7541497688112955
+    }
+  ],
+  "tolerances": {
+    "center_mm": 3,
+    "width_mm": 4,
+    "height_mm": 5,
+    "yaw_deg": 0.5,
+    "pitch_roll_deg": 0.5,
+    "side_warp_mm": 1,
+    "top_warp_mm": 2,
+    "bottom_sag_mm": 2,
+    "trigger_position_error_mm": 1
+  },
+  "end_contrast": {
+    "frequency_lp_mm": 41.89008042895442,
+    "terms": {
+      "diffraction": 0.6808049094274549,
+      "defocus": 0.9139094402914707,
+      "motion": 0.9926269353571998,
+      "pixel": 0.9707032797131746,
+      "aberration_assumption": 0.9574805807571528
+    },
+    "mtf_product": 0.574021778074311
+  },
+  "speeds": [
+    {
+      "speed_m_s": 1.0,
+      "budget_ms": 635.0,
+      "whole_label": 1.0,
+      "two_frames": 0.1388888888888889,
+      "fps_same_step": 16.0
+    },
+    {
+      "speed_m_s": 1.5,
+      "budget_ms": 253.3333333333334,
+      "whole_label": 0.6944444444444444,
+      "two_frames": 0.0,
+      "fps_same_step": 24.0
+    },
+    {
+      "speed_m_s": 2.0,
+      "budget_ms": 64.99999999999994,
+      "whole_label": 0.5185185185185185,
+      "two_frames": 0.0,
+      "fps_same_step": 32.0
+    }
+  ],
+  "sizes": [
+    {
+      "scenario": "X=0.20",
+      "line_px_module": 2.3405714285714287,
+      "end_px_module": 2.2600174023426427,
+      "budget_ms": 635.0,
+      "side_fov_margin_mm": 25.0,
+      "whole_label": 1.0
+    },
+    {
+      "scenario": "800x500x500",
+      "line_px_module": 3.861942857142857,
+      "end_px_module": 3.6759914123086634,
+      "budget_ms": 435.00000000000006,
+      "side_fov_margin_mm": -25.0,
+      "whole_label": 1.0
+    }
+  ],
+  "bottom": {
+    "nose_radius_mm": 3,
+    "top_tangent_gap_mm": 20,
+    "minimum_clear_gap_mm": 14,
+    "window_clear_width_mm": 50,
+    "window_z_mm": -30,
+    "light_centers_x_mm": [
+      -55,
+      55
+    ],
+    "light_z_mm": -180,
+    "emitter_width_mm": 25,
+    "min_ray_roller_clearance_mm": 5.30992145092527,
+    "worst_sag_mm": 2,
+    "note": "Проверка идеальных лучей в продольном разрезе. Прочность картона, высота носиков и паразитные блики проверяются приёмкой."
+  },
+  "transfer": {
+    "frame_MB": 65.408,
+    "wire_min_ms": 52.3264,
+    "budget_ms": 80,
+    "deadline_after_last_exposure_ms": 635,
+    "processing_from_exposure_ms": 500,
+    "decode_queue_budget_ms": 420,
+    "delivery_ms": 50
+  },
+  "lens_precision": "Расстояния от главной плоскости тонкой линзы; фокусировку на стенде измерять по контрасту. Для LD эффективное f=28.65 мм."
+}

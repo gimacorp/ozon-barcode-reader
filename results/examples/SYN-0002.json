@@ -9,24 +9,60 @@
   ],
   "predictions": {
     "one_frame": [
-      "OZ000201",
-      "OZ000202",
-      "OZ000204"
+      {
+        "format": "Code 128",
+        "payload_hex": "4f5a303030323031"
+      },
+      {
+        "format": "Code 128",
+        "payload_hex": "4f5a303030323032"
+      },
+      {
+        "format": "Code 128",
+        "payload_hex": "4f5a303030323034"
+      }
     ],
     "three_frames": [
-      "OZ000201",
-      "OZ000202",
-      "OZ000204"
+      {
+        "format": "Code 128",
+        "payload_hex": "4f5a303030323031"
+      },
+      {
+        "format": "Code 128",
+        "payload_hex": "4f5a303030323032"
+      },
+      {
+        "format": "Code 128",
+        "payload_hex": "4f5a303030323034"
+      }
     ],
     "three_frames_enhanced": [
-      "OZ000201",
-      "OZ000202",
-      "OZ000204"
+      {
+        "format": "Code 128",
+        "payload_hex": "4f5a303030323031"
+      },
+      {
+        "format": "Code 128",
+        "payload_hex": "4f5a303030323032"
+      },
+      {
+        "format": "Code 128",
+        "payload_hex": "4f5a303030323034"
+      }
     ],
     "three_frames_diagonal": [
-      "OZ000201",
-      "OZ000202",
-      "OZ000204"
+      {
+        "format": "Code 128",
+        "payload_hex": "4f5a303030323031"
+      },
+      {
+        "format": "Code 128",
+        "payload_hex": "4f5a303030323032"
+      },
+      {
+        "format": "Code 128",
+        "payload_hex": "4f5a303030323034"
+      }
     ]
   }
 }

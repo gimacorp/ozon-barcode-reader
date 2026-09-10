@@ -1,3 +1,4 @@
+from barcode_reader.coverage import CaptureContract
 """Пример передачи полного пакета и повторного подтверждения имитатором ПЛК."""
 from pathlib import Path
 import sys
@@ -10,7 +11,7 @@ from barcode_reader.synthetic import label
 
 
 def demo():
-    tracker=BoxTracker();tracker.register("DEMO-0001",0,2,2.635)
+    tracker=BoxTracker();tracker.register("DEMO-0001",0,2,2.635,contract=CaptureContract.image_demo({f:"frame-1" for f in FACES}))
     readings=decode(label("DEMO000001"))
     for face in sorted(FACES):
         tracker.observe("DEMO-0001",face,"frame-1",1.5,1.7,readings if face=="top" else [])

@@ -82,7 +82,7 @@ def evaluate_end_face(c: dict) -> dict:
     }
 
 
-def evaluate_label_focus(c: dict, aperture: float | None = None) -> dict:
+def evaluate_label_focus(c: dict, aperture: float | None = None, required_frames: int = 1) -> dict:
     """Проверка всех углов целой этикетки в одном кадре, включая края торца.
 
     По 9×9 допустимых центров для каждого из 12 углов; 21 фаза запуска.
@@ -108,12 +108,12 @@ def evaluate_label_focus(c: dict, aperture: float | None = None) -> dict:
     patches=np.array(patches);step=c["speed_mm_s"]/c["area_frame_rate_hz"]
     worst=1.;count=c["area_frames_per_box"]
     for phase in np.linspace(-step/2,step/2,21):
-        covered=np.zeros(len(patches),bool)
+        covered=np.zeros(len(patches),int)
         for shift in (np.arange(count)-(count-1)/2)*step+phase:
             uv,d=project((patches+[shift,0,0]).reshape(-1,3),pos,target,fp,nx,ny)
             valid=((d>=near)&(d<=far)&(uv[:,0]>=0)&(uv[:,0]<nx)&(uv[:,1]>=0)&(uv[:,1]<ny)).reshape(-1,4).all(1)
-            covered|=valid
-        worst=min(worst,float(covered.mean()))
-    return {"aperture":ap,"labels_per_phase":len(patches),"phases":21,
+            covered+=valid
+        worst=min(worst,float((covered>=required_frames).mean()))
+    return {"required_frames":required_frames,"aperture":ap,"labels_per_phase":len(patches),"phases":21,
             "min_whole_label_coverage":worst,"geometric_dof_mm":far-near,
             "limitation":"Дискретная номинальная геометрия. Не учитывает MTF, дифракцию, вибрацию и кривизну коробки."}

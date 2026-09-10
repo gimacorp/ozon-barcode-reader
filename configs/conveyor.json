@@ -13,7 +13,7 @@
   "observation_position_rounding_mm": 5.0,
   "plc_actuation_s": 0.1,
   "guard_s": 0.25,
-  "processing_budget_s": 0.4,
+  "processing_budget_s": 0.5,
   "delivery_budget_s": 0.05,
   "line_pixels": 8192,
   "line_fov_horizontal_mm": 700.0,

@@ -250,6 +250,7 @@
           "right",
           "top"
         ],
+        "capture_complete": true,
         "deadline_s": 2.635,
         "complete_set_verified": false
       },
@@ -513,6 +514,7 @@
           "right",
           "top"
         ],
+        "capture_complete": true,
         "deadline_s": 4.635,
         "complete_set_verified": false
       },

@@ -32,7 +32,7 @@
     "average_MB_s": 445.0048,
     "remaining_processing_delivery_s": 0.635,
     "last_rear_observation_x_mm": 1415.0,
-    "budget_slack_s": 0.185,
+    "budget_slack_s": 0.085,
     "encoder_step_mm": 0.08333333333333333,
     "strip_height_mm": 170.66666666666666,
     "strip_overlap_mm": 85.33333333333333,
@@ -57,6 +57,7 @@
     "limitation": "Не моделирует аберрации, дифракцию, блики, изгиб этикетки и проскальзывание"
   },
   "whole_label_focus": {
+    "required_frames": 1,
     "aperture": 11.0,
     "labels_per_phase": 972,
     "phases": 21,
@@ -65,6 +66,7 @@
     "limitation": "Дискретная номинальная геометрия. Не учитывает MTF, дифракцию, вибрацию и кривизну коробки."
   },
   "comparison_f8": {
+    "required_frames": 1,
     "aperture": 8,
     "labels_per_phase": 972,
     "phases": 21,
